@@ -1,8 +1,9 @@
 /** In this file, we create a React component which incorporates components provided by material-ui */
 
-const React = require('react');
-const RaisedButton = require('material-ui/lib/raised-button');
-const Dialog = require('material-ui/lib/dialog');
+import React from 'react';
+
+import { RaisedButton, Dialog, TextField } from 'material-ui';
+
 const ThemeManager = require('material-ui/lib/styles/theme-manager');
 const LightRawTheme = require('material-ui/lib/styles/raw-themes/light-raw-theme');
 const Colors = require('material-ui/lib/styles/colors');
@@ -27,7 +28,8 @@ const Main = React.createClass({
 
   componentWillMount() {
     let newMuiTheme = ThemeManager.modifyRawThemePalette(this.state.muiTheme, {
-      accent1Color: Colors.deepOrange500
+      primary1Color: Colors.grey400,
+      accent1Color: Colors.amber500
     });
 
     this.setState({muiTheme: newMuiTheme});
@@ -40,32 +42,79 @@ const Main = React.createClass({
       paddingTop: '200px'
     };
 
-    let standardActions = [
-      { text: 'Okay' }
+    let regActions = [
+      <RaisedButton
+        key={1}
+        label="Отмена"
+        secondary={true}
+        onTouchTap={this._closeRegPopup} />,
+      <RaisedButton
+        key={2}
+        label="Войти"
+        primary={true}
+        onTouchTap={this._submitReg} />
+    ];
+
+    let logActions = [
+      <RaisedButton
+        key={1}
+        label="Отмена"
+        secondary={true}
+        onTouchTap={this._closeLogPopup} />,
+      <RaisedButton
+        key={2}
+        label="Войти"
+        primary={true}
+        onTouchTap={this._submitLog} />
     ];
 
     return (
       <div style={containerStyle}>
         <Dialog
-          title="Super Secret Password"
-          actions={standardActions}
-          ref="superSecretPasswordDialog">
-          1-2-3-4-5
+          title="Быстрая регистрация"
+          actions={regActions}
+          ref="regPopup"
+          >
+          <TextField
+            hintText="Введите Email" />
+          <TextField
+            hintText="Придумайте пароль" />
         </Dialog>
 
-        <h1>material-ui</h1>
-        <h2>example project</h2>
+        <Dialog
+          title="Вход"
+          actions={logActions}
+          ref="logPopup"
+          >
+          <TextField
+            hintText="Введите Email" />
+          <TextField
+            hintText="Пароль" />
+        </Dialog>
 
-        <RaisedButton label="Super Secret Password" primary={true} onTouchTap={this._handleTouchTap} />
+        <RaisedButton label="Регистрация" primary={true} onTouchTap={this._openRegPopup} />
+        <RaisedButton label="Вход" secondary={true} onTouchTap={this._openLogPopup} />
 
       </div>
     );
   },
 
-  _handleTouchTap() {
-    this.refs.superSecretPasswordDialog.show();
+  _openRegPopup() {
+    this.refs.regPopup._show();
+  },
+
+  _openLogPopup() {
+    this.refs.logPopup._show();
+  },
+
+  _closeRegPopup() {
+    this.refs.regPopup._dismiss();
+  },
+
+  _closeLogPopup() {
+    this.refs.logPopup._dismiss();
   }
 
 });
 
-module.exports = Main;
+export default Main;
