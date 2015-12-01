@@ -1,11 +1,10 @@
-/** In this file, we create a React component which incorporates components provided by material-ui */
+'use strict';
 
 import React from 'react';
 
 import { RaisedButton, Dialog, TextField } from 'material-ui';
 
-import RegistrationPopup from './autorization/RegistrationPopup.jsx';
-import LoginPopup from './autorization/LoginPopup.jsx';
+import HomePage from './HomePage.jsx';
 
 const ThemeManager = require('material-ui/lib/styles/theme-manager');
 const LightRawTheme = require('material-ui/lib/styles/raw-themes/light-raw-theme');
@@ -40,17 +39,9 @@ const Main = React.createClass({
 
   render() {
 
-    let containerStyle = {
-      paddingTop: '200px',
-      paddingBottom: '200px',
-    };
-
     return (
-      <div style={containerStyle}>
-
-        <RegistrationPopup />
-        <LoginPopup />
-
+      <div>
+        <HomePage />
       </div>
     );
   },

@@ -1,10 +1,10 @@
 {
-  "name": "material-ui-example",
-  "version": "0.13.2",
-  "description": "Sample project that uses material-ui",
+  "name": "lotoru-reacted",
+  "version": "0.1.0",
+  "description": "project that uses react with material-ui",
   "repository": {
     "type": "git",
-    "url": "https://github.com/callemall/material-ui.git"
+    "url": "https://github.com/ihororlovskyi/lotoru-reacted.git"
   },
   "scripts": {
     "start": "gulp"
