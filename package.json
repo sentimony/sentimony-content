@@ -17,7 +17,9 @@
     "gulp": "^3.8.10",
     "gulp-notify": "^2.1.0",
     "gulp-util": "^3.0.1",
+    "history": "^1.13.1",
     "pretty-hrtime": "^0.2.2",
+    "react-router": "^1.0.0",
     "require-dir": "^0.1.0",
     "underscore": "^1.7.0",
     "vinyl-source-stream": "^1.0.0",
@@ -26,7 +28,7 @@
   "dependencies": {
     "material-ui": "^0.13.0",
     "react": "^0.14.0",
-    "react-dom":"^0.14.0",
+    "react-dom": "^0.14.0",
     "react-tap-event-plugin": "^0.2.1"
   }
 }
