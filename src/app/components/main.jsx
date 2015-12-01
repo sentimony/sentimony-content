@@ -38,8 +38,7 @@ const Main = React.createClass({
   render() {
 
     let containerStyle = {
-      textAlign: 'center',
-      paddingTop: '200px'
+      paddingTop: '200px',
     };
 
     let regActions = [
@@ -52,7 +51,10 @@ const Main = React.createClass({
         key={2}
         label="Войти"
         primary={true}
-        onTouchTap={this._submitReg} />
+        onTouchTap={this._submitReg}
+        style={{
+          margin: '0 0 0 10px',
+        }} />
     ];
 
     let logActions = [
@@ -65,18 +67,39 @@ const Main = React.createClass({
         key={2}
         label="Войти"
         primary={true}
-        onTouchTap={this._submitLog} />
+        onTouchTap={this._submitLog}
+        style={{
+          margin: '0 0 0 10px',
+        }} />
     ];
 
     return (
       <div style={containerStyle}>
+
+        <RaisedButton
+          label="Регистрация"
+          primary={true}
+          onTouchTap={this._openRegPopup} />
+
+        <RaisedButton
+          label="Вход"
+          secondary={true}
+          onTouchTap={this._openLogPopup}
+          style={{
+            margin: '0 0 0 10px',
+          }} />
+
         <Dialog
           title="Быстрая регистрация"
           actions={regActions}
-          ref="regPopup"
-          >
+          contentStyle={{
+            textAlign: 'center',
+            maxWidth: '304px',
+          }}
+          ref="regPopup" >
           <TextField
             hintText="Введите Email" />
+          <br/>
           <TextField
             hintText="Придумайте пароль" />
         </Dialog>
@@ -84,16 +107,17 @@ const Main = React.createClass({
         <Dialog
           title="Вход"
           actions={logActions}
-          ref="logPopup"
-          >
+          contentStyle={{
+            textAlign: 'center',
+            maxWidth: '304px',
+          }}
+          ref="logPopup" >
           <TextField
             hintText="Введите Email" />
+          <br/>
           <TextField
             hintText="Пароль" />
         </Dialog>
-
-        <RaisedButton label="Регистрация" primary={true} onTouchTap={this._openRegPopup} />
-        <RaisedButton label="Вход" secondary={true} onTouchTap={this._openLogPopup} />
 
       </div>
     );
