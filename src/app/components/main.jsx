@@ -2,8 +2,6 @@
 
 import React from 'react';
 
-import { RaisedButton, Dialog, TextField } from 'material-ui';
-
 import HomePage from './HomePage.jsx';
 
 const ThemeManager = require('material-ui/lib/styles/theme-manager');
