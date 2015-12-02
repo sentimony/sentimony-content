@@ -1,15 +1,14 @@
 {
-  "name": "lotoru-reacted",
+  "name": "herbal-base",
   "version": "0.1.0",
-  "description": "project that uses react with material-ui",
+  "description": "web instrument",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ihororlovskyi/lotoru-reacted.git"
+    "url": "https://github.com/ihororlovskyi/herbal-base.git"
   },
   "scripts": {
     "start": "gulp"
   },
-  "private": true,
   "devDependencies": {
     "babelify": "^6.1.2",
     "browser-sync": "^1.8.1",
