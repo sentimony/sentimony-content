@@ -1,13 +1,10 @@
-'use strict';
+import React from 'react'
 
-import React from 'react';
+import RegistrationPopup from './autorization/RegistrationPopup.jsx'
+import PopupLog from './autorization/PopupLog.jsx'
+import SidebarNav from './SidebarNav.jsx'
 
-import RegistrationPopup from './autorization/RegistrationPopup.jsx';
-import LoginPopup from './autorization/LoginPopup.jsx';
-import SidebarNav from './SidebarNav.jsx';
-
-const Sidebar = React.createClass({
-
+class Sidebar extends React.Component {
   render() {
 
     let containerStyle = {
@@ -15,7 +12,7 @@ const Sidebar = React.createClass({
       float: 'left',
       padding: '10px',
       boxSizing: 'border-box',
-    };
+    }
 
     return (
       <div style={containerStyle}>
@@ -23,15 +20,15 @@ const Sidebar = React.createClass({
         <h2>Sidebar</h2>
 
         <RegistrationPopup />
-        <LoginPopup />
+        <PopupLog />
 
         <hr/>
 
         <SidebarNav />
 
       </div>
-    );
-  },
-});
+    )
+  }
+}
 
-export default Sidebar;
+module.exports = Sidebar

@@ -6,6 +6,7 @@
     "type": "git",
     "url": "https://github.com/ihororlovskyi/herbal-base.git"
   },
+  "license": "MIT",
   "scripts": {
     "start": "gulp"
   },
