@@ -3,6 +3,7 @@ var dest = './build',
   mui = './node_modules/material-ui/src';
 
 module.exports = {
+
   browserSync: {
     server: {
       // We're serving the src folder as well
@@ -13,14 +14,21 @@ module.exports = {
       dest + '/**'
     ]
   },
+
   markup: {
-    src: src + "/www/**",
+    src: src + "/html/**",
     dest: dest
   },
+
   sass: {
-    src: src + "/www/**",
+    src: src + "/scss/**",
     dest: dest
   },
+
+  autoprefixer: {
+    browsers: ['last 2 versions']
+  },
+
   browserify: {
     // Enable source maps
     debug: true,
@@ -32,4 +40,5 @@ module.exports = {
       outputName: 'app.js'
     }]
   }
+
 };
