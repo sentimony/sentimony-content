@@ -1,4 +1,3 @@
-
 var users = [
   { name : 'vasya',
     email : 'vasya@email.com',

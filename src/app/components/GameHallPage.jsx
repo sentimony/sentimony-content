@@ -14,10 +14,26 @@ const GameHallPage = React.createClass({
     return (
       <div>
 
-        <h1>Game Hall Page</h1>
+        <aside>
+          <div><a href="/">Logo</a></div>
+          <div>User Info</div>
+          <div>
+            <ul>
+              <li><a href="#">Игровой зал</a></li>
+              <li><a href="#">Лотерея</a></li>
+              <li><a href="#">Турниры</a></li>
+              <li><a href="#">Акции</a></li>
+              <li><a href="#">Магазин фишек</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Видео</a></li>
+              <li><a href="#">Скачать plug-in</a></li>
+            </ul>
+          </div>
+        </aside>
 
-        <Sidebar />
-        <Wrapper />
+        <main>
+          
+        </main>
 
       </div>
     );

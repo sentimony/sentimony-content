@@ -3,6 +3,7 @@
 import React from 'react';
 
 import HomePage from './HomePage.jsx';
+import GameHallPage from './GameHallPage.jsx';
 
 const ThemeManager = require('material-ui/lib/styles/theme-manager');
 const LightRawTheme = require('material-ui/lib/styles/raw-themes/light-raw-theme');
@@ -39,7 +40,7 @@ const Main = React.createClass({
 
     return (
       <div>
-        <HomePage />
+        <GameHallPage />
       </div>
     );
   },
