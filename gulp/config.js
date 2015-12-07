@@ -17,6 +17,10 @@ module.exports = {
     src: src + "/www/**",
     dest: dest
   },
+  sass: {
+    src: src + "/www/**",
+    dest: dest
+  },
   browserify: {
     // Enable source maps
     debug: true,
