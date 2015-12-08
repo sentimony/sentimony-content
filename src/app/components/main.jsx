@@ -39,9 +39,11 @@ const Main = React.createClass({
   render() {
 
     return (
+
       <div>
         <GameHallPage />
       </div>
+
     );
   },
 });

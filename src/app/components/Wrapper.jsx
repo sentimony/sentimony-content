@@ -1,8 +1,6 @@
-'use strict';
-
 import React from 'react';
 
-const Wrapper = React.createClass({
+const WrapperNew = React.createClass({
 
   render() {
 
@@ -22,4 +20,4 @@ const Wrapper = React.createClass({
   },
 });
 
-export default Wrapper;
+export default WrapperNew;

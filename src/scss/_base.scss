@@ -1,9 +1,21 @@
+$mainTextColor: #424242;
+$mainBackgroundColor: #eaeaea;
+
 body {
   font: 400 14px/20px 'Roboto', sans-serif;
+  color: $mainTextColor;
+  background: $mainBackgroundColor;
   margin: 0;
 }
 
 a {
+  display: inline-block;
   text-decoration: none;
   transition: all .2s ease-in-out;
+  color: $mainTextColor;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
 }
