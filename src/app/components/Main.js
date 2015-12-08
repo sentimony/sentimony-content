@@ -1,13 +1,10 @@
-'use strict';
-
 import React from 'react';
-
-import HomePage from './HomePage.jsx';
-import GameHallPage from './GameHallPage.jsx';
 
 const ThemeManager = require('material-ui/lib/styles/theme-manager');
 const LightRawTheme = require('material-ui/lib/styles/raw-themes/light-raw-theme');
 const Colors = require('material-ui/lib/styles/colors');
+
+const GameHallPage = require('./GameHallPage');
 
 const Main = React.createClass({
 
@@ -48,4 +45,4 @@ const Main = React.createClass({
   },
 });
 
-export default Main;
+module.exports = Main;

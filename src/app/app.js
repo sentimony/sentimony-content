@@ -1,7 +1,8 @@
 import React from 'react';
 import {render} from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import Main from './components/Main.jsx';
+
+const { Main } = require('./components');
 
 window.React = React;
 

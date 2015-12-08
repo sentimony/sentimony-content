@@ -2,7 +2,7 @@ import React from 'react'
 
 import RegistrationPopup from './autorization/RegistrationPopup.jsx'
 import PopupLog from './autorization/PopupLog.jsx'
-import SidebarNav from './SidebarNav.jsx'
+import SidebarNav from './SidebarNav.js'
 
 class Sidebar extends React.Component {
   render() {
@@ -31,4 +31,4 @@ class Sidebar extends React.Component {
   }
 }
 
-module.exports = Sidebar
+export { Sidebar }

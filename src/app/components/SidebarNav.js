@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 
 import { List, ListItem } from 'material-ui';
@@ -23,4 +21,4 @@ const SidebarNav = React.createClass({
   },
 });
 
-export default SidebarNav;
+export { SidebarNav };
