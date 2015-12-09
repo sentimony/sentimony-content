@@ -4,7 +4,11 @@ const ThemeManager = require('material-ui/lib/styles/theme-manager');
 const LightRawTheme = require('material-ui/lib/styles/raw-themes/light-raw-theme');
 const Colors = require('material-ui/lib/styles/colors');
 
-const GameHallPage = require('./GameHallPage');
+import Logo from './Logo';
+import PopupReg from './PopupReg';
+import PopupLog from './PopupLog';
+import GlobalNav from './GlobalNav';
+import Button from './Button';
 
 const Main = React.createClass({
 
@@ -38,11 +42,19 @@ const Main = React.createClass({
     return (
 
       <div>
-        <GameHallPage />
+        <aside>
+          <Logo />
+          <PopupReg />
+          <PopupLog />
+          <GlobalNav />
+        </aside>
+        <main>
+          <Button />
+        </main>
       </div>
 
     );
   },
 });
 
-module.exports = Main;
+module.exports = Main

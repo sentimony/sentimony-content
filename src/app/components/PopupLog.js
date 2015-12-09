@@ -1,11 +1,9 @@
-'use strict';
-
-import React from 'react';
-import login from '../../mock/api-login';
+import React from 'react'
+import login from '../mock/api-login'
 
 import { RaisedButton, Dialog, TextField } from 'material-ui';
 
-export class PopupLog extends React.Component {
+class PopupLog extends React.Component {
 
   constructor() {
     super();
@@ -35,8 +33,8 @@ export class PopupLog extends React.Component {
     ];
 
     return (
+
       <span>
-      
         <RaisedButton
           label="Вход"
           secondary={true}
@@ -65,12 +63,11 @@ export class PopupLog extends React.Component {
             floatingLabelText="Пароль"
             hintText="Введите Пароль" />
 
-
-
         </Dialog>
 
       </span>
-    );
+
+    )
   }
 
   _showPopup() {
@@ -104,7 +101,6 @@ export class PopupLog extends React.Component {
       console.log(response);
     })
   }
-
 }
 
-export default PopupLog;
+module.exports = PopupLog

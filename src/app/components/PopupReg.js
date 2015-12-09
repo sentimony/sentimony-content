@@ -1,10 +1,18 @@
-'use strict';
-
-import React from 'react';
+import React from 'react'
 
 import { RaisedButton, Dialog, TextField } from 'material-ui';
 
-const RegistrationPopup = React.createClass({
+class PopupLog extends React.Component {
+
+  constructor() {
+    super();
+    this.state = {
+      modal: false,
+      showPopup: false,
+    };
+    this._showPopup = this._showPopup.bind(this);
+    this._dismissPopup = this._dismissPopup.bind(this);
+  }
 
   render() {
 
@@ -24,8 +32,8 @@ const RegistrationPopup = React.createClass({
     ];
 
     return (
-      <span>
 
+      <span>
         <RaisedButton
           style={{ marginRight: '10px' }}
           label="Pегистрация"
@@ -33,43 +41,50 @@ const RegistrationPopup = React.createClass({
           onTouchTap={this._showPopup} />
 
         <Dialog
-          title="Быстрая регистрация"
-          actions={autorizationActions}
-          autoScrollBodyContent={true}
           contentStyle={{
             textAlign: 'center',
             maxWidth: '304px',
           }}
-          ref="autorizationPopup" >
+          title="Быстрая регистрация"
+          ref="autorizationPopup"
+          open={this.state.showPopup}
+          onRequestClose={this._dismissPopup}
+          actions={autorizationActions} >
 
           <TextField
+            ref="email"
             fullWidth={true}
             floatingLabelText="Email"
             hintText="Введите Email" />
 
           <TextField
+            ref="password"
             fullWidth={true}
             floatingLabelText="Пароль"
-            hintText="Придумайте пароль" />
+            hintText="Введите Пароль" />
 
         </Dialog>
 
       </span>
-    );
-  },
+
+    )
+  }
 
   _submitPopup() {
     console.log('Submitting');
-  },
+  }
 
   _showPopup() {
-    this.refs.autorizationPopup._show();
-  },
+    this.setState({
+      showPopup: true,
+    });
+  }
 
   _dismissPopup() {
-    this.refs.autorizationPopup._dismiss();
-  },
+    this.setState({
+      showPopup: false,
+    });
+  }
+}
 
-});
-
-export default RegistrationPopup;
+module.exports = PopupLog
