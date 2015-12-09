@@ -10,7 +10,7 @@
   "scripts": {
     "start": "gulp"
   },
-  "devDependencies": {
+  "dependencies": {
     "babel-plugin-transform-object-rest-spread": "^6.3.13",
     "browser-sync": "^1.8.1",
     "browserify": "^7.0.3",
@@ -29,9 +29,7 @@
     "require-dir": "^0.1.0",
     "underscore": "^1.7.0",
     "vinyl-source-stream": "^1.0.0",
-    "watchify": "^2.2.1"
-  },
-  "dependencies": {
+    "watchify": "^2.2.1",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-2": "^6.3.13",
