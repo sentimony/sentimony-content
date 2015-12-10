@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { RaisedButton, Dialog, TextField } from 'material-ui';
 
 class PopupLog extends React.Component {

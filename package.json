@@ -36,7 +36,7 @@
     "babelify": "^7.2.0",
     "material-ui": "^0.13.0",
     "radium": "^0.15.3",
-    "react": "^0.14.0",
+    "react": "^0.14.3",
     "react-dom": "^0.14.0",
     "react-tap-event-plugin": "^0.2.1"
   }

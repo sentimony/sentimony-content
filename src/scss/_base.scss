@@ -21,6 +21,12 @@ button {
 }
 
 img {
-  display: inline-block;
+  // display: inline-block;
+  display: block;
   max-width: 100%;
 }
+
+p {
+  margin: 0 0 16px;
+}
+

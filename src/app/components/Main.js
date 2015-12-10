@@ -4,11 +4,8 @@ const ThemeManager = require('material-ui/lib/styles/theme-manager');
 const LightRawTheme = require('material-ui/lib/styles/raw-themes/light-raw-theme');
 const Colors = require('material-ui/lib/styles/colors');
 
-import Logo from './Logo';
-import PopupReg from './PopupReg';
-import PopupLog from './PopupLog';
-import GlobalNav from './GlobalNav';
-import Button from './Button';
+import Sidebar from './Sidebar';
+import Wrapper from './Wrapper';
 
 const Main = React.createClass({
 
@@ -42,15 +39,8 @@ const Main = React.createClass({
     return (
 
       <div>
-        <aside>
-          <Logo />
-          <PopupReg />
-          <PopupLog />
-          <GlobalNav />
-        </aside>
-        <main>
-          <Button />
-        </main>
+        <Sidebar />
+        <Wrapper />
       </div>
 
     );
