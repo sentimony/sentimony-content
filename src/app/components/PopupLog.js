@@ -11,8 +11,6 @@ class PopupLog extends React.Component {
       modal: false,
       showPopup: false,
     };
-    this._showPopup = this._showPopup.bind(this);
-    this._dismissPopup = this._dismissPopup.bind(this);
   }
 
   render() {
@@ -22,7 +20,7 @@ class PopupLog extends React.Component {
         key={1}
         label="Отмена"
         secondary={true}
-        onTouchTap={this._dismissPopup} />,
+        onTouchTap={this._dismissPopup.bind(this)} />,
 
       <RaisedButton
         style={{ marginLeft: '10px' }}
@@ -38,7 +36,7 @@ class PopupLog extends React.Component {
         <RaisedButton
           label="Вход"
           secondary={true}
-          onTouchTap={this._showPopup} />
+          onTouchTap={this._showPopup.bind(this)} />
 
         <Dialog
           contentStyle={{
@@ -48,7 +46,7 @@ class PopupLog extends React.Component {
           title="Вход"
           ref="autorizationPopup"
           open={this.state.showPopup}
-          onRequestClose={this._dismissPopup}
+          onRequestClose={this._dismissPopup.bind(this)}
           actions={autorizationActions} >
 
           <TextField

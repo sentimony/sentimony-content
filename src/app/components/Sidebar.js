@@ -8,13 +8,13 @@ import SidebarNav from './SidebarNav';
 class Sidebar extends React.Component {
   render() {
     return (
+      <div style={[styles.sidebar, this.props.style]}>
 
-      <div style={ styles.sidebar }>
-        <SidebarLogo style={[ styles.component, styles.divider ]} />
-        <SidebarUser style={[ styles.component, styles.divider ]} />
-        <SidebarNav style={ styles.component } />
+        <SidebarLogo style={[ styles.sidebarComponent, styles.divider ]} />
+        <SidebarUser style={[ styles.sidebarComponent, styles.divider ]} />
+        <SidebarNav style={ styles.sidebarComponent } />
+
       </div>
-
     )
   }
 }
@@ -25,15 +25,15 @@ let styles = {
     width: '300px',
     float: 'left',
     padding: '16px',
-    display: 'none',
     marginRight: '-100%',
     boxSizing: 'border-box',
+    display: 'none',
 
     '@media (min-width: 1054px)': {
       display: 'block',
     }
   },
-  component: {
+  sidebarComponent: {
     marginBottom: '16px',
   },
   divider: {
