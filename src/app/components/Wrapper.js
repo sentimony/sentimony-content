@@ -16,20 +16,10 @@ class Wrapper extends React.Component {
         <Burger />
 
         <div className='clearfix' style={styles.widgetContainer}>
-
-          <Widget3x1 />
-          <Widget1x1 />
-
-        </div>
-
-        <div className='clearfix' style={styles.widgetContainer}>
-
           <WrapPresets />
-
         </div>
 
         <div className='clearfix' style={styles.widgetContainer}>
-
           <Widget1x1 />
           <Widget1x1 />
           <Widget1x1 />
@@ -40,13 +30,14 @@ class Wrapper extends React.Component {
 
           <Widget1x1 />
           <Widget3x1 />
-
         </div>
 
         <div className='clearfix' style={styles.widgetContainer}>
+          <WrapPresets />
+        </div>
 
+        <div className='clearfix' style={styles.widgetContainer}>
           <Widget3x1Full />
-
         </div>
 
       </div>

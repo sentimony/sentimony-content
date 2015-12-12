@@ -11,7 +11,7 @@ class Widget3x1Full extends React.Component {
         <div style={styles.widgetContent}>
           <div style={styles.widgetText}>
             <h3>Widget 3x1 Full</h3>
-            <p>Minima earum magnam est</p>
+            <p>bob@email.com secret</p>
           </div>
         </div>
 
