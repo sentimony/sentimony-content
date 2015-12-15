@@ -1,11 +1,12 @@
 import Radium from 'radium'
 import React from 'react'
 import RetinaImage from 'react-retina-image'
+import { ClearFix } from 'material-ui'
 
 class SidebarUserPromo extends React.Component {
   render() {
     return (
-      <div className="clearfix" style={this.props.style} >
+      <ClearFix style={this.props.style}>
 
         <div style={styles.imageContainer} >
           <RetinaImage src={["./img/promo/motivation.png", "./img/promo/motivation@2x.png"]}
@@ -17,7 +18,7 @@ class SidebarUserPromo extends React.Component {
           <div style={styles.textPrimary} >Зарегистрируйся и получи +1 000 рублей</div>
         </div>
 
-      </div>
+      </ClearFix>
     )
   }
 }

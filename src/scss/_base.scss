@@ -29,15 +29,11 @@ img {
 
 h3 {
   // font-size: 28px;
-  margin: 0 0 4px;
+  margin: 0 0 2px;
 }
 
 p {
   margin: 0 0 16px;
-}
-
-.clearfix {
-  @include clearfix;
 }
 
 #app {

@@ -1,5 +1,6 @@
 import Radium from 'radium'
 import React from 'react'
+import { ClearFix } from 'material-ui'
 
 import Burger from './Burger';
 import WrapPresets from './WrapPresets';
@@ -7,7 +8,6 @@ import Widget1x1 from './Widget1x1';
 import Widget2x1 from './Widget2x1';
 import Widget3x1 from './Widget3x1';
 import Widget3x1Full from './Widget3x1Full';
-import { ClearFix } from 'material-ui'
 
 class Wrapper extends React.Component {
   render() {

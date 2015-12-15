@@ -1,14 +1,14 @@
 import Radium from 'radium'
 import React from 'react'
 import RetinaImage from 'react-retina-image'
-import { Toggle, Badge, RaisedButton, FontIcon } from 'material-ui'
+import { Toggle, Badge, RaisedButton, FontIcon, ClearFix } from 'material-ui'
 
 class SidebarUserInfo extends React.Component {
   render() {
     return (
-      <div className="clearfix" style={this.props.style} >
+      <ClearFix style={this.props.style}>
 
-        <div className="clearfix" style={{ marginBottom: '16px' }}>
+        <ClearFix style={{ marginBottom: '16px' }}>
           <div style={styles.imageContainer} >
             <RetinaImage src={["./img/user/avatar.png", "./img/user/avatar@2x.png"]}
               alt="User Avatar" />
@@ -21,7 +21,7 @@ class SidebarUserInfo extends React.Component {
               <span>[ico]</span>
             </Badge>
           </div>
-        </div>
+        </ClearFix>
 
         <div style={{ marginBottom: '16px' }}>
           <span>Режим</span>
@@ -51,7 +51,7 @@ class SidebarUserInfo extends React.Component {
           <span style={{ marginLeft: '16px', color: '#fff' }}>[ico]</span>
         </RaisedButton>
 
-      </div>
+      </ClearFix>
     )
   }
 }
