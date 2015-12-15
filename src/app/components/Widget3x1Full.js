@@ -5,13 +5,11 @@ class Widget3x1Full extends React.Component {
   render() {
     return (
       <div className="widget3x1full" style={styles.widget3x1full}>
-        <img style={styles.imageRatio3x1} src='./img/widget/3x1.png'/>
-        <img style={styles.imageRatio2x1} src='./img/widget/2x1.png'/>
 
         <div style={styles.widgetContent}>
           <div style={styles.widgetText}>
             <h3>Widget 3x1 Full</h3>
-            <p>bob@email.com secret</p>
+            <div>bob@email.com secret</div>
           </div>
         </div>
 
@@ -21,29 +19,19 @@ class Widget3x1Full extends React.Component {
 }
 
 let styles = {
+
   widget3x1full: {
     width: '100%',
     float: 'left',
     position: 'relative',
-  },
-  imageRatio3x1: {
-    width: '100%',
-    height: 'auto',
-    display: 'none',
+    paddingBottom: '50%',
 
     '@media (min-width: 754px)': {
-      display: 'block',
+      width: '100%',
+      paddingBottom: '33.333333%',
     },
   },
-  imageRatio2x1: {
-    width: '100%',
-    height: 'auto',
-    display: 'block',
 
-    '@media (min-width: 754px)': {
-      display: 'none',
-    },
-  },
   widgetContent: {
     backgroundColor: '#f5a623',
     position: 'absolute',
@@ -56,6 +44,7 @@ let styles = {
     overflow: 'hidden',
     zIndex: '1',
   },
+
   widgetText: {
     backgroundColor: '#fff',
     width: '140px',
@@ -78,6 +67,7 @@ let styles = {
       width: '25%',
     },
   },
+
 }
 
 module.exports = Radium(Widget3x1Full)
