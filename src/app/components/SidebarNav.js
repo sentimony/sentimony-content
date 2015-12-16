@@ -1,5 +1,8 @@
 import Radium from 'radium'
 import React from 'react'
+import { Link } from 'react-router'
+
+const selected = { color: '#f5a623' }
 
 class SidebarNav extends React.Component {
   render() {
@@ -7,7 +10,7 @@ class SidebarNav extends React.Component {
       <div style={this.props.style}>
 
         <ul style={styles.ul}>
-          <li style={styles.li}><a style={styles.a}>Игровой зал</a></li>
+          <li style={styles.li}><Link to="/game-hall" style={styles.a} activeStyle={selected}>Игровой зал</Link></li>
           <li style={styles.li}><a style={styles.a}>Лотерея</a></li>
           <li style={styles.li}><a style={styles.a}>Турниры</a></li>
           <li style={styles.li}><a style={styles.a}>Акции</a></li>

@@ -1,15 +1,48 @@
-import React from 'react';
-import {render} from 'react-dom';
-import injectTapEventPlugin from 'react-tap-event-plugin';
+import React from 'react'
+import { render } from 'react-dom'
+import { Router, Route, IndexRoute, Link, IndexLink } from 'react-router'
+import { createHistory, useBasename } from 'history'
 
-import Main from './components/Main';
+import Index from './components/Index'
+import Profile from './components/Profile'
+import GameHall from './components/GameHall'
+import Sidebar from './components/Sidebar'
+import Wrapper from './components/Wrapper'
 
-window.React = React;
+const selected = { color: '#f5a623' }
 
-injectTapEventPlugin();
+const history = useBasename(createHistory)({
+  basename: '/'
+})
 
-render(
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <ul>
+          <li><IndexLink to="/" activeStyle={selected}>home</IndexLink></li>
+          <li><Link to="/profile" activeStyle={selected}>profile</Link></li>
+          <li><Link to="/game-hall" activeStyle={selected}>game hall</Link></li>
+        </ul>
 
-  <Main />,
-  document.getElementById('app')
-);
+        <Sidebar/>
+
+        <Wrapper>
+          {this.props.children}
+        </Wrapper>
+
+      </div>
+    )
+  }
+}
+
+render((
+  <Router history={history}>
+    <Route path="/" component={App}>
+      <IndexRoute component={Index}/>
+      <Route path="/profile" component={Profile}/>
+      <Route path="/game-hall" component={GameHall}/>
+    </Route>
+  </Router>
+), document.getElementById('app'))
+
