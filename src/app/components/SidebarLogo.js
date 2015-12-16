@@ -1,17 +1,18 @@
 import Radium from 'radium'
 import React from 'react'
 import RetinaImage from 'react-retina-image'
+import { IndexLink } from 'react-router'
 
 class SidebarLogo extends React.Component {
   render() {
     return (
       <div style={[ this.props.style, styles.logo]} >
 
-        <a href="/" >
+        <IndexLink to="/">
           <RetinaImage src={["./img/brand/site-logo.png", "./img/brand/site-logo@2x.png"]}
             alt="Site Logo"
             style={styles.image} />
-        </a>
+        </IndexLink>
 
       </div>
     )

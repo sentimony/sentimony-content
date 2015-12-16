@@ -11,8 +11,10 @@ class SidebarUser extends React.Component {
     return (
       <div style={this.props.style}>
 
-        <SidebarUserPromo style={styles.sidebarUserComponent} />
-        <SidebarUserAutorize style={styles.sidebarUserComponent} />
+        <div style={{display:'none'}}>
+          <SidebarUserPromo style={styles.sidebarUserComponent} />
+          <SidebarUserAutorize style={styles.sidebarUserComponent} />
+        </div>
         <SidebarUserInfo style={styles.sidebarUserComponent} />
 
       </div>

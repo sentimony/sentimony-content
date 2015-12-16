@@ -13,6 +13,8 @@ class Index extends React.Component {
   render() {
     return (
       <div>
+        <h1>Главная</h1>
+
         <ClearFix style={styles.widgetContainer}>
           <Widget3x1Full />
         </ClearFix>

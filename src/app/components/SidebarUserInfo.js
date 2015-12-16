@@ -2,6 +2,7 @@ import Radium from 'radium'
 import React from 'react'
 import RetinaImage from 'react-retina-image'
 import { Toggle, Badge, RaisedButton, FontIcon, ClearFix, SvgIcon } from 'material-ui'
+import { Link } from 'react-router'
 
 class SidebarUserInfo extends React.Component {
   render() {
@@ -15,7 +16,7 @@ class SidebarUserInfo extends React.Component {
           </div>
 
           <div style={styles.textContainer} >
-            <a><span style={styles.userName} >Джордж Вашингтон</span></a>
+            <Link to="/profile"><span style={styles.userName} >Джордж Вашингтон</span></Link>
 
             <Badge
               style={{

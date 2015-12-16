@@ -27,7 +27,9 @@ const Main = React.createClass({
     return (
       <div>
         <Sidebar />
-        <Wrapper />
+        <Wrapper>
+          {this.props.children}
+        </Wrapper>
       </div>
     );
   },
