@@ -17,6 +17,10 @@ class Wrapper extends React.Component {
         <Burger />
 
         <ClearFix style={styles.widgetContainer}>
+          <Widget3x1Full />
+        </ClearFix>
+
+        <ClearFix style={styles.widgetContainer}>
           <WrapPresets />
         </ClearFix>
 

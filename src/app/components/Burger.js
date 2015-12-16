@@ -1,6 +1,6 @@
 import Radium from 'radium'
 import React from 'react'
-import { RaisedButton, LeftNav, MenuItem } from 'material-ui'
+import { RaisedButton, LeftNav, MenuItem, SvgIcon } from 'material-ui'
 
 import Sidebar from './Sidebar';
 
@@ -14,11 +14,20 @@ class Burger extends React.Component {
   render() {
     const navTransfrom = this.state.navOpened ? 0 : -300;
     return (
-      <div style={ styles.burger }>
+      <div style={styles.burger}>
 
-        <RaisedButton label="Burger"
+        <RaisedButton
           primary={true}
-          onTouchTap={this._toggleLeftNav.bind(this)}/>
+          label="Меню"
+          labelPosition="after"
+          labelStyle={{paddingLeft:'8px'}}
+          onTouchTap={this._toggleLeftNav.bind(this)}>
+
+          <SvgIcon style={styles.iconMenu}>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </SvgIcon>
+
+        </RaisedButton>
 
         <LeftNav ref="leftNav"
           onNavOpen={()=>this.setState({ navOpened : true })}
@@ -37,7 +46,6 @@ class Burger extends React.Component {
     )
   }
 
-
   _toggleLeftNav() {
     this.refs.leftNav.toggle();
   }
@@ -51,6 +59,13 @@ let styles = {
     '@media (min-width: 1054px)': {
       display: 'none',
     },
+  },
+  iconMenu: {
+    fill: '#fff',
+    padding: '0 0 0 12px',
+    marginTop: '-2px',
+    verticalAlign: 'middle',
+    lineHeight: '36px',
   }
 }
 

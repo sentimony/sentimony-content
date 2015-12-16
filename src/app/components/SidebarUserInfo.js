@@ -1,7 +1,7 @@
 import Radium from 'radium'
 import React from 'react'
 import RetinaImage from 'react-retina-image'
-import { Toggle, Badge, RaisedButton, FontIcon, ClearFix } from 'material-ui'
+import { Toggle, Badge, RaisedButton, FontIcon, ClearFix, SvgIcon } from 'material-ui'
 
 class SidebarUserInfo extends React.Component {
   render() {
@@ -9,18 +9,37 @@ class SidebarUserInfo extends React.Component {
       <ClearFix style={this.props.style}>
 
         <ClearFix style={{ marginBottom: '16px' }}>
+          
           <div style={styles.imageContainer} >
-            <RetinaImage src={["./img/user/avatar.png", "./img/user/avatar@2x.png"]}
-              alt="User Avatar" />
+            <RetinaImage src={["./img/user/avatar.png", "./img/user/avatar@2x.png"]} alt="User Avatar"/>
           </div>
 
           <div style={styles.textContainer} >
-            <span style={styles.userName} >Джордж Вашингтон</span>
+            <a><span style={styles.userName} >Джордж Вашингтон</span></a>
 
-            <Badge badgeContent={3} secondary={true} style={{ float: 'right' }}>
-              <span>[ico]</span>
+            <Badge
+              style={{
+                float:'right',
+                padding: '12px 20px 12px 12px',
+              }}
+              badgeStyle={{
+                backgroundColor:'#d12f02',
+                color:'#fff',
+                height: '30px',
+                width: '30px',
+                fontSize: '16px',
+                top: '-6px'
+              }}
+              // secondary={true}
+              badgeContent={3}>
+
+              <SvgIcon style={styles.iconComment}>
+                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+              </SvgIcon>
+
             </Badge>
           </div>
+          
         </ClearFix>
 
         <div style={{ marginBottom: '16px' }}>
@@ -44,11 +63,19 @@ class SidebarUserInfo extends React.Component {
 
         <div style={{ marginBottom: '16px' }}>
           <span>Баллы</span>
-          <span style={{ float: 'right' }}>346</span>
+          <span style={{ float: 'right' }}>347</span>
         </div>
 
-        <RaisedButton primary={true} label="Касса" labelPosition="after" >
-          <span style={{ marginLeft: '16px', color: '#fff' }}>[ico]</span>
+        <RaisedButton
+          primary={true}
+          label="Касса"
+          labelStyle={{paddingLeft:'8px'}}
+          labelPosition="after">
+
+          <SvgIcon style={styles.iconWallet}>
+            <path d="M21 18v1c0 1.1-.9 2-2 2H5c-1.11 0-2-.9-2-2V5c0-1.1.89-2 2-2h14c1.1 0 2 .9 2 2v1h-9c-1.11 0-2 .9-2 2v8c0 1.1.89 2 2 2h9zm-9-2h10V8H12v8zm4-2.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+          </SvgIcon>
+
         </RaisedButton>
 
       </ClearFix>
@@ -57,16 +84,19 @@ class SidebarUserInfo extends React.Component {
 }
 
 let styles = {
+
   imageContainer: {
     float: 'left',
     maxWidth: '40px',
     marginRight: '-100%',
   },
+
   textContainer: {
     marginLeft: '40px',
-    paddingLeft: '10px',
   },
+
   userName: {
+    paddingLeft: '10px',
     fontSize: '16px',
     lineHeight: '46px',
     whiteSpace: 'nowrap',
@@ -74,7 +104,21 @@ let styles = {
     float: 'left',
     maxWidth: '155px',
     textOverflow: 'ellipsis',
-  }
+  },
+
+  iconComment: {
+    fill: '#F8BA2B',
+    verticalAlign: 'middle',
+  },
+
+  iconWallet: {
+    fill: '#fff',
+    padding: '0 0 0 12px',
+    marginTop: '-2px',
+    verticalAlign: 'middle',
+    lineHeight: '36px',
+  },
+
 }
 
 module.exports = Radium(SidebarUserInfo)

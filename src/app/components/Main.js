@@ -1,8 +1,6 @@
-import React from 'react';
-
-const ThemeManager = require('material-ui/lib/styles/theme-manager');
-const LightRawTheme = require('material-ui/lib/styles/raw-themes/light-raw-theme');
-const Colors = require('material-ui/lib/styles/colors');
+import React from 'react'
+import ThemeManager from 'material-ui/lib/styles/theme-manager'
+import VaBankRawTheme from '../styles/raw-themes/vabank-raw-theme'
 
 import Sidebar from './Sidebar';
 import Wrapper from './Wrapper';
@@ -15,7 +13,7 @@ const Main = React.createClass({
 
   getInitialState () {
     return {
-      muiTheme: ThemeManager.getMuiTheme(LightRawTheme),
+      muiTheme: ThemeManager.getMuiTheme(VaBankRawTheme),
     };
   },
 
@@ -25,24 +23,12 @@ const Main = React.createClass({
     };
   },
 
-  componentWillMount() {
-    let newMuiTheme = ThemeManager.modifyRawThemePalette(this.state.muiTheme, {
-      primary1Color: Colors.grey400,
-      accent1Color: Colors.amber500
-    });
-
-    this.setState({muiTheme: newMuiTheme});
-  },
-
   render() {
-
     return (
-
       <div>
         <Sidebar />
         <Wrapper />
       </div>
-
     );
   },
 });

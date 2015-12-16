@@ -9,6 +9,7 @@ window.React = React;
 injectTapEventPlugin();
 
 render(
+
   <Main />,
   document.getElementById('app')
 );
