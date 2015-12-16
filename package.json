@@ -1,10 +1,10 @@
 {
-  "name": "herbal-base",
+  "name": "coriolan",
   "version": "0.1.0",
   "description": "web instrument",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ihororlovskyi/herbal-base.git"
+    "url": "https://github.com/ihororlovskyi/coriolan.git"
   },
   "license": "MIT",
   "scripts": {
