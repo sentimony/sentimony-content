@@ -1,10 +1,10 @@
 {
-  "name": "coriolan",
+  "name": "coriolan-gulp",
   "version": "0.1.0",
   "description": "web instrument",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ihororlovskyi/coriolan.git"
+    "url": "https://github.com/coriolanix/coriolan-gulp.git"
   },
   "license": "MIT",
   "scripts": {
