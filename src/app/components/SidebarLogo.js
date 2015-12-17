@@ -9,9 +9,7 @@ class SidebarLogo extends React.Component {
       <div style={[ this.props.style, styles.logo]} >
 
         <IndexLink to="/">
-          <RetinaImage src={["./img/brand/site-logo.png", "./img/brand/site-logo@2x.png"]}
-            alt="Site Logo"
-            style={styles.image} />
+          <RetinaImage src={["./img/brand/site-logo.png", "./img/brand/site-logo@2x.png"]} alt="Site Logo" style={styles.image} />
         </IndexLink>
 
       </div>
@@ -26,6 +24,8 @@ let styles = {
   image: {
     maxWidth: '180px',
     // padding: '10px',
+    width: '100%',
+    height: 'auto',
     boxSizing: 'border-box',
   }
 }

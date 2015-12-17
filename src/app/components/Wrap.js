@@ -1,14 +1,14 @@
 import Radium from 'radium'
 import React from 'react'
 
-import Burger from './Burger';
+import WrapBurger from './WrapBurger';
 
-class Wrapper extends React.Component {
+class Wrap extends React.Component {
   render() {
     return (
       <div style={styles.wrapper}>
 
-        <Burger />
+        <WrapBurger />
 
         {this.props.children}
 
@@ -29,4 +29,4 @@ let styles = {
   },
 }
 
-module.exports = Radium(Wrapper)
+module.exports = Radium(Wrap)

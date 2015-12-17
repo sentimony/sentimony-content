@@ -12,7 +12,7 @@ class SidebarUserInfo extends React.Component {
         <ClearFix style={{ marginBottom: '16px' }}>
           
           <div style={styles.imageContainer} >
-            <RetinaImage src={["./img/user/avatar.png", "./img/user/avatar@2x.png"]} alt="User Avatar"/>
+            <RetinaImage src={["./img/user/avatar-sm.png", "./img/user/avatar-sm@2x.png"]} alt="User Small Avatar"/>
           </div>
 
           <div style={styles.textContainer} >
@@ -31,7 +31,6 @@ class SidebarUserInfo extends React.Component {
                 fontSize: '16px',
                 top: '-6px'
               }}
-              // secondary={true}
               badgeContent={3}>
 
               <SvgIcon style={styles.iconComment}>
@@ -69,9 +68,9 @@ class SidebarUserInfo extends React.Component {
 
         <RaisedButton
           primary={true}
-          label="Касса"
+          label='Касса'
           labelStyle={{paddingLeft:'8px'}}
-          labelPosition="after">
+          labelPosition='after'>
 
           <SvgIcon style={styles.iconWallet}>
             <path d="M21 18v1c0 1.1-.9 2-2 2H5c-1.11 0-2-.9-2-2V5c0-1.1.89-2 2-2h14c1.1 0 2 .9 2 2v1h-9c-1.11 0-2 .9-2 2v8c0 1.1.89 2 2 2h9zm-9-2h10V8H12v8zm4-2.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
@@ -108,7 +107,7 @@ let styles = {
   },
 
   iconComment: {
-    fill: '#F8BA2B',
+    fill: '#f5a623',
     verticalAlign: 'middle',
   },
 
@@ -120,6 +119,6 @@ let styles = {
     lineHeight: '36px',
   },
 
-}
+ }
 
 module.exports = Radium(SidebarUserInfo)

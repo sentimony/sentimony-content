@@ -21,7 +21,7 @@
     "gulp-notify": "^2.1.0",
     "gulp-sass": "^2.1.0",
     "gulp-util": "^3.0.1",
-    "history": "^1.13.1",
+    "history": "^1.16.0",
     "pretty-hrtime": "^0.2.2",
     "react-modal": "^0.6.1",
     "react-retina-image": "^2.0.0",

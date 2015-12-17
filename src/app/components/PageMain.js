@@ -3,9 +3,9 @@ import ThemeManager from 'material-ui/lib/styles/theme-manager'
 import VaBankRawTheme from '../styles/raw-themes/vabank-raw-theme'
 
 import Sidebar from './Sidebar';
-import Wrapper from './Wrapper';
+import Wrap from './Wrap';
 
-const Main = React.createClass({
+const PageMain = React.createClass({
 
   childContextTypes: {
     muiTheme: React.PropTypes.object
@@ -27,12 +27,12 @@ const Main = React.createClass({
     return (
       <div>
         <Sidebar />
-        <Wrapper>
+        <Wrap>
           {this.props.children}
-        </Wrapper>
+        </Wrap>
       </div>
     );
   },
 });
 
-module.exports = Main
+module.exports = PageMain

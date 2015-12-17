@@ -15,6 +15,7 @@ class SidebarUser extends React.Component {
           <SidebarUserPromo style={styles.sidebarUserComponent} />
           <SidebarUserAutorize style={styles.sidebarUserComponent} />
         </div>
+
         <SidebarUserInfo style={styles.sidebarUserComponent} />
 
       </div>
