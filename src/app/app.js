@@ -8,18 +8,19 @@ import PageMain from './components/PageMain'
 import PageIndex from './components/PageIndex'
 import PageProfile from './components/PageProfile'
 import PageGameHall from './components/PageGameHall'
+import PageCoriolanUi from './components/PageCoriolanUi'
 
 window.React = React;
 
 injectTapEventPlugin();
 
-const history = createHashHistory({
-  queryKey: false
-});
+// const history = createHashHistory({
+//   queryKey: false
+// });
 
-// const history = useBasename(createHistory)({
-//   basename: '/'
-// })
+const history = useBasename(createHistory)({
+  basename: '/'
+})
 
 const selected = { color: '#f5a623' }
 
@@ -29,6 +30,7 @@ render((
       <IndexRoute component={PageIndex}/>
       <Route path="/profile" component={PageProfile}/>
       <Route path="/game-hall" component={PageGameHall}/>
+      <Route path="/coriolan-ui" component={PageCoriolanUi}/>
     </Route>
   </Router>
 ), document.getElementById('app'))

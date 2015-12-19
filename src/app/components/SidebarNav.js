@@ -16,6 +16,7 @@ class SidebarNav extends React.Component {
           <li><a style={styles.a}>Новости</a></li>
           <li><a style={styles.a}>Видео</a></li>
           <li><a style={styles.a}>Скачать plug-in</a></li>
+          <li><Link to="/coriolan-ui" style={styles.a} activeStyle={selected}>Coriolan UI</Link></li>
         </ul>
         
       </div>

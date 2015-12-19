@@ -18,6 +18,7 @@ class Wrap extends React.Component {
 }
 
 let styles = {
+
   wrapper: {
     display: 'block',
     padding: '16px',
@@ -27,6 +28,7 @@ let styles = {
       marginLeft: '300px',
     },
   },
+
 }
 
 module.exports = Radium(Wrap)

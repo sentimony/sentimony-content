@@ -16,6 +16,7 @@ class PageProfile extends React.Component {
             src={["./img/user/avatar-lg.png", "./img/user/avatar-lg@2x.png"]}
             alt="User Large Avatar"
             style={styles.avatar}/>
+
           <div style={styles.text}>
             <div style={{fontSize:'16px'}}>Профиль</div>
             <div style={{fontSize:'52px'}}>Вашингтон Джордж</div>
@@ -24,16 +25,15 @@ class PageProfile extends React.Component {
           </div>
         </ClearFix>
 
-        <div>Уровень: Охотник за Удачей</div>
-        <div>Персональные данные [ico]</div>
-
-        <div>Статистика за Неделю Реальные деньги в любимых играх</div>
-
-        <div>Задания</div>
-        <div>Выполняй задания получай фишки</div>
-
-        <div>Ваши любимые игры</div>
-        <div>Игры в которые вы играли</div>
+        <span style={{ display:'none' }}>
+          <div>Уровень: Охотник за Удачей</div>
+          <div>Персональные данные [ico]</div>
+          <div>Статистика за Неделю Реальные деньги в любимых играх</div>
+          <div>Задания</div>
+          <div>Выполняй задания получай фишки</div>
+          <div>Ваши любимые игры</div>
+          <div>Игры в которые вы играли</div>
+        </span>
 
         <ClearFix style={styles.widgetContainer}>
           <Widget2x1 />
@@ -54,6 +54,7 @@ let styles = {
     backgroundSize: 'cover',
     borderRadius: '4px 4px 0 0',
     padding: '16px',
+    marginBottom: '16px',
   },
 
   avatar: {

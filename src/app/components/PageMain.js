@@ -1,6 +1,7 @@
 import React from 'react'
-import ThemeManager from 'material-ui/lib/styles/theme-manager'
+// import ThemeManager from 'material-ui/lib/styles/theme-manager'
 import VaBankRawTheme from '../styles/raw-themes/vabank-raw-theme'
+import VaBankRawThemeManager from '../styles/vabank-theme-manager'
 
 import Sidebar from './Sidebar';
 import Wrap from './Wrap';
@@ -13,7 +14,7 @@ const PageMain = React.createClass({
 
   getInitialState () {
     return {
-      muiTheme: ThemeManager.getMuiTheme(VaBankRawTheme),
+      muiTheme: VaBankRawThemeManager.getMuiTheme(VaBankRawTheme),
     };
   },
 
