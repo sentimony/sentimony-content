@@ -9,6 +9,7 @@ class SidebarNav extends React.Component {
 
         <ul style={styles.ul}>
           <li><Link to="/game-hall" style={styles.a} activeStyle={selected}>Игровой зал</Link></li>
+          <li><Link to="/coriolan-ui" style={styles.a} activeStyle={selected}>Coriolan UI</Link></li>
           <li><a style={styles.a}>Лотерея</a></li>
           <li><a style={styles.a}>Турниры</a></li>
           <li><a style={styles.a}>Акции</a></li>
@@ -16,7 +17,6 @@ class SidebarNav extends React.Component {
           <li><a style={styles.a}>Новости</a></li>
           <li><a style={styles.a}>Видео</a></li>
           <li><a style={styles.a}>Скачать plug-in</a></li>
-          <li><Link to="/coriolan-ui" style={styles.a} activeStyle={selected}>Coriolan UI</Link></li>
         </ul>
         
       </div>
