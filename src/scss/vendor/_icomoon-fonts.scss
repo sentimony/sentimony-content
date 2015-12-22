@@ -18,6 +18,8 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  // custom
+  // font-size: 1.75em;
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
@@ -32,16 +34,33 @@
   left: -7px;
 }
 
+.icon-expand-less:before {
+    content: "\e904";
+}
+.icon-expand-more:before {
+    content: "\e905";
+}
+.icon-arrow-forward:before {
+    content: "\e906";
+}
+.icon-lock:before {
+    content: "\e907";
+}
+.icon-person:before {
+    content: "\e908";
+}
+.icon-close:before {
+    content: "\e909";
+}
 .icon-verified-user:before {
-  content: "\e900";
+    content: "\e900";
 }
 .icon-menu:before {
-  content: "\e901";
+    content: "\e901";
 }
 .icon-comment:before {
-  content: "\e902";
+    content: "\e902";
 }
 .icon-wallet:before {
-  content: "\e903";
+    content: "\e903";
 }
-

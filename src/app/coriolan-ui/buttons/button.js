@@ -6,8 +6,8 @@ class Button extends React.Component {
   render() {
     return (
       <a style={[ styles.button, this.props.style ]}>
+        <span>{this.props.children}</span>
         <Ink/>
-        {this.props.children}
       </a>
     )
   }

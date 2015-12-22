@@ -1,16 +1,15 @@
 import React from 'react'
 import Radium from 'radium'
 
-import PrimaryButton from './../coriolan-ui/primary-button'
-import GhostButton from './../coriolan-ui/ghost-button'
-import LinkButton from './../coriolan-ui/link-button'
+import { PrimaryButton, GhostButton, LinkButton, Popup } from './../coriolan-ui'
 
 class PageCoriolanUi extends React.Component {
   render() {
     return (
       <div>
-        <PrimaryButton style={{ marginRight:'10px' }}>Primary Button</PrimaryButton>
 
+        <h2>Buttons:</h2>
+        <PrimaryButton style={{ marginRight:'10px' }}>Primary Button</PrimaryButton>
         <GhostButton style={{ marginRight:'10px' }}>Ghost Button</GhostButton>
         <LinkButton>Link Button</LinkButton>
 
@@ -31,6 +30,32 @@ class PageCoriolanUi extends React.Component {
           <span className='icon-menu icon-at-button'></span>
           Icon Link
         </LinkButton>
+
+        <br/>
+        <br/>
+
+        <h2>SVG Icons:</h2>
+        <div>
+          <span className='icon-expand-less'></span>
+          <span className='icon-expand-more'></span>
+          <span className='icon-arrow-forward'></span>
+          <span className='icon-lock'></span>
+          <span className='icon-close'></span>
+          <span className='icon-menu'></span>
+          <span className='icon-wallet'></span>
+          <span className='icon-comment'></span>
+          <span className='icon-verified-user'></span>
+        </div>
+
+        <br/>
+        <br/>
+
+        <h2>Popup:</h2>
+        <Popup openPopupText='Open Popupsssss'>
+          <h1>Modal Content</h1>
+          <p>siijsfgjksdnjgnsjkgn</p>
+        </Popup>
+
       </div>
     )
   }

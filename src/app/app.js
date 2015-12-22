@@ -14,13 +14,13 @@ window.React = React;
 
 injectTapEventPlugin();
 
-// const history = createHashHistory({
-//   queryKey: false
-// });
+const history = createHashHistory({
+  queryKey: false
+});
 
-const history = useBasename(createHistory)({
-  basename: '/'
-})
+// const history = useBasename(createHistory)({
+//   basename: '/'
+// })
 
 const selected = { color: '#f5a623' }
 

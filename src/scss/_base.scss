@@ -21,6 +21,12 @@ button {
   cursor: pointer;
 }
 
+a {
+  @include selection(true) {
+    background-color: #ffbb52;
+  }
+}
+
 img {
   // display: inline-block;
   display: block;
@@ -41,3 +47,30 @@ p {
   min-width: 320px;
   max-width: 1792px;
 }
+
+
+
+.ReactModal__Overlay {
+  opacity: 0;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+  @include transition(opacity .15s ease-in-out);
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+// .ReactModal__Content {
+//   @include transform(scale(0.5) translateX(-50%));
+// }
+
+// .ReactModal__Content--after-open {
+//   @include transform(scale(1) translateX(-50%));
+// }
+
+// .ReactModal__Content--before-close {
+//   @include transform(scale(0.5) translateX(-50%));
+// }

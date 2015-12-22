@@ -28,7 +28,7 @@ let styles = {
     marginRight: '-100%',
     boxSizing: 'border-box',
     display: 'none',
-    zIndex: '20',
+    // zIndex: '20',
 
     '@media (min-width: 1054px)': {
       display: 'block',
