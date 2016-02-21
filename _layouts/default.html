@@ -1,36 +1,61 @@
 ---
 layout: compress
 ---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Coriolan UI</title>
-  <meta name="description" content="Coriolan UI - front-end framework">
-  <meta name="keywords" content="Coriolan, UI, front-end, framework">
+    <title>Coriolan UI</title>
+    <meta name="description" content="Coriolan UI - front-end framework">
+    <meta name="keywords" content="Coriolan, UI, front-end, framework">
 
-  <link href='https://fonts.googleapis.com/css?family=Montserrat|PT+Serif:400italic' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|PT+Serif:400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ page.site-id }}.css">
 
-  <link rel="shortcut icon" href="{{ site.baseurl }}/assets/img/favicons/favicon-32.png">
-  <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/img/favicons/favicon-144.png">
+    <link rel="shortcut icon" href="{{ site.baseurl }}/assets/img/favicons/{{ page.site-id }}-32.png">
+    <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/img/favicons/{{ page.site-id }}-144.png">
 </head>
 <body>
 
-  {{ content }}
+    {{ content }}
 
-  <script src="{{ site.baseurl }}/assets/js/vendor/jquery-1.11.3.min.js"></script>
-  <script src="{{ site.baseurl }}/assets/js/main.js"></script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-73758928-1', 'auto');
-    ga('send', 'pageview');
-  </script>
+    <script src="{{ site.baseurl }}/assets/js/vendor/jquery-1.11.3.min.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/main.js"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-73758928-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- not for prod -->
+    <div style="
+        position: fixed;
+        top: 50px;
+        right: 0;
+        padding: 10px;
+        background: rgb(27,32,50);
+        font-size: 12px;
+        z-index: 200;
+        border-radius: 5px 0 0 5px;
+    ">
+        <nav>
+            <a href="{{ site.baseurl }}/">home</a>
+            <br>
+            <a href="{{ site.baseurl }}/vu3">vu3</a>
+            <br>
+            <a href="{{ site.baseurl }}/vu5">vu5</a>
+            <br>
+            <a href="{{ site.baseurl }}/vu10">vu10</a>
+            <br>
+            <a href="{{ site.baseurl }}/korona">korona</a>
+        </nav>
+    </div>
 </body>
 </html>

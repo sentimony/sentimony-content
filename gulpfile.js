@@ -14,7 +14,7 @@ var messages = {
  */
 gulp.task('jekyll-build', function (done) {
     browserSync.notify(messages.jekyllBuild);
-    return cp.spawn('jekyll', ['build '], {stdio: 'inherit'})
+    return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
         .on('close', done);
 });
 
@@ -44,13 +44,15 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
  */
 gulp.task('sass', function () {
     return gulp.src([
-            '_scss/coriolan.scss',
-            '_scss/vu5.scss',
+            '_scss/index.scss',
+            '_scss/korona.scss',
             '_scss/vu10.scss',
-            '_scss/korona.scss'
+            '_scss/vu3.scss',
+            '_scss/vu5.scss'
         ])
         .pipe(sass({
             includePaths: ['scss'],
+            outputStyle: 'expanded',
             onError: browserSync.notify
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))

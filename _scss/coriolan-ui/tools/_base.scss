@@ -1,0 +1,56 @@
+// Basic
+html {
+
+}
+
+body {
+    background-color: #ccc;
+    background-image: url($bodyBgImage);
+    background-position: top center;
+}
+
+// Selection colors
+::selection {
+
+}
+
+// Links
+a {
+
+  &:hover {
+
+  }
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6, p {
+
+}
+
+h1 {
+
+}
+
+h2 {
+  
+}
+
+h3 {
+  
+}
+
+h4 {
+  
+}
+
+h5 {
+  
+}
+
+h6 {
+  
+}
+
+p {
+  
+}
