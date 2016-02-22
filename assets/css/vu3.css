@@ -846,6 +846,16 @@ body {
   background-position: top center;
 }
 
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .row {
   margin: 0 -2%;
 }
@@ -950,4 +960,107 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
+}
+
+.modal {
+  position: relative;
+  background: #fff;
+  width: 100%;
+  margin: 40px auto;
+  text-align: center;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  overflow: hidden;
+}
+
+.modal--cashbox {
+  max-width: 684px;
+}
+
+.modal__header {
+  font-size: 20px;
+  padding: 0 55px;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #249e49;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.modal__header [class^="icon-"] {
+  font-size: 24px;
+  margin-right: 5px;
+  position: relative;
+  top: 3px;
+}
+
+.modal__body {
+  background: #f0f0f0;
+}
+
+.modal__footer {
+  height: 50px;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+
+.modal__footer [class^="icon-"] {
+  font-size: 16px;
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+}
+
+.cashbox-tabs__nav {
+  background: #249e49;
+  text-align: center;
+}
+
+.cashbox-tabs__nav li {
+  display: inline-block;
+  padding: 16px 0;
+  position: relative;
+}
+
+.cashbox-tabs__nav li.selected:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -6px;
+  border: 6px solid transparent;
+  border-top-width: 0 6px 6px;
+  border-bottom-color: #fff;
+}
+
+.cashbox-tabs__nav li a {
+  display: block;
+  color: #fff;
+  border: 1px solid transparent;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+  padding: 6px 12px;
+}
+
+.cashbox-tabs__nav li a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.cashbox-tabs__nav li a.selected {
+  border-color: #fff;
+}
+
+.rub-to-fun__choice {
+  float: left;
+  width: 50%;
+  background: #fff;
+  margin-bottom: 16px;
+}
+
+.rub-to-fun__label {
+  cursor: pointer;
 }
