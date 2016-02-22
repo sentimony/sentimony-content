@@ -1,4 +1,95 @@
+@import 'vendor/remodal/remodal-index';
+@import 'vendor/icomoon';
+
 // body
 $bodyBgImage: '../img/bg/index.jpg';
 
 @import 'coriolan-ui/coriolan-ui';
+
+.modal {
+    position: relative;
+    background: #fff;
+    width: 100%;
+    margin: 40px auto;
+    text-align: center;
+    border-radius: 4px;
+    overflow: hidden;
+
+    &--cashbox {
+        max-width: 684px;
+    }
+
+    &__header {
+        font-size: 20px;
+        padding: 0 55px;
+        height: 50px;
+        line-height: 50px;
+        border-bottom: 1px solid rgba(#000, .1);
+        box-sizing: border-box;
+        background: red;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 500;
+
+        [class^="icon-"] {
+            font-size: 24px;
+            margin-right: 5px;
+            position: relative;
+            top: 3px;
+        }
+    }
+
+    &__body {
+        background: #f0f0f0;
+    }
+
+    &__footer {
+        height: 50px;
+        line-height: 50px;
+        text-transform: uppercase;
+
+        [class^="icon-"] {
+            font-size: 16px;
+            margin-left: 5px;
+            position: relative;
+            top: 2px;
+        }
+    }
+}
+
+.cashbox-tabs {
+
+    &__nav {
+        margin: 0;
+        padding: 0;
+        background: #249e49;
+        text-align: center;
+
+        li {
+            display: inline-block;
+
+            &.selected {
+                
+            }
+
+            a {
+                display: block;
+                color: #fff;
+                border: 1px solid transparent;
+                border-radius: 20px;
+                padding: 6px 12px;
+
+                &:hover {
+                    background: rgba(#000, .1);
+                }
+
+                &.selected {
+                    border-color: #fff;
+                }
+            }
+        }
+    }
+
+    &__single-tab {
+    }
+}
