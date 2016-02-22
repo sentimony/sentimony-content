@@ -2,7 +2,7 @@
 @import 'vendor/icomoon';
 
 // body
-$bodyBg: '../img/bg/vu5.jpg';
-$bodyFont: 'Open Sans';
+$bodyBg: #ccc url(../img/bg/korona.jpg) top center;
+$bodyFont: 400 14px/1.3 Helvetica, Arial, sans-serif;
 
 @import 'coriolan-ui/coriolan-ui';

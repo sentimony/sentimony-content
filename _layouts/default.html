@@ -41,25 +41,22 @@ layout: compress
     <!-- not for prod -->
     <div style="
         position: fixed;
-        top: 50px;
-        right: 0;
+        top: 0;
+        left: 0;
         padding: 10px;
         background: rgb(27,32,50);
         font-size: 12px;
         z-index: 200;
-        border-radius: 5px 0 0 5px;
+        border-radius: 0 0 5px 0;
     ">
         <nav>
-            <a href="{{ site.baseurl }}/">home</a>
-            <br>
-            <a href="{{ site.baseurl }}/vu3">vu3</a>
-            <br>
-            <a href="{{ site.baseurl }}/vu5">vu5</a>
-            <br>
-            <a href="{{ site.baseurl }}/vu10">vu10</a>
-            <br>
-            <a href="{{ site.baseurl }}/korona">korona</a>
+            <a href="{{ site.baseurl }}/" {% if page.url == '/' %}style="color:red"{% endif %}>Home</a>
+            <a href="{{ site.baseurl }}/vu3" {% if page.url contains 'vu3' %}style="color:red"{% endif %}>Vu3</a>
+            <a href="{{ site.baseurl }}/vu5" {% if page.url contains 'vu5' %}style="color:red"{% endif %}>Vu5</a>
+            <a href="{{ site.baseurl }}/vu10" {% if page.url contains 'vu10' %}style="color:red"{% endif %}>Vu10</a>
+            <a href="{{ site.baseurl }}/korona" {% if page.url contains 'korona' %}style="color:red"{% endif %}>Korona</a>
         </nav>
+        <a href="#cashbox">Касса</a>
     </div>
 </body>
 </html>

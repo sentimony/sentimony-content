@@ -4,11 +4,8 @@ html {
 }
 
 body {
-    background-color: #ccc;
-    background-image: url($bodyBgImage);
-    background-position: top center;
-    font-family: $bodyFontFamily;
-    font-size: 14px;
+    font: $bodyFont;
+    background: $bodyBg;
 }
 
 // Selection colors
@@ -58,6 +55,10 @@ p {
 
 }
 
+i {
+    font-family: 'PT Serif';
+}
+
 // Lists
 ul {
     margin: 0;
@@ -70,7 +71,6 @@ ul {
 }
 
 // Images
-
 img {
     display: block;
     width: 100%;
