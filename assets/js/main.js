@@ -10,7 +10,7 @@ $('.js-remodal').remodal({
 * EasyTabs
 * https://github.com/JangoSteve/jQuery-EasyTabs
 */
-$('.js-cashbox-tabs').easytabs({
+$('.js-easytabs').easytabs({
     animate: true,
     animationSpeed: 100,
     // tabs: '.cashbox-tabs__nav > ul > li',

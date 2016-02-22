@@ -1,0 +1,12 @@
+.btn {
+    display: inline-block;
+    border-radius: 50px;
+    text-transform: uppercase;
+    line-height: 40px;
+    padding: 0 16px;
+
+    &--success {
+        color: #fff;
+        background: #249E49;
+    }
+}

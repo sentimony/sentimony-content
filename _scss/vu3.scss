@@ -2,7 +2,8 @@
 @import 'vendor/icomoon';
 
 // body
-$bodyBgImage: '../img/bg/vu3.png';
+$bodyBg: '../img/bg/vu3.png';
+$bodyFont: 'Open Sans';
 
 @import 'coriolan-ui/coriolan-ui';
 
@@ -57,7 +58,7 @@ $bodyBgImage: '../img/bg/vu3.png';
     }
 }
 
-.cashbox-tabs {
+.easytabs {
 
     &__nav {
         background: #249e49;
@@ -75,9 +76,10 @@ $bodyBgImage: '../img/bg/vu3.png';
                     bottom: 0;
                     left: 50%;
                     margin-left: -6px;
-                    border: 6px solid transparent;
-                    border-top-width: 0 6px 6px;
-                    border-bottom-color: #fff;
+                    border-color: transparent;
+                    border-style: solid;
+                    border-width: 0 6px 6px;
+                    border-bottom-color: #f0f0f0;
                 }
             }
 
@@ -98,19 +100,50 @@ $bodyBgImage: '../img/bg/vu3.png';
             }
         }
     }
+}
 
-    &__single-tab {
+.singletab {
+    padding: 16px;
+
+    &__title {
+        font-weight: 600;
+        font-size: 18px;
+        // margin-top: 16px;
+    }
+
+    &__subtitle {
+        font-family: 'PT Serif';
+        font-style: italic;
+        margin-bottom: 16px;
     }
 }
 
-.rub-to-fun {
-    &__choice {
+.exchange {
+    &__item {
+        text-align: left;
         float: left;
         width: 50%;
-        background: #fff;
+        padding: 0 8px;
+        box-sizing: border-box;
         margin-bottom: 16px;
+
+        &--own {
+            width: 100%;
+        }
+    }
+    &__input[type="radio"] {
+        display: none;
+
+        &:checked + .exchange__label {
+            border-color: #249e49;
+        }
     }
     &__label {
+        min-height: 64px;
+        background: #fff;
+        display: block;
         cursor: pointer;
+        border: 2px solid transparent;
+        border-radius: 4px;
     }
 }

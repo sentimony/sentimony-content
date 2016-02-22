@@ -844,6 +844,8 @@ body {
   background-color: #ccc;
   background-image: url("../img/bg/vu3.png");
   background-position: top center;
+  font-family: "Open Sans";
+  font-size: 14px;
 }
 
 a {
@@ -854,6 +856,12 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .row {
@@ -962,6 +970,32 @@ ul {
   width: 100%;
 }
 
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.btn {
+  display: inline-block;
+  -webkit-border-radius: 50px;
+          border-radius: 50px;
+  text-transform: uppercase;
+  line-height: 40px;
+  padding: 0 16px;
+}
+
+.btn--success {
+  color: #fff;
+  background: #249E49;
+}
+
 .modal {
   position: relative;
   background: #fff;
@@ -1015,29 +1049,30 @@ ul {
   top: 2px;
 }
 
-.cashbox-tabs__nav {
+.easytabs__nav {
   background: #249e49;
   text-align: center;
 }
 
-.cashbox-tabs__nav li {
+.easytabs__nav li {
   display: inline-block;
   padding: 16px 0;
   position: relative;
 }
 
-.cashbox-tabs__nav li.selected:after {
+.easytabs__nav li.selected:after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
   margin-left: -6px;
-  border: 6px solid transparent;
-  border-top-width: 0 6px 6px;
-  border-bottom-color: #fff;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 0 6px 6px;
+  border-bottom-color: #f0f0f0;
 }
 
-.cashbox-tabs__nav li a {
+.easytabs__nav li a {
   display: block;
   color: #fff;
   border: 1px solid transparent;
@@ -1046,21 +1081,57 @@ ul {
   padding: 6px 12px;
 }
 
-.cashbox-tabs__nav li a:hover {
+.easytabs__nav li a:hover {
   background: rgba(0, 0, 0, 0.1);
 }
 
-.cashbox-tabs__nav li a.selected {
+.easytabs__nav li a.selected {
   border-color: #fff;
 }
 
-.rub-to-fun__choice {
-  float: left;
-  width: 50%;
-  background: #fff;
+.singletab {
+  padding: 16px;
+}
+
+.singletab__title {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.singletab__subtitle {
+  font-family: 'PT Serif';
+  font-style: italic;
   margin-bottom: 16px;
 }
 
-.rub-to-fun__label {
+.exchange__item {
+  text-align: left;
+  float: left;
+  width: 50%;
+  padding: 0 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 16px;
+}
+
+.exchange__item--own {
+  width: 100%;
+}
+
+.exchange__input[type="radio"] {
+  display: none;
+}
+
+.exchange__input[type="radio"]:checked + .exchange__label {
+  border-color: #249e49;
+}
+
+.exchange__label {
+  min-height: 64px;
+  background: #fff;
+  display: block;
   cursor: pointer;
+  border: 2px solid transparent;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
 }

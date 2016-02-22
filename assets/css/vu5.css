@@ -844,6 +844,8 @@ body {
   background-color: #ccc;
   background-image: url("../img/bg/vu5.jpg");
   background-position: top center;
+  font-family: "Open Sans";
+  font-size: 14px;
 }
 
 a {
@@ -854,6 +856,12 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .row {
@@ -960,4 +968,30 @@ ul {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.btn {
+  display: inline-block;
+  -webkit-border-radius: 50px;
+          border-radius: 50px;
+  text-transform: uppercase;
+  line-height: 40px;
+  padding: 0 16px;
+}
+
+.btn--success {
+  color: #fff;
+  background: #249E49;
 }
