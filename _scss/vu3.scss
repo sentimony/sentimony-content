@@ -40,7 +40,7 @@ $gridIndent: 8px;
         .icon-close {
             font-size: 24px;
             display: block;
-        }
+                }
     }
 
     &__header {
@@ -181,6 +181,16 @@ $gridIndent: 8px;
             transition: border-color .2s ease-in-out;
         }
 
+        .btn {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            z-index: 50;
+            @include ellipsis;
+            transform: translate3d(-50%,-50%,0);
+            display: none;
+        }
+
         .icon-radio-checked,
         .icon-radio-unchecked {
             position: absolute;
@@ -202,7 +212,12 @@ $gridIndent: 8px;
 
         &:hover {
             &:before {
-                border-color: rgba(#000, .1);
+                // border-color: rgba(#000, .1);
+                border-color: #249e49;
+            }
+
+            .btn {
+                display: block;
             }
 
             .icon-radio-checked {

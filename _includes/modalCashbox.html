@@ -176,9 +176,10 @@
                                         <span class="exchange__currency">{{ item.currency2 }}</span>
                                     </div>
                                 </div>
+                                <button type="submit" class="btn btn--success"><span class="icon-cached"></span> Обменять Баллы</button>
                             </label>
                             {% if item.profitable == true %}
-                            <div class="gonfalon gonfalon--popular">Самый выгодный пакет</div>
+                            <div class="gonfalon gonfalon--profitable">Самый выгодный пакет</div>
                             {% endif %}
                         </div>
                         {% endfor %}

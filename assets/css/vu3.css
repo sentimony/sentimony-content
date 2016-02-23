@@ -1197,6 +1197,20 @@ input[type="text"] {
   transition: border-color .2s ease-in-out;
 }
 
+.exchange__label .btn {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 50;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  display: none;
+}
+
 .exchange__label .icon-radio-checked,
 .exchange__label .icon-radio-unchecked {
   position: absolute;
@@ -1218,7 +1232,11 @@ input[type="text"] {
 }
 
 .exchange__label:hover:before {
-  border-color: rgba(0, 0, 0, 0.1);
+  border-color: #249e49;
+}
+
+.exchange__label:hover .btn {
+  display: block;
 }
 
 .exchange__label:hover .icon-radio-checked {
