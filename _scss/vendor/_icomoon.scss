@@ -26,6 +26,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-radio-checked:before {
+    content: "\e919";
+}
+.icon-radio-unchecked:before {
+    content: "\e91a";
+}
 .icon-close:before {
     content: "\e90a";
 }

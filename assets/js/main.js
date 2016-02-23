@@ -12,7 +12,6 @@ $('.js-remodal').remodal({
 */
 $('.js-easytabs').easytabs({
     animate: true,
-    animationSpeed: 100,
-    // tabs: '.cashbox-tabs__nav > ul > li',
+    animationSpeed: 200,
     tabActiveClass: 'selected',
 });

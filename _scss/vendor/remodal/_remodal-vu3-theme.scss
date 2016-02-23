@@ -27,3 +27,37 @@
   left: auto;
   right: 0;
 }
+
+/* Close button */
+
+.remodal-close {
+  left: auto;
+  right: 0;
+
+  display: block;
+  overflow: visible;
+
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+
+  cursor: pointer;
+  transition: color .2s ease-in-out;
+  text-decoration: none;
+
+  color: #95979c;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+.remodal-close:hover,
+.remodal-close:focus {
+  color: #fff;
+  background: rgba(#000, .1);
+}
+
+.remodal-close:before {
+  content: none;
+}

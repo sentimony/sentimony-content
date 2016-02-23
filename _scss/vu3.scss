@@ -1,9 +1,12 @@
 @import 'vendor/remodal/remodal-index';
 @import 'vendor/icomoon';
 
-// body
+// Body
 $bodyBg: #ccc url(../img/bg/vu3.png) top center;
 $bodyFont: 400 14px/1.3 "Open Sans", Helvetica, Arial, sans-serif;
+
+// Grid
+$gridIndent: 8px;
 
 @import 'coriolan-ui/coriolan-ui';
 
@@ -12,12 +15,32 @@ $bodyFont: 400 14px/1.3 "Open Sans", Helvetica, Arial, sans-serif;
     background: #fff;
     width: 100%;
     margin: 40px auto;
-    text-align: center;
     border-radius: 4px;
     overflow: hidden;
 
     &--cashbox {
         max-width: 684px;
+    }
+
+    &__close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        z-index: 100;
+        width: 40px;
+        height: 40px;
+        color: #fff;
+        border-radius: 4px;
+        transition: background .2s ease-in-out;
+
+        &:hover {
+            background: rgba(#000, .1);
+        }
+
+        .icon-close {
+            font-size: 24px;
+            display: block;
+        }
     }
 
     &__header {
@@ -31,6 +54,7 @@ $bodyFont: 400 14px/1.3 "Open Sans", Helvetica, Arial, sans-serif;
         color: #fff;
         text-transform: uppercase;
         font-weight: 500;
+        position: relative;
 
         [class^="icon-"] {
             font-size: 24px;
@@ -62,7 +86,6 @@ $bodyFont: 400 14px/1.3 "Open Sans", Helvetica, Arial, sans-serif;
 
     &__nav {
         background: #249e49;
-        text-align: center;
 
         li {
             display: inline-block;
@@ -84,11 +107,15 @@ $bodyFont: 400 14px/1.3 "Open Sans", Helvetica, Arial, sans-serif;
             }
 
             a {
+                font-weight: 600;
+                text-transform: uppercase;
                 display: block;
                 color: #fff;
                 border: 1px solid transparent;
                 border-radius: 20px;
                 padding: 6px 12px;
+                transition: background .2s ease-in-out,
+                            border-color .2s ease-in-out;
 
                 &:hover {
                     background: rgba(#000, .1);
@@ -103,39 +130,40 @@ $bodyFont: 400 14px/1.3 "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 .singletab {
-    padding: 16px;
+
+    &__form {
+        padding: 16px;
+        text-align: left;
+        border-bottom: 1px solid #e0e0e0;
+
+        &:last-child {
+            border: none;
+        }
+    }
 
     &__title {
         font-weight: 600;
         font-size: 18px;
-        // margin-top: 16px;
+        text-align: center;
     }
 
     &__subtitle {
         font-family: 'PT Serif';
         font-style: italic;
         margin-bottom: 16px;
+        text-align: center;
     }
 }
 
 .exchange {
     &__item {
         text-align: left;
-        // float: left;
-        // width: 50%;
-        // padding: 0 8px;
         box-sizing: border-box;
         margin-bottom: 16px;
+        position: relative;
 
         &--own {
             width: 100%;
-        }
-    }
-    &__input[type="radio"] {
-        display: none;
-
-        &:checked + .exchange__label:before {
-            border-color: #249e49;
         }
     }
     &__label {
@@ -157,7 +185,44 @@ $bodyFont: 400 14px/1.3 "Open Sans", Helvetica, Arial, sans-serif;
             height: 100%;
             border: 2px solid transparent;
             border-radius: 4px;
-            // box-sizing: border-box;
+            transition: border-color .2s ease-in-out;
+        }
+
+        .icon-radio-checked,
+        .icon-radio-unchecked {
+            position: absolute;
+            top: 50%;
+            left: 14px;
+            color: rgba(#000, .2);
+            font-size: 20px;
+            margin-top: -10px;
+            transition: opacity .2s ease-in-out;
+        }
+
+        .icon-radio-checked {
+            opacity: 0;
+        }
+
+        .icon-radio-unchecked {
+            opacity: 1;
+        }
+    }
+    &__input[type="radio"] {
+        display: none;
+
+        &:checked + .exchange__label {
+            &:before {
+                border-color: #249e49;
+            }
+
+            .icon-radio-checked {
+                opacity: 1;
+                color: #205A89;
+            }
+
+            .icon-radio-unchecked {
+                opacity: 0;
+            }
         }
     }
     &__left,
@@ -166,11 +231,14 @@ $bodyFont: 400 14px/1.3 "Open Sans", Helvetica, Arial, sans-serif;
         display: table-cell;
         vertical-align: middle;
         padding: 0 16px;
+        position: relative;
+        z-index: 10;
     }
     &__left {
         border-radius: 4px 0 0 4px;
+        padding-left: 42px;
         background: #fff;
-        background: linear-gradient(left, #fff 85%, #f2f2f2);
+        background: linear-gradient(left, #fff 75%, #f2f2f2);
     }
     &__right {
         border-radius: 0 4px 4px 0;
@@ -196,6 +264,9 @@ $bodyFont: 400 14px/1.3 "Open Sans", Helvetica, Arial, sans-serif;
             border-width: 32px 1px 32px 10px;
         }
     }
+    &__row-ellipsis {
+        @include ellipsis;
+    }
     &__number {
         font-size: 18px;
         font-weight: 600;
@@ -215,4 +286,23 @@ $bodyFont: 400 14px/1.3 "Open Sans", Helvetica, Arial, sans-serif;
         font-family: 'PT Serif';
         font-style: italic;
     }
+}
+
+.gonfalon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    text-transform: uppercase;
+    display: inline-block;
+    color: #fff;
+    background: #c33225;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 1.1px;
+    border-radius: 3px;
+    line-height: 18px;
+    padding: 0 10px;
+    z-index: 20;
+    @include ellipsis;
+    transform: translate3d(-50%,-50%,0);
 }

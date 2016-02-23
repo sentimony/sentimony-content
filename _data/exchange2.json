@@ -39,6 +39,7 @@
         "number1": "30 000",
         "currency1": "баллов",
         "number2": "30 000",
-        "currency2": "руб"
+        "currency2": "руб",
+        "profitable": true
     }
 ]

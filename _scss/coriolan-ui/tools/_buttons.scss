@@ -4,11 +4,16 @@
     display: inline-block;
     border-radius: 50px;
     text-transform: uppercase;
-    line-height: 40px;
-    padding: 0 16px;
+    line-height: 20px;
+    padding: 10px 16px;
+    font-weight: 600;
 
     &--success {
         color: #fff;
         background: #249E49;
+    }
+
+    &--link {
+        color: #0a4777;
     }
 }

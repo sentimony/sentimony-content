@@ -30,7 +30,8 @@
     number2: '1 220 000',
     currency2: 'fun',
     number3: '+ 120 000',
-    currency3: 'fun'
+    currency3: 'fun',
+    profitable: true
 }
 - {
     id: 'exchange1-05',

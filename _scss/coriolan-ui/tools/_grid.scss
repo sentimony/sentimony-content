@@ -1,5 +1,3 @@
-$gridIndent: 8px;
-
 @mixin col($width: 12) {
     float: left;
     padding: 0 $gridIndent;
