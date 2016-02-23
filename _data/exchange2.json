@@ -1,0 +1,44 @@
+[
+    {
+        "id": "exchange2-01",
+        "number1": "100",
+        "currency1": "баллов",
+        "number2": "10",
+        "currency2": "руб"
+    },
+    {
+        "id": "exchange2-02",
+        "number1": "800",
+        "currency1": "баллов",
+        "number2": "100",
+        "currency2": "руб"
+    },
+    {
+        "id": "exchange2-03",
+        "number1": "3 000",
+        "currency1": "баллов",
+        "number2": "500",
+        "currency2": "руб"
+    },
+    {
+        "id": "exchange2-04",
+        "number1": "8 000",
+        "currency1": "баллов",
+        "number2": "2 000",
+        "currency2": "руб"
+    },
+    {
+        "id": "exchange2-05",
+        "number1": "16 000",
+        "currency1": "баллов",
+        "number2": "8 000",
+        "currency2": "руб"
+    },
+    {
+        "id": "exchange2-06",
+        "number1": "30 000",
+        "currency1": "баллов",
+        "number2": "30 000",
+        "currency2": "руб"
+    }
+]

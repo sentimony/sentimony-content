@@ -47,7 +47,7 @@
                                     </div>
                                     <div>
                                         <span class="exchange__subnumber">{{ item.number3 }}</span>
-                                        <span class="exchange__subcurrency">{{ item.currency2 }}</span>
+                                        <span class="exchange__subcurrency">{{ item.currency3 }}</span>
                                     </div>
                                 </div>
                             </label>
@@ -113,7 +113,7 @@
                     <div class="singletab__subtitle">Доступно 145 баллов. Ваш курс обмена 1:35</div>
 
                     <div class="row">
-                        {% for item in site.exchange2 %}
+                        {% for item in site.data.exchange2 %}
                         <div class="col-6 exchange__item">
                             <input class="exchange__input" type="radio" name="exchange" id="{{ item.id }}">
                             <label class="exchange__label" for="{{ item.id }}">
