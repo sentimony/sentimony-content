@@ -867,13 +867,6 @@ img {
   margin: 0 auto;
 }
 
-button {
-  border: 0;
-  background: none;
-  padding: 0;
-  outline: none;
-}
-
 .row {
   margin: 0 -8px;
 }
@@ -992,6 +985,13 @@ button {
   text-align: right;
 }
 
+button {
+  border: 0;
+  background: none;
+  padding: 0;
+  outline: 0;
+}
+
 .btn {
   outline: 0;
   border: 0;
@@ -1000,8 +1000,15 @@ button {
           border-radius: 50px;
   text-transform: uppercase;
   line-height: 20px;
-  padding: 10px 16px;
+  padding: 8px 16px;
   font-weight: 600;
+}
+
+.btn [class^="icon-"] {
+  font-size: 18px;
+  line-height: 20px;
+  position: relative;
+  top: 2px;
 }
 
 .btn--success {
@@ -1011,6 +1018,11 @@ button {
 
 .btn--link {
   color: #0a4777;
+}
+
+input[type="text"] {
+  border: 0;
+  outline: none;
 }
 
 .modal {
@@ -1077,16 +1089,7 @@ button {
 }
 
 .modal__footer {
-  height: 50px;
-  line-height: 50px;
-  text-transform: uppercase;
-}
-
-.modal__footer [class^="icon-"] {
-  font-size: 16px;
-  margin-left: 5px;
-  position: relative;
-  top: 2px;
+  padding: 8px 10px;
 }
 
 .easytabs__nav {
@@ -1095,7 +1098,7 @@ button {
 
 .easytabs__nav li {
   display: inline-block;
-  padding: 16px 0;
+  padding: 14px 0;
   position: relative;
 }
 
@@ -1104,10 +1107,10 @@ button {
   position: absolute;
   bottom: 0;
   left: 50%;
-  margin-left: -6px;
+  margin-left: -8px;
   border-color: transparent;
   border-style: solid;
-  border-width: 0 6px 6px;
+  border-width: 0 8px 8px;
   border-bottom-color: #f0f0f0;
 }
 
@@ -1133,7 +1136,7 @@ button {
 }
 
 .singletab__form {
-  padding: 16px;
+  padding: 16px 20px;
   text-align: left;
   border-bottom: 1px solid #e0e0e0;
 }
@@ -1214,20 +1217,32 @@ button {
   opacity: 1;
 }
 
-.exchange__input[type="radio"] {
+.exchange__label:hover:before {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.exchange__label:hover .icon-radio-checked {
+  opacity: 1;
+}
+
+.exchange__label:hover .icon-radio-unchecked {
+  opacity: 0;
+}
+
+.exchange__input-radio[type="radio"] {
   display: none;
 }
 
-.exchange__input[type="radio"]:checked + .exchange__label:before {
+.exchange__input-radio[type="radio"]:checked + .exchange__label:before {
   border-color: #249e49;
 }
 
-.exchange__input[type="radio"]:checked + .exchange__label .icon-radio-checked {
+.exchange__input-radio[type="radio"]:checked + .exchange__label .icon-radio-checked {
   opacity: 1;
   color: #205A89;
 }
 
-.exchange__input[type="radio"]:checked + .exchange__label .icon-radio-unchecked {
+.exchange__input-radio[type="radio"]:checked + .exchange__label .icon-radio-unchecked {
   opacity: 0;
 }
 
@@ -1245,9 +1260,9 @@ button {
           border-radius: 4px 0 0 4px;
   padding-left: 42px;
   background: #fff;
-  background: -webkit-gradient(linear, left top, right top, color-stop(75%, #fff), color-stop(75%, #f2f2f2));
-  background: -webkit-linear-gradient(left, #fff 75%, #f2f2f2);
-  background: linear-gradient(left, #fff 75%, #f2f2f2);
+  background: -webkit-gradient(linear, left top, right top, color-stop(75%, #fff), color-stop(75%, #f5f5f5));
+  background: -webkit-linear-gradient(left, #fff 75%, #f5f5f5);
+  background: linear-gradient(to right, #fff 75%, #f5f5f5);
 }
 
 .exchange__right {
@@ -1284,7 +1299,7 @@ button {
   overflow: hidden;
 }
 
-.exchange__number {
+.exchange__number, .exchange__input-text[type="text"] {
   font-size: 18px;
   font-weight: 600;
   color: #205a89;
@@ -1307,6 +1322,17 @@ button {
   font-style: italic;
 }
 
+.exchange__input-text[type="text"] {
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  max-width: 120px;
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
+  line-height: 40px;
+  padding: 0 8px;
+  background: #f3f3f3;
+}
+
 .gonfalon {
   position: absolute;
   top: 0;
@@ -1314,7 +1340,7 @@ button {
   text-transform: uppercase;
   display: inline-block;
   color: #fff;
-  background: #c33225;
+  background: rgba(0, 0, 0, 0.2);
   font-weight: 700;
   font-size: 10px;
   letter-spacing: 1.1px;
@@ -1329,4 +1355,16 @@ button {
   overflow: hidden;
   -webkit-transform: translate3d(-50%, -50%, 0);
           transform: translate3d(-50%, -50%, 0);
+}
+
+.gonfalon--profitable {
+  background: #c33225;
+}
+
+.gonfalon--popular {
+  background: #c37d25;
+}
+
+.gonfalon--own {
+  background: #0c4a76;
 }

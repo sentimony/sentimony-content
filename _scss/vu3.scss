@@ -69,16 +69,7 @@ $gridIndent: 8px;
     }
 
     &__footer {
-        height: 50px;
-        line-height: 50px;
-        text-transform: uppercase;
-
-        [class^="icon-"] {
-            font-size: 16px;
-            margin-left: 5px;
-            position: relative;
-            top: 2px;
-        }
+        padding: 8px 10px;
     }
 }
 
@@ -89,7 +80,7 @@ $gridIndent: 8px;
 
         li {
             display: inline-block;
-            padding: 16px 0;
+            padding: 14px 0;
             position: relative;
 
             &.selected {
@@ -98,10 +89,10 @@ $gridIndent: 8px;
                     position: absolute;
                     bottom: 0;
                     left: 50%;
-                    margin-left: -6px;
+                    margin-left: -8px;
                     border-color: transparent;
                     border-style: solid;
-                    border-width: 0 6px 6px;
+                    border-width: 0 8px 8px;
                     border-bottom-color: #f0f0f0;
                 }
             }
@@ -132,7 +123,7 @@ $gridIndent: 8px;
 .singletab {
 
     &__form {
-        padding: 16px;
+        padding: 16px 20px;
         text-align: left;
         border-bottom: 1px solid #e0e0e0;
 
@@ -156,6 +147,7 @@ $gridIndent: 8px;
 }
 
 .exchange {
+
     &__item {
         text-align: left;
         box-sizing: border-box;
@@ -166,6 +158,7 @@ $gridIndent: 8px;
             width: 100%;
         }
     }
+
     &__label {
         width: 100%;
         height: 64px;
@@ -206,8 +199,23 @@ $gridIndent: 8px;
         .icon-radio-unchecked {
             opacity: 1;
         }
+
+        &:hover {
+            &:before {
+                border-color: rgba(#000, .1);
+            }
+
+            .icon-radio-checked {
+                opacity: 1;
+            }
+
+            .icon-radio-unchecked {
+                opacity: 0;
+            }
+        }
     }
-    &__input[type="radio"] {
+
+    &__input-radio[type="radio"] {
         display: none;
 
         &:checked + .exchange__label {
@@ -225,6 +233,7 @@ $gridIndent: 8px;
             }
         }
     }
+
     &__left,
     &__right {
         width: 50%;
@@ -234,12 +243,14 @@ $gridIndent: 8px;
         position: relative;
         z-index: 10;
     }
+
     &__left {
         border-radius: 4px 0 0 4px;
         padding-left: 42px;
         background: #fff;
-        background: linear-gradient(left, #fff 75%, #f2f2f2);
+        background: linear-gradient(to right, #fff 75%, #f5f5f5);
     }
+
     &__right {
         border-radius: 0 4px 4px 0;
         position: relative;
@@ -264,27 +275,42 @@ $gridIndent: 8px;
             border-width: 32px 1px 32px 10px;
         }
     }
+
     &__row-ellipsis {
         @include ellipsis;
     }
+
     &__number {
         font-size: 18px;
         font-weight: 600;
         color: #205a89;
     }
+
     &__currency {
         color: rgba(#000, .5);
         font-family: 'PT Serif';
         font-style: italic;
     }
+
     &__subnumber {
         font-weight: 600;
         color: rgba(#000, .5);
     }
+
     &__subcurrency {
         color: rgba(#000, .5);
         font-family: 'PT Serif';
         font-style: italic;
+    }
+
+    &__input-text[type="text"] {
+        @extend .exchange__number;
+        border-radius: 4px;
+        max-width: 120px;
+        box-shadow: inset 1px 1px 0 rgba(#000, .1);
+        line-height: 40px;
+        padding: 0 8px;
+        background: #f3f3f3;
     }
 }
 
@@ -295,7 +321,7 @@ $gridIndent: 8px;
     text-transform: uppercase;
     display: inline-block;
     color: #fff;
-    background: #c33225;
+    background: rgba(#000, .2);
     font-weight: 700;
     font-size: 10px;
     letter-spacing: 1.1px;
@@ -305,4 +331,16 @@ $gridIndent: 8px;
     z-index: 20;
     @include ellipsis;
     transform: translate3d(-50%,-50%,0);
+
+    &--profitable {
+        background: #c33225;
+    }
+
+    &--popular {
+        background: #c37d25;
+    }
+
+    &--own {
+        background: #0c4a76;
+    }
 }

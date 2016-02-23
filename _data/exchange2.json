@@ -18,7 +18,8 @@
         "number1": "3 000",
         "currency1": "баллов",
         "number2": "500",
-        "currency2": "руб"
+        "currency2": "руб",
+        "checked": true
     },
     {
         "id": "exchange2-04",

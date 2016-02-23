@@ -867,13 +867,6 @@ img {
   margin: 0 auto;
 }
 
-button {
-  border: 0;
-  background: none;
-  padding: 0;
-  outline: none;
-}
-
 .row {
   margin: 0 -8px;
 }
@@ -992,6 +985,13 @@ button {
   text-align: right;
 }
 
+button {
+  border: 0;
+  background: none;
+  padding: 0;
+  outline: 0;
+}
+
 .btn {
   outline: 0;
   border: 0;
@@ -1000,8 +1000,15 @@ button {
           border-radius: 50px;
   text-transform: uppercase;
   line-height: 20px;
-  padding: 10px 16px;
+  padding: 8px 16px;
   font-weight: 600;
+}
+
+.btn [class^="icon-"] {
+  font-size: 18px;
+  line-height: 20px;
+  position: relative;
+  top: 2px;
 }
 
 .btn--success {
@@ -1011,4 +1018,9 @@ button {
 
 .btn--link {
   color: #0a4777;
+}
+
+input[type="text"] {
+  border: 0;
+  outline: none;
 }

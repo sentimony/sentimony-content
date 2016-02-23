@@ -29,46 +29,59 @@
                     <div class="singletab__title">Обменять Рубли на Fun</div>
                     <div class="singletab__subtitle">Доступно 145 654 руб</div>
 
-                    <div class="row">
-                        {% for item in site.data.exchange1 %}
-                        <div class="col-6 exchange__item">
-                            <input class="exchange__input" type="radio" name="rub-to-fun" id="{{ item.id }}" value="{{ item.number1 }}">
-                            <label class="exchange__label" for="{{ item.id }}">
-                                <div class="exchange__left">
-                                    <div class="exchange__row-ellipsis">
-                                        <span class="icon-radio-checked"></span>
-                                        <span class="icon-radio-unchecked"></span>
-                                        <span class="exchange__number">{{ item.number1 }}</span>
-                                        <span class="exchange__currency">{{ item.currency1 }}</span>
-                                    </div>
+                    {% for item in site.data.exchange1 %}
+                    <div class="exchange__item">
+                        <input class="exchange__input-radio" type="radio" name="rub-to-fun" id="{{ item.id }}" value="{{ item.number1 }}" {% if item.checked == true %}checked{% endif %}>
+                        <label class="exchange__label" for="{{ item.id }}">
+                            <div class="exchange__left">
+                                <div class="exchange__row-ellipsis">
+                                    <span class="icon-radio-checked"></span>
+                                    <span class="icon-radio-unchecked"></span>
+                                    <span class="exchange__number">{{ item.number1 }}</span>
+                                    <span class="exchange__currency">{{ item.currency1 }}</span>
                                 </div>
-                                <div class="exchange__right">
-                                    <div class="exchange__row-ellipsis">
-                                        <span class="exchange__number">{{ item.number2 }}</span>
-                                        <span class="exchange__currency">{{ item.currency2 }}</span>
-                                    </div>
-                                    <div class="exchange__row-ellipsis">
-                                        <span class="exchange__subnumber">{{ item.number3 }}</span>
-                                        <span class="exchange__subcurrency">{{ item.currency3 }}</span>
-                                    </div>
+                            </div>
+                            <div class="exchange__right">
+                                <div class="exchange__row-ellipsis">
+                                    <span class="exchange__number">{{ item.number2 }}</span>
+                                    <span class="exchange__currency">{{ item.currency2 }}</span>
                                 </div>
-                            </label>
-                            {% if item.profitable == true %}
-                            <div class="gonfalon">Самый выгодный пакет</div>
-                            {% endif %}
-                        </div>
-                        {% endfor %}
+                                <div class="exchange__row-ellipsis">
+                                    <span class="exchange__subnumber">{{ item.number3 }}</span>
+                                    <span class="exchange__subcurrency">{{ item.currency3 }}</span>
+                                </div>
+                            </div>
+                        </label>
+                        {% if item.profitable == true %}
+                        <div class="gonfalon gonfalon--profitable">Самый выгодный пакет</div>
+                        {% endif %}
+                        {% if item.popular == true %}
+                        <div class="gonfalon gonfalon--popular">Самый популярный пакет</div>
+                        {% endif %}
                     </div>
+                    {% endfor %}
 
                     <div class="exchange__item exchange__item--own">
-                        <input class="exchange__input" type="radio" name="rub-to-fun" id="own-exchange" value="10000000">
+                        <input class="exchange__input-radio" type="radio" name="rub-to-fun" id="own-exchange" value="10000000">
                         <label class="exchange__label" for="own-exchange">
-                            <input type="text" value="50 000">
-                            <span><i>руб</i></span>
-                            <input type="text" value="105 567 000">
-                            <span> <i>fun</i></span>
-                            <span>+ 120 000 <i>fun</i></span>
+                            <div class="exchange__left">
+                                <div class="exchange__row-ellipsis">
+                                    <span class="icon-radio-checked"></span>
+                                    <span class="icon-radio-unchecked"></span>
+                                    <input type="text" value="50 000" class="exchange__input-text">
+                                    <span class="exchange__currency">руб</span>
+                                </div>
+                            </div>
+                            <div class="exchange__right">
+                                <div class="exchange__row-ellipsis">
+                                    <input type="text" value="105 567 000" class="exchange__input-text">
+                                    <span class="exchange__currency">fun</span>
+                                    <span class="exchange__subnumber">+ 120 000</span>
+                                    <span class="exchange__subcurrency">fun</span>
+                                </div>
+                            </div>
                         </label>
+                        <div class="gonfalon gonfalon--own">Собственная сумма</div>
                     </div>
 
                     <div class="row">
@@ -101,12 +114,21 @@
                     <div class="singletab__title">Обменять Баллы на Fun</div>
                     <div class="singletab__subtitle">Доступно 145 баллов</div>
 
-                    <div class="exchange__item exchange__item--own">
-                        <label class="exchange__label">
-                            <input type="text" value="145">
-                            <span><i>баллов</i></span>
-                            <input type="text" value="45 400">
-                            <span><i>fun</i></span>
+                    <div class="exchange__item">
+                        <input class="exchange__input-radio" type="radio" name="rub-to-fun" id="own-exchange" value="10000000">
+                        <label class="exchange__label" for="own-exchange">
+                            <div class="exchange__left">
+                                <div class="exchange__row-ellipsis">
+                                    <input type="text" value="145" class="exchange__input-text">
+                                    <span class="exchange__currency">баллов</span>
+                                </div>
+                            </div>
+                            <div class="exchange__right">
+                                <div class="exchange__row-ellipsis">
+                                    <input type="text" value="45 400" class="exchange__input-text">
+                                    <span class="exchange__currency">fun</span>
+                                </div>
+                            </div>
                         </label>
                     </div>
 
@@ -138,7 +160,7 @@
                     <div class="row">
                         {% for item in site.data.exchange2 %}
                         <div class="col-6 exchange__item">
-                            <input class="exchange__input" type="radio" name="cp-to-rub" id="{{ item.id }}" value="{{ item.number1 }}">
+                            <input class="exchange__input-radio" type="radio" name="cp-to-rub" id="{{ item.id }}" value="{{ item.number1 }}" {% if item.checked == true %}checked{% endif %}>
                             <label class="exchange__label" for="{{ item.id }}">
                                 <div class="exchange__left">
                                     <div class="exchange__row-ellipsis">
@@ -156,10 +178,33 @@
                                 </div>
                             </label>
                             {% if item.profitable == true %}
-                            <div class="gonfalon">Самый выгодный пакет</div>
+                            <div class="gonfalon gonfalon--popular">Самый выгодный пакет</div>
                             {% endif %}
                         </div>
                         {% endfor %}
+                    </div>
+
+                    <div class="exchange__item exchange__item--own">
+                        <input class="exchange__input-radio" type="radio" name="rub-to-fun" id="own-exchange" value="10000000">
+                        <label class="exchange__label" for="own-exchange">
+                            <div class="exchange__left">
+                                <div class="exchange__row-ellipsis">
+                                    <span class="icon-radio-checked"></span>
+                                    <span class="icon-radio-unchecked"></span>
+                                    <input type="text" value="50 000" class="exchange__input-text">
+                                    <span class="exchange__currency">руб</span>
+                                </div>
+                            </div>
+                            <div class="exchange__right">
+                                <div class="exchange__row-ellipsis">
+                                    <input type="text" value="105 567 000" class="exchange__input-text">
+                                    <span class="exchange__currency">fun</span>
+                                    <span class="exchange__subnumber">+ 120 000</span>
+                                    <span class="exchange__subcurrency">fun</span>
+                                </div>
+                            </div>
+                        </label>
+                        <div class="gonfalon gonfalon--own">Собственная сумма</div>
                     </div>
 
                     <div class="row">
@@ -185,6 +230,24 @@
 
                     <div class="singletab__title">Обменять Баллы на Fun</div>
                     <div class="singletab__subtitle">Доступно 145 баллов</div>
+
+                    <div class="exchange__item">
+                        <input class="exchange__input-radio" type="radio" name="rub-to-fun" id="own-exchange" value="10000000">
+                        <label class="exchange__label" for="own-exchange">
+                            <div class="exchange__left">
+                                <div class="exchange__row-ellipsis">
+                                    <input type="text" value="145" class="exchange__input-text">
+                                    <span class="exchange__currency">баллов</span>
+                                </div>
+                            </div>
+                            <div class="exchange__right">
+                                <div class="exchange__row-ellipsis">
+                                    <input type="text" value="45 400" class="exchange__input-text">
+                                    <span class="exchange__currency">fun</span>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
 
                     <div class="row">
                         <div class="col-3">
