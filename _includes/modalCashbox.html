@@ -30,7 +30,7 @@
                     <div class="singletab__subtitle">Доступно 145 654 руб</div>
 
                     <div class="row">
-                        {% for item in site.exchange1 %}
+                        {% for item in site.data.exchange1 %}
                         <div class="col-6 exchange__item">
                             <input class="exchange__input" type="radio" name="exchange" id="{{ item.id }}">
                             <label class="exchange__label" for="{{ item.id }}">
