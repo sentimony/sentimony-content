@@ -30,59 +30,29 @@
                     <div class="singletab__subtitle">Доступно 145 654 руб</div>
 
                     <div class="row">
+                        {% for item in site.exchange1 %}
                         <div class="col-6 exchange__item">
-                            <input class="exchange__input" type="radio" name="exchange" id="exchange__1">
-                            <label class="exchange__label" for="exchange__1">
-                                <span>250 <i>руб</i></span>
-                                <span>160 000 <i>fun</i></span>
+                            <input class="exchange__input" type="radio" name="exchange" id="{{ item.id }}">
+                            <label class="exchange__label" for="{{ item.id }}">
+                                <div class="exchange__left">
+                                    <div>
+                                        <span class="exchange__number">{{ item.number1 }}</span>
+                                        <span class="exchange__currency">{{ item.currency1 }}</span>
+                                    </div>
+                                </div>
+                                <div class="exchange__right">
+                                    <div>
+                                        <span class="exchange__number">{{ item.number2 }}</span>
+                                        <span class="exchange__currency">{{ item.currency2 }}</span>
+                                    </div>
+                                    <div>
+                                        <span class="exchange__subnumber">{{ item.number3 }}</span>
+                                        <span class="exchange__subcurrency">{{ item.currency2 }}</span>
+                                    </div>
+                                </div>
                             </label>
                         </div>
-
-                        <div class="col-6 exchange__item">
-                            <input class="exchange__input" type="radio" name="exchange" id="exchange__2">
-                            <label class="exchange__label" for="exchange__2">
-                                <span>500 <i>руб</i></span>
-                                <span>320 000 <i>fun</i></span>
-                                <span>+ 30 000 <i>fun</i></span>
-                            </label>
-                        </div>
-
-                        <div class="col-6 exchange__item">
-                            <input class="exchange__input" type="radio" name="exchange" id="exchange__3">
-                            <label class="exchange__label" for="exchange__3">
-                                <span>1 000 <i>руб</i></span>
-                                <span>640 000 <i>fun</i></span>
-                                <span>+ 60 000 <i>fun</i></span>
-                            </label>
-                        </div>
-
-                        <div class="col-6 exchange__item">
-                            <input class="exchange__input" type="radio" name="exchange" id="exchange__4">
-                            <label class="exchange__label" for="exchange__4">
-                                <span>5 000 <i>руб</i></span>
-                                <span>1 220 000 <i>fun</i></span>
-                                <span>+ 120 000 <i>fun</i></span>
-                            </label>
-                        </div>
-
-                        <div class="col-6 exchange__item">
-                            <input class="exchange__input" type="radio" name="exchange" id="exchange__5">
-                            <label class="exchange__label" for="exchange__5">
-                                <span>10 000 <i>руб</i></span>
-                                <span>2 540 000 <i>fun</i></span>
-                                <span>+ 120 000 <i>fun</i></span>
-                            </label>
-                        </div>
-
-                        <div class="col-6 exchange__item">
-                            <input class="exchange__input" type="radio" name="exchange" id="exchange__6">
-                            <label class="exchange__label" for="exchange__6">
-                                <span>Самый выгодный пакет</span>
-                                <span>20 000 <i>руб</i></span>
-                                <span>3 140 000 <i>fun</i></span>
-                                <span>+ 200 000 <i>fun</i></span>
-                            </label>
-                        </div>
+                        {% endfor %}
                     </div>
 
                     <div class="exchange__item exchange__item--own">
@@ -106,7 +76,7 @@
                             <div>45 400 <i>Fun</i></div>
                         </div>
                         <div class="col-6 text-right">
-                            <a href="javasctipt:void(0)" class="btn btn--success"><span class="icon-cached"></span> Обменять Рубли</a>
+                            <button type="submit" class="btn btn--success"><span class="icon-cached"></span> Обменять Рубли</button>
                         </div>
                     </div>
 
@@ -138,37 +108,61 @@
             </div>
 
             <div id="comppoints" class="singletab">
-                <div class="singletab__title">Обменять Баллы на Рубли</div>
-                <div class="singletab__subtitle">Доступно 145 баллов. Ваш курс обмена 1:35</div>
+                <form>
+                    <div class="singletab__title">Обменять Баллы на Рубли</div>
+                    <div class="singletab__subtitle">Доступно 145 баллов. Ваш курс обмена 1:35</div>
 
-                <div class="row">
-                    <div class="col-3">
-                        <div>Вы получите:</div>
-                        <div>45 400 <i>Fun</i></div>
+                    <div class="row">
+                        {% for item in site.exchange2 %}
+                        <div class="col-6 exchange__item">
+                            <input class="exchange__input" type="radio" name="exchange" id="{{ item.id }}">
+                            <label class="exchange__label" for="{{ item.id }}">
+                                <div class="exchange__left">
+                                    <div>
+                                        <span class="exchange__number">{{ item.number1 }}</span>
+                                        <span class="exchange__currency">{{ item.currency1 }}</span>
+                                    </div>
+                                </div>
+                                <div class="exchange__right">
+                                    <div>
+                                        <span class="exchange__number">{{ item.number2 }}</span>
+                                        <span class="exchange__currency">{{ item.currency2 }}</span>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        {% endfor %}
                     </div>
-                    <div class="col-3">
-                        &nbsp;
-                    </div>
-                    <div class="col-6 text-right">
-                        <a href="javasctipt:void(0)" class="btn btn--success"><span class="icon-cached"></span> Обменять на Рубли</a>
-                    </div>
-                </div>
 
-                <div class="singletab__title">Обменять Баллы на Fun</div>
-                <div class="singletab__subtitle">Доступно 145 баллов</div>
+                    <div class="row">
+                        <div class="col-3">
+                            <div>Вы получите:</div>
+                            <div>45 400 <i>Fun</i></div>
+                        </div>
+                        <div class="col-3">
+                            &nbsp;
+                        </div>
+                        <div class="col-6 text-right">
+                            <a href="javasctipt:void(0)" class="btn btn--success"><span class="icon-cached"></span> Обменять на Рубли</a>
+                        </div>
+                    </div>
 
-                <div class="row">
-                    <div class="col-3">
-                        <div>Вы получите:</div>
-                        <div>45 400 <i>Fun</i></div>
+                    <div class="singletab__title">Обменять Баллы на Fun</div>
+                    <div class="singletab__subtitle">Доступно 145 баллов</div>
+
+                    <div class="row">
+                        <div class="col-3">
+                            <div>Вы получите:</div>
+                            <div>45 400 <i>Fun</i></div>
+                        </div>
+                        <div class="col-3">
+                            &nbsp;
+                        </div>
+                        <div class="col-6 text-right">
+                            <a href="javasctipt:void(0)" class="btn btn--success"><span class="icon-cached"></span> Обменять на Fun</a>
+                        </div>
                     </div>
-                    <div class="col-3">
-                        &nbsp;
-                    </div>
-                    <div class="col-6 text-right">
-                        <a href="javasctipt:void(0)" class="btn btn--success"><span class="icon-cached"></span> Обменять на Fun</a>
-                    </div>
-                </div>
+                </form>
             </div>
 
         </div>
