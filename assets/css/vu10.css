@@ -1022,10 +1022,27 @@ button {
   color: #0a4777;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="number"] {
   border: 0;
   outline: none;
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+input[type="number"] {
+  border: 0;
+  outline: none;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }

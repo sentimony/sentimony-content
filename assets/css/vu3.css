@@ -1022,12 +1022,29 @@ button {
   color: #0a4777;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="number"] {
   border: 0;
   outline: none;
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+input[type="number"] {
+  border: 0;
+  outline: none;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 .modal {
@@ -1258,6 +1275,19 @@ input[type="text"] {
   display: none;
 }
 
+.exchange__input-radio[type="radio"]:checked + .exchange__label:before {
+  border-color: #249e49;
+}
+
+.exchange__input-radio[type="radio"]:checked + .exchange__label .icon-radio-checked {
+  opacity: 1;
+  color: #205A89;
+}
+
+.exchange__input-radio[type="radio"]:checked + .exchange__label .icon-radio-unchecked {
+  opacity: 0;
+}
+
 .exchange__left, .exchange__right {
   width: 50%;
   display: table-cell;
@@ -1311,7 +1341,7 @@ input[type="text"] {
   overflow: hidden;
 }
 
-.exchange__number, .exchange__input-text[type="text"] {
+.exchange__number, .exchange__input-text[type="number"] {
   font-size: 18px;
   font-weight: 600;
   color: #205a89;
@@ -1334,17 +1364,17 @@ input[type="text"] {
   font-style: italic;
 }
 
-.exchange__input-text[type="text"] {
+.exchange__input-text[type="number"] {
   -webkit-border-radius: 4px;
           border-radius: 4px;
   -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
           box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
   line-height: 40px;
-  padding: 0 8px;
+  padding: 0 36px 0 8px;
   background: #f3f3f3;
 }
 
-.exchange__input-text[type="text"] + .exchange__currency {
+.exchange__input-text[type="number"] + .exchange__currency {
   position: absolute;
   right: 24px;
   bottom: 21px;
