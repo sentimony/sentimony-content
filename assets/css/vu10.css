@@ -268,7 +268,7 @@ html.remodal-is-locked {
 
 /* Default theme styles of the wrapper */
 .remodal-wrapper {
-  padding: 40px 10px 0;
+  padding: 10px 10px 0;
 }
 
 /* Default theme styles of the modal dialog */
@@ -1023,4 +1023,7 @@ button {
 input[type="text"] {
   border: 0;
   outline: none;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }

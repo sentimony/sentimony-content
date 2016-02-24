@@ -15,3 +15,11 @@ $('.js-easytabs').easytabs({
     animationSpeed: 200,
     tabActiveClass: 'selected',
 });
+
+/**
+* exchange__label--selected
+*/
+$('.exchange__label').click(function() {
+    $('.exchange__label').removeClass('exchange__label--selected');
+    $(this).toggleClass('exchange__label--selected');
+});

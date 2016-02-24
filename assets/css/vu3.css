@@ -268,7 +268,7 @@ html.remodal-is-locked {
 
 /* Default theme styles of the wrapper */
 .remodal-wrapper {
-  padding: 40px 10px 0;
+  padding: 10px 10px 0;
 }
 
 /* Default theme styles of the modal dialog */
@@ -1023,13 +1023,16 @@ button {
 input[type="text"] {
   border: 0;
   outline: none;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .modal {
   position: relative;
   background: #fff;
   width: 100%;
-  margin: 40px auto;
+  margin: 0 auto 40px;
   -webkit-border-radius: 4px;
           border-radius: 4px;
   overflow: hidden;
@@ -1145,6 +1148,11 @@ input[type="text"] {
   border: none;
 }
 
+.singletab__container {
+  max-width: 456px;
+  margin: 0 auto;
+}
+
 .singletab__title {
   font-weight: 600;
   font-size: 18px;
@@ -1166,8 +1174,8 @@ input[type="text"] {
   position: relative;
 }
 
-.exchange__item--own {
-  width: 100%;
+.exchange__item--noradio .exchange__left {
+  padding-left: 16px;
 }
 
 .exchange__label {
@@ -1197,25 +1205,11 @@ input[type="text"] {
   transition: border-color .2s ease-in-out;
 }
 
-.exchange__label .btn {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  z-index: 50;
-  display: block;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  -webkit-transform: translate3d(-50%, -50%, 0);
-          transform: translate3d(-50%, -50%, 0);
-  display: none;
-}
-
 .exchange__label .icon-radio-checked,
 .exchange__label .icon-radio-unchecked {
   position: absolute;
   top: 50%;
-  left: 14px;
+  left: 10px;
   color: rgba(0, 0, 0, 0.2);
   font-size: 20px;
   margin-top: -10px;
@@ -1232,11 +1226,7 @@ input[type="text"] {
 }
 
 .exchange__label:hover:before {
-  border-color: #249e49;
-}
-
-.exchange__label:hover .btn {
-  display: block;
+  border-color: rgba(0, 0, 0, 0.1);
 }
 
 .exchange__label:hover .icon-radio-checked {
@@ -1247,36 +1237,36 @@ input[type="text"] {
   opacity: 0;
 }
 
-.exchange__input-radio[type="radio"] {
-  display: none;
-}
-
-.exchange__input-radio[type="radio"]:checked + .exchange__label:before {
+.exchange__label.exchange__label--selected:before {
   border-color: #249e49;
 }
 
-.exchange__input-radio[type="radio"]:checked + .exchange__label .icon-radio-checked {
+.exchange__label.exchange__label--selected .icon-radio-checked {
   opacity: 1;
   color: #205A89;
 }
 
-.exchange__input-radio[type="radio"]:checked + .exchange__label .icon-radio-unchecked {
+.exchange__label.exchange__label--selected .icon-radio-unchecked {
   opacity: 0;
+}
+
+.exchange__input-radio[type="radio"] {
+  display: none;
 }
 
 .exchange__left, .exchange__right {
   width: 50%;
   display: table-cell;
   vertical-align: middle;
-  padding: 0 16px;
   position: relative;
   z-index: 10;
+  padding: 0 16px;
 }
 
 .exchange__left {
   -webkit-border-radius: 4px 0 0 4px;
           border-radius: 4px 0 0 4px;
-  padding-left: 42px;
+  padding-left: 40px;
   background: #fff;
   background: -webkit-gradient(linear, left top, right top, color-stop(75%, #fff), color-stop(75%, #f5f5f5));
   background: -webkit-linear-gradient(left, #fff 75%, #f5f5f5);
@@ -1343,12 +1333,17 @@ input[type="text"] {
 .exchange__input-text[type="text"] {
   -webkit-border-radius: 4px;
           border-radius: 4px;
-  max-width: 120px;
   -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
           box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
   line-height: 40px;
   padding: 0 8px;
   background: #f3f3f3;
+}
+
+.exchange__input-text[type="text"] + .exchange__currency {
+  position: absolute;
+  right: 24px;
+  bottom: 21px;
 }
 
 .gonfalon {
