@@ -1014,6 +1014,8 @@ button {
 .btn--success {
   color: #fff;
   background: #249E49;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .btn--link {

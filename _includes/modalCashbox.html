@@ -33,8 +33,8 @@
 
                     {% for item in site.data.exchange1 %}
                     <div class="exchange__item">
-                        <input class="exchange__input-radio" type="radio" name="rub-to-fun" id="{{ item.id }}" value="{{ item.number1 }}" {% if item.checked == true %}checked{% endif %}>
-                        <label class="exchange__label" for="{{ item.id }}">
+                        <input class="exchange__input-radio" type="radio" name="rub-to-fun" id="{{ item.id }}" value="{{ item.number1 }}">
+                        <label class="exchange__label {% if item.checked == true %}exchange__label--selected{% endif %}" for="{{ item.id }}">
                             <div class="exchange__left">
                                 <div class="exchange__row-ellipsis">
                                     <span class="icon-radio-checked"></span>
@@ -160,8 +160,8 @@
 
                     {% for item in site.data.exchange2 %}
                     <div class="exchange__item">
-                        <input class="exchange__input-radio" type="radio" name="cp-to-rub" id="{{ item.id }}" value="{{ item.number1 }}" {% if item.checked == true %}checked{% endif %}>
-                        <label class="exchange__label" for="{{ item.id }}">
+                        <input class="exchange__input-radio" type="radio" name="cp-to-rub" id="{{ item.id }}" value="{{ item.number1 }}">
+                        <label class="exchange__label {% if item.checked == true %}exchange__label--selected{% endif %}" for="{{ item.id }}">
                             <div class="exchange__left">
                                 <div class="exchange__row-ellipsis">
                                     <span class="icon-radio-checked"></span>

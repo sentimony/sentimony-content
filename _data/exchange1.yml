@@ -3,7 +3,8 @@
     number1: '250',
     currency1: 'руб',
     number2: '160 000',
-    currency2: 'fun'
+    currency2: 'fun',
+    checked: true,
 }
 - {
     id: 'exchange1-02',
@@ -13,7 +14,6 @@
     currency2: 'fun',
     number3: '+ 30 000',
     currency3: 'fun',
-    # checked: true,
     # popular: true
 }
 # - {

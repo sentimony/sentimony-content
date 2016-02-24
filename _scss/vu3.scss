@@ -172,6 +172,7 @@ $gridIndent: 8px;
         box-sizing: border-box;
         position: relative;
         display: table;
+        box-shadow: 0 2px 4px rgba(#000, .3);
 
         &:before {
             content: '';
