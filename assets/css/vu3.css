@@ -1247,8 +1247,7 @@ html.remodal-is-locked {
 }
 
 .exchange__label:hover:before {
-  border-color: rgba(0, 0, 0, 0.1);
-  border-color: #249e49;
+  border-color: #249e49 !important;
 }
 
 .exchange__label:hover .icon-radio-checked {
@@ -1264,7 +1263,6 @@ html.remodal-is-locked {
 }
 
 .exchange__input-radio[type="radio"]:checked + .exchange__label:before {
-  border-color: #249e49;
   border-color: transparent;
 }
 

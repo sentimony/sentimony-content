@@ -56,8 +56,8 @@
 
         &:hover {
             &:before {
-                border-color: rgba(#000, .1);
-                border-color: #249e49;
+                // border-color: rgba(#000, .1);
+                border-color: #249e49 !important;
             }
 
             .icon-radio-checked {
@@ -92,7 +92,7 @@
 
         &:checked + .exchange__label {
             &:before {
-                border-color: #249e49;
+                // border-color: #249e49;
                 border-color: transparent;
             }
 
