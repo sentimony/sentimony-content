@@ -1330,6 +1330,10 @@ input[type="number"]::-webkit-outer-spin-button {
   bottom: 21px;
 }
 
+.disabled {
+  opacity: 0.4;
+}
+
 .gonfalon {
   position: absolute;
   top: 0;

@@ -62,6 +62,21 @@ $('.exchange__item').click(function () {
     sum.length ? result.text(sum) : result.text(exchangeSum);
 });
 
+/* Disabled */
+(function () {
+    var availableSum = +$('.js-available').text().match(/\d+/)[0],
+        disabledSum = $('.exchange__item').find('.exchange__left .exchange__number');
+
+    disabledSum.each(function () {
+        var thisSum = $(this).text();
+        thisSum = +thisSum.replace(/\s/g, '');
+
+        if (thisSum > availableSum) {
+            $(this).closest('.exchange__item').addClass('disabled');
+        }
+    });
+})();
+
 /**
  * calculation
  */
