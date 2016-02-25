@@ -2,7 +2,7 @@
     <div class="singletab__container">
 
         <div class="singletab__title">Обменять Баллы на Рубли</div>
-        <div class="singletab__subtitle">Доступно 145 баллов. Ваш курс обмена 1:35</div>
+        <div class="singletab__subtitle">Доступно: {{ site.data.userData.userCpBalanse }} баллов. Ваш курс обмена 1:{{ site.data.userData.coefficientRub2Fun }}</div>
 
         {% for item in site.data.cp2rub %}
         <div class="exchange__item">

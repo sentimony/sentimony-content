@@ -2,14 +2,14 @@
     <div class="singletab__container">
 
         <div class="singletab__title">Обменять Баллы на Fun</div>
-        <div class="singletab__subtitle">Доступно 145 баллов</div>
+        <div class="singletab__subtitle">Доступно: {{ site.data.userData.userCpBalanse }} баллов</div>
 
         <div class="exchange__item exchange__item--noradio">
             <input class="exchange__input-radio" type="radio" name="cp2fun" id="cp2fun-1" value="true">
             <label class="exchange__label" for="cp2fun-1">
                 <div class="exchange__left">
                     <div class="exchange__row-ellipsis">
-                        <input type="number" value="1700" class="exchange__input-text js-cp2fun-cp">
+                        <input type="number" class="exchange__input-text js-cp2fun-cp">
                         <span class="exchange__currency">баллов</span>
                     </div>
                 </div>

@@ -572,8 +572,7 @@ button {
   color: #0a4777;
 }
 
-input[type="text"],
-input[type="number"] {
+input[type="text"] {
   border: 0;
   outline: none;
   width: 100%;
@@ -589,8 +588,8 @@ input[type="number"] {
           box-sizing: border-box;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
