@@ -960,12 +960,12 @@ button {
   outline: 0;
   border: 0;
   display: inline-block;
-  -webkit-border-radius: 50px;
-          border-radius: 50px;
-  text-transform: uppercase;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  text-transform: capitalize;
   line-height: 20px;
   padding: 8px 16px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .btn [class^="icon-"] {
@@ -978,8 +978,12 @@ button {
 .btn--success {
   color: #fff;
   background: #249E49;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fa807f), color-stop(38%, #f36265), to(#e55151));
+  background: -webkit-linear-gradient(top, #fa807f 0%, #f36265 38%, #e55151 100%);
+  background: linear-gradient(to bottom, #fa807f 0%, #f36265 38%, #e55151 100%);
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0px 1px 0px 0px #9e0206, inset 0px 0px 6px 0px rgba(255, 255, 255, 0.6);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0px 1px 0px 0px #9e0206, inset 0px 0px 6px 0px rgba(255, 255, 255, 0.6);
+  text-shadow: 1px 1px 0px #B71B1F;
 }
 
 .btn--link {
@@ -1012,9 +1016,12 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .modal {
   position: relative;
-  background: #fff;
+  background: #05152c;
+  -webkit-box-shadow: 0px -5px 0px 0px #06182e, inset 0px 0px 18px 0px rgba(115, 161, 240, 0.55);
+          box-shadow: 0px -5px 0px 0px #06182e, inset 0px 0px 18px 0px rgba(115, 161, 240, 0.55);
   width: 100%;
   margin: 0 auto 40px;
+  padding: 40px 45px;
   -webkit-border-radius: 4px;
           border-radius: 4px;
   overflow: hidden;
@@ -1026,16 +1033,48 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .modal__close {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 0px;
+  right: 0px;
   z-index: 100;
   width: 40px;
   height: 40px;
-  color: #fff;
+  color: #1f8fd9;
   -webkit-border-radius: 4px;
           border-radius: 4px;
   -webkit-transition: background .2s ease-in-out;
   transition: background .2s ease-in-out;
+}
+
+.modal__close:before {
+  content: '';
+  border-top: 70px solid #1b5084;
+  border-left: 70px solid transparent;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 0px;
+  height: 0px;
+  z-index: -1;
+}
+
+.modal__close:after {
+  content: '';
+  background: -webkit-linear-gradient(232deg, #4489cc 0%, #2F71B1 0%, rgba(5, 21, 44, 0.6) 100%);
+  background: linear-gradient(-142deg, #4489cc 0%, #2F71B1 0%, rgba(5, 21, 44, 0.6) 100%);
+  border-left: 1px solid rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: inset -5px 5px 7px 2px rgba(255, 255, 255, 0.1);
+          box-shadow: inset -5px 5px 7px 2px rgba(255, 255, 255, 0.1);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  right: -34px;
+  top: 0px;
+  width: 70px;
+  height: 70px;
+  z-index: -1;
+  -webkit-transform: skew(45deg);
+      -ms-transform: skew(45deg);
+          transform: skew(45deg);
 }
 
 .modal__close:hover {
@@ -1045,18 +1084,19 @@ input[type="number"]::-webkit-outer-spin-button {
 .modal__close .icon-close {
   font-size: 24px;
   display: block;
+  text-shadow: 1px 0px 1px #000000;
 }
 
 .modal__header {
-  font-size: 20px;
+  font-size: 14px;
   padding: 0 55px;
-  height: 50px;
-  line-height: 50px;
+  margin-bottom: 40px;
+  height: 1em;
+  line-height: 1em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: #249e49;
-  color: #fff;
+  color: #238dd9;
   text-transform: uppercase;
   font-weight: 500;
   position: relative;
@@ -1067,10 +1107,11 @@ input[type="number"]::-webkit-outer-spin-button {
   margin-right: 5px;
   position: relative;
   top: 3px;
+  display: none;
 }
 
 .modal__body {
-  background: #f0f0f0;
+  background: #081d38;
 }
 
 .modal__footer {
@@ -1078,38 +1119,43 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .easytabs__nav {
-  background: #249e49;
+  background: #002e4f;
+  background: -webkit-gradient(linear, left top, left bottom, from(#023f6b), color-stop(77%, #002e4f), to(#022b4b));
+  background: -webkit-linear-gradient(top, #023f6b 0%, #002e4f 77%, #022b4b 100%);
+  background: linear-gradient(to bottom, #023f6b 0%, #002e4f 77%, #022b4b 100%);
+}
+
+.easytabs__nav::after {
+  clear: both;
+  content: "";
+  display: table;
 }
 
 .easytabs__nav li {
-  display: inline-block;
-  padding: 14px 0;
+  float: left;
+  display: block;
+  padding: 0;
   position: relative;
+  width: 25%;
 }
 
-.easytabs__nav li.selected:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin-left: -8px;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 0 8px 8px;
-  border-bottom-color: #f0f0f0;
+.easytabs__nav li:first-child a {
+  border-left: none;
+}
+
+.easytabs__nav li:last-child a {
+  border-right: none;
 }
 
 .easytabs__nav li a {
-  font-weight: 600;
-  text-transform: uppercase;
+  font-weight: 400;
+  text-transform: none;
   display: block;
-  color: #fff;
+  color: #0187d0;
   border: 1px solid transparent;
-  -webkit-border-radius: 20px;
-          border-radius: 20px;
-  padding: 6px 12px;
-  -webkit-transition: background .2s ease-in-out, border-color .2s ease-in-out;
-  transition: background .2s ease-in-out, border-color .2s ease-in-out;
+  padding: 15px 12px;
+  -webkit-transition: background .2s ease-in-out, border-color .2s ease-in-out;
+  transition: background .2s ease-in-out, border-color .2s ease-in-out;
 }
 
 .easytabs__nav li a:hover {
@@ -1117,7 +1163,26 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .easytabs__nav li a.selected {
-  border-color: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00a7de), to(#008dd5));
+  background: -webkit-linear-gradient(top, #00a7de 0%, #008dd5 100%);
+  background: linear-gradient(to bottom, #00a7de 0%, #008dd5 100%);
+  text-shadow: 1px 1px 0px #01669C;
+  color: #fff;
+}
+
+.easytabs__nav li a.selected:before {
+  border: none;
+}
+
+.easytabs__nav li + li:before {
+  content: '';
+  border-right: 1px solid #002a4a;
+  border-left: 1px solid #001a2b;
+  position: absolute;
+  top: 0;
+  left: -1px;
+  width: 0px;
+  height: 100%;
 }
 
 .singletab__form {
@@ -1342,17 +1407,19 @@ input[type="number"]::-webkit-outer-spin-button {
   position: absolute;
   top: 0;
   left: 50%;
-  text-transform: uppercase;
+  text-transform: none;
   display: inline-block;
   color: #fff;
   background: rgba(0, 0, 0, 0.2);
-  font-weight: 700;
-  font-size: 10px;
-  letter-spacing: 1.1px;
+  -webkit-box-shadow: inset 10px 0 5px -2px rgba(0, 0, 0, 0.25), inset -10px 0 5px -2px rgba(0, 0, 0, 0.25);
+          box-shadow: inset 10px 0 5px -2px rgba(0, 0, 0, 0.25), inset -10px 0 5px -2px rgba(0, 0, 0, 0.25);
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.1px;
   -webkit-border-radius: 3px;
           border-radius: 3px;
-  line-height: 18px;
-  padding: 0 10px;
+  line-height: 28px;
+  padding: 0 12px;
   z-index: 20;
   display: block;
   white-space: nowrap;
@@ -1362,8 +1429,30 @@ input[type="number"]::-webkit-outer-spin-button {
           transform: translate3d(-50%, -50%, 0);
 }
 
+.gonfalon:before, .gonfalon:after {
+  content: '';
+  background: #cb221b;
+  position: absolute;
+  width: 6px;
+  height: 100%;
+}
+
+.gonfalon:before {
+  background: -webkit-gradient(linear, left top, right top, from(#dd524f), to(#d02825));
+  background: -webkit-linear-gradient(left, #dd524f 0%, #d02825 100%);
+  background: linear-gradient(to right, #dd524f 0%, #d02825 100%);
+  left: 0;
+}
+
+.gonfalon:after {
+  background: -webkit-gradient(linear, left top, right top, from(#d02825), to(#dd524f));
+  background: -webkit-linear-gradient(left, #d02825 0%, #dd524f 100%);
+  background: linear-gradient(to right, #d02825 0%, #dd524f 100%);
+  right: 0;
+}
+
 .gonfalon--profitable {
-  background: #c33225;
+  background: #cb221b;
 }
 
 .gonfalon--popular {
@@ -1371,5 +1460,17 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .gonfalon--own {
-  background: #0c4a76;
+  background: #0070aa;
+}
+
+.gonfalon--own:before {
+  background: -webkit-gradient(linear, left top, right top, from(#0091ca), to(#0076b0));
+  background: -webkit-linear-gradient(left, #0091ca 0%, #0076b0 100%);
+  background: linear-gradient(to right, #0091ca 0%, #0076b0 100%);
+}
+
+.gonfalon--own:after {
+  background: -webkit-gradient(linear, left top, right top, from(#0076b0), to(#0091ca));
+  background: -webkit-linear-gradient(left, #0076b0 0%, #0091ca 100%);
+  background: linear-gradient(to right, #0076b0 0%, #0091ca 100%);
 }

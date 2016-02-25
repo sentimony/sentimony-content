@@ -7,8 +7,9 @@
     color: #fff;
     background: rgba(#000, .2);
     font-weight: 700;
-    font-size: 10px;
-    letter-spacing: 1.1px;
+    font-size: 13px;
+    font-style: italic;
+    letter-spacing: -0.1px;
     border-radius: 3px;
     line-height: 18px;
     padding: 0 10px;
@@ -17,7 +18,12 @@
     transform: translate3d(-50%,-50%,0);
 
     &--profitable {
-        background: #c33225;
+        background: #f5b810;
+        background: linear-gradient(to bottom, 
+            #f5b810 0%,
+            #d47403 51%,
+            #f5b810 100%);
+        text-shadow: 0px 1px 5px #C60000;
     }
 
     &--popular {
@@ -25,6 +31,11 @@
     }
 
     &--own {
-        background: #0c4a76;
+        background: #458acd;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: normal;
+        text-transform: none;
+        color: #16406a;
     }
 }

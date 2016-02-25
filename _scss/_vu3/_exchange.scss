@@ -68,27 +68,10 @@
                 opacity: 0;
             }
         }
-
-        // &.exchange__label--selected {
-        //     &:before {
-        //         border-color: #249e49;
-        //     }
-
-        //     .icon-radio-checked {
-        //         opacity: 1;
-        //         color: #205A89;
-        //     }
-
-        //     .icon-radio-unchecked {
-        //         opacity: 0;
-        //     }
-        // }
     }
 
     &__input-radio[type="radio"] {
         display: none;
-        // position: absolute;
-        // left: -20px;
 
         &:checked + .exchange__label {
             &:before {

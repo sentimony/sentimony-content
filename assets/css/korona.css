@@ -960,12 +960,13 @@ button {
   outline: 0;
   border: 0;
   display: inline-block;
-  -webkit-border-radius: 50px;
-          border-radius: 50px;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
   text-transform: uppercase;
   line-height: 20px;
   padding: 8px 16px;
   font-weight: 600;
+  font-style: italic;
 }
 
 .btn [class^="icon-"] {
@@ -977,9 +978,35 @@ button {
 
 .btn--success {
   color: #fff;
-  background: #249E49;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  background: #fef035;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fef035), to(#dc4401));
+  background: -webkit-linear-gradient(top, #fef035 0%, #dc4401 100%);
+  background: linear-gradient(to bottom, #fef035 0%, #dc4401 100%);
+  -webkit-box-shadow: 0px 3px 0px 0px rgba(95, 32, 0, 0.9), 0px 1px 1px 0px rgba(220, 68, 1, 0.57), inset 0px 7px 34px 0px rgba(252, 239, 49, 0.8);
+          box-shadow: 0px 3px 0px 0px rgba(95, 32, 0, 0.9), 0px 1px 1px 0px rgba(220, 68, 1, 0.57), inset 0px 7px 34px 0px rgba(252, 239, 49, 0.8);
+  text-shadow: 0px 1px 4px #8C3200;
+  position: relative;
+  border-top: 1px solid #fffb02;
+  border-bottom: 1px solid #ffad01;
+}
+
+.btn--success:before, .btn--success:after {
+  content: "";
+  position: absolute;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fffb02), to(#ffad01));
+  background-image: -webkit-linear-gradient(#fffb02, #ffad01);
+  background-image: linear-gradient(#fffb02, #ffad01);
+  top: 0;
+  bottom: 0;
+  width: 1px;
+}
+
+.btn--success:before {
+  left: 0;
+}
+
+.btn--success:after {
+  right: 0;
 }
 
 .btn--link {
@@ -1012,12 +1039,13 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .modal {
   position: relative;
-  background: #fff;
+  background: #000c34;
   width: 100%;
-  margin: 0 auto 40px;
-  -webkit-border-radius: 4px;
-          border-radius: 4px;
-  overflow: hidden;
+  margin: 40px auto 40px;
+  padding: 50px 60px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  border: 3px solid #f7cf5d;
 }
 
 .modal--cashbox {
@@ -1026,12 +1054,12 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .modal__close {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: -8px;
+  right: -50px;
   z-index: 100;
   width: 40px;
   height: 40px;
-  color: #fff;
+  color: #f7d05b;
   -webkit-border-radius: 4px;
           border-radius: 4px;
   -webkit-transition: background .2s ease-in-out;
@@ -1044,22 +1072,35 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .modal__close .icon-close {
   font-size: 24px;
+  font-weight: 700;
   display: block;
+  border: 3px solid;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  width: 27px;
+  height: 27px;
+  line-height: 27px;
 }
 
 .modal__header {
-  font-size: 20px;
+  font-size: 26px;
+  font-style: italic;
   padding: 0 55px;
+  margin-top: -75px;
   height: 50px;
   line-height: 50px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: #249e49;
-  color: #fff;
+  background: #000c34;
+  color: #e9ba44;
   text-transform: uppercase;
-  font-weight: 500;
-  position: relative;
+  font-weight: 700;
+  position: absolute;
+  right: 0;
+  left: 0;
+  background: -webkit-linear-gradient(#f4cd4e, #e3aa39);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .modal__header [class^="icon-"] {
@@ -1067,49 +1108,64 @@ input[type="number"]::-webkit-outer-spin-button {
   margin-right: 5px;
   position: relative;
   top: 3px;
+  display: none;
+}
+
+.modal__header:before {
+  content: '';
+  background: #000c34;
+  display: block;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 150px;
+  height: 80px;
+  z-index: -1;
 }
 
 .modal__body {
-  background: #f0f0f0;
+  background: #1b5082;
+  border-left: 1px solid #4976b7;
+  border-right: 1px solid #4976b7;
 }
 
 .modal__footer {
+  background: #1b5082;
+  border-bottom: 1px solid #4976b7;
+  border-left: 1px solid #4976b7;
+  border-right: 1px solid #4976b7;
   padding: 8px 10px;
 }
 
 .easytabs__nav {
-  background: #249e49;
+  background: #4489cc;
+}
+
+.easytabs__nav::after {
+  clear: both;
+  content: "";
+  display: table;
 }
 
 .easytabs__nav li {
-  display: inline-block;
-  padding: 14px 0;
+  float: left;
+  display: block;
+  padding: 0;
   position: relative;
-}
-
-.easytabs__nav li.selected:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin-left: -8px;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 0 8px 8px;
-  border-bottom-color: #f0f0f0;
+  width: 25%;
 }
 
 .easytabs__nav li a {
   font-weight: 600;
-  text-transform: uppercase;
+  text-transform: none;
+  text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.2);
   display: block;
-  color: #fff;
+  color: #1c5185;
   border: 1px solid transparent;
-  -webkit-border-radius: 20px;
-          border-radius: 20px;
-  padding: 6px 12px;
-  -webkit-transition: background .2s ease-in-out, border-color .2s ease-in-out;
-  transition: background .2s ease-in-out, border-color .2s ease-in-out;
+  padding: 12px;
+  -webkit-transition: background .2s ease-in-out, border-color .2s ease-in-out;
+  transition: background .2s ease-in-out, border-color .2s ease-in-out;
 }
 
 .easytabs__nav li a:hover {
@@ -1117,7 +1173,20 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .easytabs__nav li a.selected {
-  border-color: #fff;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.85);
+  color: #fff;
+}
+
+.easytabs__nav li + li:before {
+  content: '';
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(12%, #4489cc), color-stop(51%, #5db1df), color-stop(89%, #4489cc));
+  background: -webkit-linear-gradient(top, #4489cc 12%, #5db1df 51%, #4489cc 89%);
+  background: linear-gradient(to bottom, #4489cc 12%, #5db1df 51%, #4489cc 89%);
+  position: absolute;
+  top: 0;
+  left: -1px;
+  width: 1px;
+  height: 100%;
 }
 
 .singletab__form {
@@ -1347,8 +1416,9 @@ input[type="number"]::-webkit-outer-spin-button {
   color: #fff;
   background: rgba(0, 0, 0, 0.2);
   font-weight: 700;
-  font-size: 10px;
-  letter-spacing: 1.1px;
+  font-size: 13px;
+  font-style: italic;
+  letter-spacing: -0.1px;
   -webkit-border-radius: 3px;
           border-radius: 3px;
   line-height: 18px;
@@ -1363,7 +1433,11 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .gonfalon--profitable {
-  background: #c33225;
+  background: #f5b810;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f5b810), color-stop(51%, #d47403), to(#f5b810));
+  background: -webkit-linear-gradient(top, #f5b810 0%, #d47403 51%, #f5b810 100%);
+  background: linear-gradient(to bottom, #f5b810 0%, #d47403 51%, #f5b810 100%);
+  text-shadow: 0px 1px 5px #C60000;
 }
 
 .gonfalon--popular {
@@ -1371,5 +1445,10 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .gonfalon--own {
-  background: #0c4a76;
+  background: #458acd;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+  color: #16406a;
 }
