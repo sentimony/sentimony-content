@@ -151,12 +151,20 @@
     &__subnumber {
         font-weight: 600;
         color: rgba(#000, .5);
+
+        &--line-through {
+            text-decoration: line-through;
+        }
     }
 
     &__subcurrency {
         color: rgba(#000, .5);
         font-family: 'PT Serif';
         font-style: italic;
+
+        &--line-through {
+            text-decoration: line-through;
+        }
     }
 
     &__input-text[type="number"] {
@@ -174,4 +182,8 @@
             bottom: 21px;
         }
     }
+}
+
+.disabled {
+    opacity: 0.4;
 }

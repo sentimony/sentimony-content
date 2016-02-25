@@ -1308,10 +1308,18 @@ input[type="number"]::-webkit-outer-spin-button {
   color: rgba(0, 0, 0, 0.5);
 }
 
+.exchange__subnumber--line-through {
+  text-decoration: line-through;
+}
+
 .exchange__subcurrency {
   color: rgba(0, 0, 0, 0.5);
   font-family: 'PT Serif';
   font-style: italic;
+}
+
+.exchange__subcurrency--line-through {
+  text-decoration: line-through;
 }
 
 .exchange__input-text[type="number"] {
@@ -1328,6 +1336,10 @@ input[type="number"]::-webkit-outer-spin-button {
   position: absolute;
   right: 24px;
   bottom: 21px;
+}
+
+.disabled {
+  opacity: 0.4;
 }
 
 .gonfalon {
