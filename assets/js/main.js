@@ -1,53 +1,70 @@
 /**
-* Remodal
-* https://github.com/VodkaBears/Remodal
-*/
+ * Remodal
+ * https://github.com/VodkaBears/Remodal
+ */
 $('.js-remodal').remodal({
     // closeOnEscape: false
 });
 
 /**
-* EasyTabs
-* https://github.com/JangoSteve/jQuery-EasyTabs
-*/
+ * EasyTabs
+ * https://github.com/JangoSteve/jQuery-EasyTabs
+ */
 $('.js-easytabs').easytabs({
     animate: true,
     animationSpeed: 200,
-    tabActiveClass: 'selected',
+    tabActiveClass: 'selected'
 });
 
 /**
-* include throw
-*/
+ * include throw
+ */
 // rub2fun
 $(".js-rub2fun-rub").keyup(function () {
-  var value = $(this).val();
-  $(".js-rub2fun-fun").val(value);
-  $(".js-rub2fun-result").text(value);
+    var value = $(this).val();
+    $(".js-rub2fun-fun").val(value);
+    $(".js-rub2fun-result").text(value);
 }).keyup();
- 
+
 $(".js-rub2fun-fun").keyup(function () {
-  var value = $(this).val();
-  $(".js-rub2fun-rub").val(value);
-  $(".js-rub2fun-result").text(value);
+    var value = $(this).val();
+    $(".js-rub2fun-rub").val(value);
+    $(".js-rub2fun-result").text(value);
 }).keyup();
 
 // cp2fun
 $(".js-cp2fun-cp").keyup(function () {
-  var value = $(this).val();
-  $(".js-cp2fun-fun").val(value);
-  $(".js-cp2fun-result").text(value);
-}).keyup();
- 
-$(".js-cp2fun-fun").keyup(function () {
-  var value = $(this).val();
-  $(".js-cp2fun-cp").val(value);
-  $(".js-cp2fun-result").text(value);
+    var value = $(this).val();
+    $(".js-cp2fun-fun").val(value);
+    $(".js-cp2fun-result").text(value);
 }).keyup();
 
+$(".js-cp2fun-fun").keyup(function () {
+    var value = $(this).val();
+    $(".js-cp2fun-cp").val(value);
+    $(".js-cp2fun-result").text(value);
+}).keyup();
+
+
+/* Checked cashbox */
+$('.js-exchange').click(function () {
+    $(this).find('input').prop('checked', true);
+});
+
+/* Duplication sum cashbox */
+$('.exchange__item').click(function () {
+    var sum = $(this).find('.exchange__right .exchange__number').text(),
+        exchangeSum = $(this).find('.js-rub2fun-fun').val(),
+        result = $('.active .js-rub2fun-result');
+
+    result = result.length ? result : $('.active .js-cp2rub-result');
+
+    sum.length ? result.text(sum) : result.text(exchangeSum);
+});
+
 /**
-* calculation
-*/
+ * calculation
+ */
 // var number1 = $(".js-number1").val();
 // var number2 = $(".js-number2").val();
 
