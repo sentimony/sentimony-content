@@ -1096,6 +1096,18 @@ input[type="number"]::-webkit-outer-spin-button {
   display: none;
 }
 
+.modal__header:after {
+  content: '';
+  background: -webkit-gradient(linear, left top, right top, from(#0c2237), color-stop(50%, #2281b9), to(#0c2237));
+  background: -webkit-linear-gradient(left, #0c2237 0%, #2281b9 50%, #0c2237 100%);
+  background: linear-gradient(to right, #0c2237 0%, #2281b9 50%, #0c2237 100%);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+}
+
 .modal__body {
   background: #08192b;
 }
