@@ -6,7 +6,7 @@
 
         {% for item in site.data.rub2fun %}
         <div class="exchange__item">
-            <input class="exchange__input-radio" type="radio" name="rub2fun" id="{{ item.id }}" value="{{ item.number1 }}" {% if item.checked == true %}checked{% endif %}>
+            <input class="exchange__input-radio" type="radio" name="rub2fun" id="{{ item.id }}" value="{{ item.number1 }}">
             <label class="exchange__label" for="{{ item.id }}">
                 <div class="exchange__left">
                     <div class="exchange__row-ellipsis">
@@ -37,7 +37,7 @@
         {% endfor %}
 
         <div class="exchange__item js-exchange">
-            <input class="exchange__input-radio" type="radio" name="rub2fun" id="rub2fun-own" value="true">
+            <input class="exchange__input-radio" type="radio" name="rub2fun" id="rub2fun-own" value="true" checked>
             <label class="exchange__label" for="rub2fun-own">
                 <div class="exchange__left">
                     <div class="exchange__row-ellipsis">
