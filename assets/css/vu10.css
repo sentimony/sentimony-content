@@ -1099,36 +1099,41 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .easytabs__nav {
-  background: #249e49;
+  background: #002e4f;
+  background: -webkit-gradient(linear, left top, left bottom, from(#023f6b), color-stop(77%, #002e4f), to(#022b4b));
+  background: -webkit-linear-gradient(top, #023f6b 0%, #002e4f 77%, #022b4b 100%);
+  background: linear-gradient(to bottom, #023f6b 0%, #002e4f 77%, #022b4b 100%);
+}
+
+.easytabs__nav::after {
+  clear: both;
+  content: "";
+  display: table;
 }
 
 .easytabs__nav li {
-  display: inline-block;
-  padding: 14px 0;
+  float: left;
+  display: block;
+  padding: 0;
   position: relative;
+  width: 25%;
 }
 
-.easytabs__nav li.selected:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin-left: -8px;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 0 8px 8px;
-  border-bottom-color: #f0f0f0;
+.easytabs__nav li:first-child a {
+  border-left: none;
+}
+
+.easytabs__nav li:last-child a {
+  border-right: none;
 }
 
 .easytabs__nav li a {
-  font-weight: 600;
-  text-transform: uppercase;
+  font-weight: 400;
+  text-transform: none;
   display: block;
-  color: #fff;
+  color: #0187d0;
   border: 1px solid transparent;
-  -webkit-border-radius: 20px;
-          border-radius: 20px;
-  padding: 6px 12px;
+  padding: 15px 12px;
   -webkit-transition: background .2s ease-in-out, border-color .2s ease-in-out;
   transition: background .2s ease-in-out, border-color .2s ease-in-out;
 }
@@ -1138,7 +1143,26 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .easytabs__nav li a.selected {
-  border-color: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00a7de), to(#008dd5));
+  background: -webkit-linear-gradient(top, #00a7de 0%, #008dd5 100%);
+  background: linear-gradient(to bottom, #00a7de 0%, #008dd5 100%);
+  text-shadow: 1px 1px 0px #01669C;
+  color: #fff;
+}
+
+.easytabs__nav li a.selected:before {
+  border: none;
+}
+
+.easytabs__nav li + li:before {
+  content: '';
+  border-right: 1px solid #002a4a;
+  border-left: 1px solid #001a2b;
+  position: absolute;
+  top: 0;
+  left: -1px;
+  width: 0px;
+  height: 100%;
 }
 
 .singletab__form {

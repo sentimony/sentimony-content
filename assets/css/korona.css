@@ -1089,14 +1089,15 @@ input[type="number"]::-webkit-outer-spin-button {
   margin-top: -75px;
   height: 50px;
   line-height: 50px;
-  border-bottom: 1px solid #4976b7;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: #000c34;
   color: #e9ba44;
   text-transform: uppercase;
   font-weight: 700;
-  position: relative;
+  position: absolute;
+  right: 0;
+  left: 0;
   background: -webkit-linear-gradient(#f4cd4e, #e3aa39);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1138,36 +1139,31 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .easytabs__nav {
-  background: #249e49;
+  background: #4489cc;
+}
+
+.easytabs__nav::after {
+  clear: both;
+  content: "";
+  display: table;
 }
 
 .easytabs__nav li {
-  display: inline-block;
-  padding: 14px 0;
+  float: left;
+  display: block;
+  padding: 0;
   position: relative;
-}
-
-.easytabs__nav li.selected:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin-left: -8px;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 0 8px 8px;
-  border-bottom-color: #f0f0f0;
+  width: 25%;
 }
 
 .easytabs__nav li a {
   font-weight: 600;
-  text-transform: uppercase;
+  text-transform: none;
+  text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.2);
   display: block;
-  color: #fff;
+  color: #1c5185;
   border: 1px solid transparent;
-  -webkit-border-radius: 20px;
-          border-radius: 20px;
-  padding: 6px 12px;
+  padding: 12px;
   -webkit-transition: background .2s ease-in-out, border-color .2s ease-in-out;
   transition: background .2s ease-in-out, border-color .2s ease-in-out;
 }
@@ -1177,7 +1173,20 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .easytabs__nav li a.selected {
-  border-color: #fff;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.85);
+  color: #fff;
+}
+
+.easytabs__nav li + li:before {
+  content: '';
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(12%, #4489cc), color-stop(51%, #5db1df), color-stop(89%, #4489cc));
+  background: -webkit-linear-gradient(top, #4489cc 12%, #5db1df 51%, #4489cc 89%);
+  background: linear-gradient(to bottom, #4489cc 12%, #5db1df 51%, #4489cc 89%);
+  position: absolute;
+  top: 0;
+  left: -1px;
+  width: 1px;
+  height: 100%;
 }
 
 .singletab__form {

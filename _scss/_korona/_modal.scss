@@ -46,13 +46,14 @@
         margin-top: -75px;
         height: 50px;
         line-height: 50px;
-        border-bottom: 1px solid #4976b7;
         box-sizing: border-box;
         background: #000c34;
         color: #e9ba44;
         text-transform: uppercase;
         font-weight: 700;
-        position: relative;
+        position: absolute;
+        right: 0;
+        left: 0;
         background: -webkit-linear-gradient(#f4cd4e, #e3aa39);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
