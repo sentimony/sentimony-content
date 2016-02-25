@@ -535,67 +535,6 @@ img {
   text-align: right;
 }
 
-button {
-  border: 0;
-  background: none;
-  padding: 0;
-  outline: 0;
-}
-
-.btn {
-  outline: 0;
-  border: 0;
-  display: inline-block;
-  -webkit-border-radius: 50px;
-          border-radius: 50px;
-  text-transform: uppercase;
-  line-height: 20px;
-  padding: 8px 16px;
-  font-weight: 600;
-}
-
-.btn [class^="icon-"] {
-  font-size: 18px;
-  line-height: 20px;
-  position: relative;
-  top: 2px;
-}
-
-.btn--success {
-  color: #fff;
-  background: #249E49;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.btn--link {
-  color: #0a4777;
-}
-
-input[type="text"] {
-  border: 0;
-  outline: none;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-input[type="number"] {
-  border: 0;
-  outline: none;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  margin: 0;
-}
-
 /*
  *  Remodal - v1.0.6
  *  Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
@@ -880,42 +819,6 @@ html.remodal-is-locked {
   vertical-align: top;
 }
 
-/* Close button */
-.remodal-close {
-  left: auto;
-  right: 0;
-}
-
-/* Close button */
-.remodal-close {
-  left: auto;
-  right: 0;
-  display: block;
-  overflow: visible;
-  width: 35px;
-  height: 35px;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
-  -webkit-transition: color .2s ease-in-out;
-  transition: color .2s ease-in-out;
-  text-decoration: none;
-  color: #95979c;
-  border: 0;
-  outline: 0;
-  background: transparent;
-}
-
-.remodal-close:hover,
-.remodal-close:focus {
-  color: #fff;
-  background: rgba(0, 0, 0, 0.1);
-}
-
-.remodal-close:before {
-  content: none;
-}
-
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon.eot?31sqig");
@@ -1044,6 +947,67 @@ html.remodal-is-locked {
 
 .icon-yandex:before {
   content: "\e900";
+}
+
+button {
+  border: 0;
+  background: none;
+  padding: 0;
+  outline: 0;
+}
+
+.btn {
+  outline: 0;
+  border: 0;
+  display: inline-block;
+  -webkit-border-radius: 50px;
+          border-radius: 50px;
+  text-transform: uppercase;
+  line-height: 20px;
+  padding: 8px 16px;
+  font-weight: 600;
+}
+
+.btn [class^="icon-"] {
+  font-size: 18px;
+  line-height: 20px;
+  position: relative;
+  top: 2px;
+}
+
+.btn--success {
+  color: #fff;
+  background: #249E49;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.btn--link {
+  color: #0a4777;
+}
+
+input[type="text"] {
+  border: 0;
+  outline: none;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input[type="number"] {
+  border: 0;
+  outline: none;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 .modal {
