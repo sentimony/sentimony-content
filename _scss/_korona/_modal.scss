@@ -1,10 +1,12 @@
 .modal {
     position: relative;
-    background: #fff;
+    background: #000c34;
     width: 100%;
-    margin: 0 auto 40px;
-    border-radius: 4px;
-    overflow: hidden;
+    margin: 40px auto 40px;
+    padding: 50px 60px;
+    border-radius: 10px;
+    border: 3px solid #f7cf5d;
+    // overflow: hidden;
 
     &--cashbox {
         max-width: 684px;
@@ -12,12 +14,12 @@
 
     &__close {
         position: absolute;
-        top: 5px;
-        right: 5px;
+        top: -8px;
+        right: -50px;
         z-index: 100;
         width: 40px;
         height: 40px;
-        color: #fff;
+        color: #f7d05b;
         border-radius: 4px;
         transition: background .2s ease-in-out;
 
@@ -27,36 +29,67 @@
 
         .icon-close {
             font-size: 24px;
+            font-weight: 700;
             display: block;
+            border: 3px solid;
+            border-radius: 50%;
+            width: 27px;
+            height: 27px;
+            line-height: 27px;
         }
     }
 
     &__header {
-        font-size: 20px;
+        font-size: 26px;
+        font-style: italic;
         padding: 0 55px;
+        margin-top: -75px;
         height: 50px;
         line-height: 50px;
-        border-bottom: 1px solid rgba(#000, .1);
+        border-bottom: 1px solid #4976b7;
         box-sizing: border-box;
-        background: #249e49;
-        color: #fff;
+        background: #000c34;
+        color: #e9ba44;
         text-transform: uppercase;
-        font-weight: 500;
+        font-weight: 700;
         position: relative;
+        background: -webkit-linear-gradient(#f4cd4e, #e3aa39);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 
         [class^="icon-"] {
             font-size: 24px;
             margin-right: 5px;
             position: relative;
             top: 3px;
+            display: none;
+        }
+
+        &:before {
+            content: '';
+            background: #000c34;
+            display: block;
+            margin: auto;
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 150px;
+            height: 80px;
+            z-index: -1;
         }
     }
 
     &__body {
-        background: #f0f0f0;
+        background: #1b5082;
+        border-left: 1px solid #4976b7;
+        border-right: 1px solid #4976b7;
     }
 
     &__footer {
+        background: #1b5082;
+        border-bottom: 1px solid #4976b7;
+        border-left: 1px solid #4976b7;
+        border-right: 1px solid #4976b7;
         padding: 8px 10px;
     }
 }

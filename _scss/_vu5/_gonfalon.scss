@@ -5,19 +5,20 @@
     text-transform: uppercase;
     display: inline-block;
     color: #fff;
-    background: rgba(#000, .2);
+    background: #091e33;
     font-weight: 700;
     font-size: 10px;
     letter-spacing: 1.1px;
     border-radius: 3px;
-    line-height: 18px;
+    line-height: 22px;
     padding: 0 10px;
     z-index: 20;
     @include ellipsis;
     transform: translate3d(-50%,-50%,0);
 
     &--profitable {
-        background: #c33225;
+        border: 1px solid #ffbf1f;
+        color: #ffbf1f;
     }
 
     &--popular {
@@ -25,6 +26,7 @@
     }
 
     &--own {
-        background: #0c4a76;
+        border: 1px solid #3773a5;
+        color: #fff;
     }
 }

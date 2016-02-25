@@ -962,7 +962,7 @@ button {
   display: inline-block;
   -webkit-border-radius: 4px;
           border-radius: 4px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   line-height: 20px;
   padding: 8px 16px;
   font-weight: 600;
@@ -976,10 +976,14 @@ button {
 }
 
 .btn--success {
-  color: #fff;
+  color: #8e4803;
   background: #fecf1f;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fecf1f), color-stop(27%, #ffc31d), color-stop(60%, #ffa71f), color-stop(69%, #ffa71f), color-stop(75%, #ffa71f), to(#ffcd1e));
+  background: -webkit-linear-gradient(top, #fecf1f 0%, #ffc31d 27%, #ffa71f 60%, #ffa71f 69%, #ffa71f 75%, #ffcd1e 100%);
+  background: linear-gradient(to bottom, #fecf1f 0%, #ffc31d 27%, #ffa71f 60%, #ffa71f 69%, #ffa71f 75%, #ffcd1e 100%);
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 0px 1px 1px #ffd79b;
 }
 
 .btn--link {
@@ -1012,7 +1016,8 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .modal {
   position: relative;
-  background: #fff;
+  background: #f08192b;
+  border: 1px solid #133260;
   width: 100%;
   margin: 0 auto 40px;
   -webkit-border-radius: 4px;
@@ -1026,16 +1031,26 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .modal__close {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 0px;
+  right: 0px;
   z-index: 100;
-  width: 40px;
-  height: 40px;
-  color: #fff;
+  width: 50px;
+  height: 50px;
+  color: #0c8fd7;
   -webkit-border-radius: 4px;
           border-radius: 4px;
   -webkit-transition: background .2s ease-in-out;
   transition: background .2s ease-in-out;
+}
+
+.modal__close:before {
+  content: '';
+  border-right: 1px solid #1a3965;
+  border-left: 1px solid #08192b;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
 }
 
 .modal__close:hover {
@@ -1044,7 +1059,15 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .modal__close .icon-close {
   font-size: 24px;
+  font-weight: 400;
   display: block;
+  border: 2px solid #123360;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  margin: auto;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
 }
 
 .modal__header {
@@ -1052,12 +1075,15 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 0 55px;
   height: 50px;
   line-height: 50px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #0e3650;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: #249e49;
-  color: #fff;
-  text-transform: uppercase;
+  background: #071e30;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0d436f), to(#071e30));
+  background: -webkit-linear-gradient(top, #0d436f 0%, #071e30 100%);
+  background: linear-gradient(to bottom, #0d436f 0%, #071e30 100%);
+  color: #ffbc01;
+  text-transform: none;
   font-weight: 500;
   position: relative;
 }
@@ -1067,14 +1093,19 @@ input[type="number"]::-webkit-outer-spin-button {
   margin-right: 5px;
   position: relative;
   top: 3px;
+  display: none;
 }
 
 .modal__body {
-  background: #f0f0f0;
+  background: #08192b;
 }
 
 .modal__footer {
+  background: -webkit-gradient(linear, left top, right top, color-stop(1%, #071a2b), color-stop(50%, #0e2d4a), to(#071a2b));
+  background: -webkit-linear-gradient(left, #071a2b 1%, #0e2d4a 50%, #071a2b 100%);
+  background: linear-gradient(to right, #071a2b 1%, #0e2d4a 50%, #071a2b 100%);
   padding: 8px 10px;
+  color: #fff;
 }
 
 .easytabs__nav {
@@ -1337,13 +1368,13 @@ input[type="number"]::-webkit-outer-spin-button {
   text-transform: uppercase;
   display: inline-block;
   color: #fff;
-  background: rgba(0, 0, 0, 0.2);
+  background: #091e33;
   font-weight: 700;
   font-size: 10px;
   letter-spacing: 1.1px;
   -webkit-border-radius: 3px;
           border-radius: 3px;
-  line-height: 18px;
+  line-height: 22px;
   padding: 0 10px;
   z-index: 20;
   display: block;
@@ -1355,7 +1386,8 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .gonfalon--profitable {
-  background: #c33225;
+  border: 1px solid #ffbf1f;
+  color: #ffbf1f;
 }
 
 .gonfalon--popular {
@@ -1363,5 +1395,6 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .gonfalon--own {
-  background: #0c4a76;
+  border: 1px solid #3773a5;
+  color: #fff;
 }

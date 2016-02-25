@@ -10,11 +10,11 @@ button {
     outline: 0;
     border: 0;
     display: inline-block;
-    border-radius: 50px;
-    text-transform: uppercase;
+    border-radius: 3px;
+    text-transform: capitalize;
     line-height: 20px;
     padding: 8px 16px;
-    font-weight: 600;
+    font-weight: 400;
 
     [class^="icon-"] {
         font-size: 18px;
@@ -26,7 +26,15 @@ button {
     &--success {
         color: #fff;
         background: #249E49;
-        box-shadow: 0 2px 4px rgba(#000, .3);
+        background: linear-gradient(to bottom, 
+            #fa807f 0%,
+            #f36265 38%,
+            #e55151 100%);
+        box-shadow: 
+            0 2px 4px rgba(#000, .3),
+            0px 1px 0px 0px rgba(158,2,6,1),
+            inset 0px 0px 6px 0px rgba(255,255,255,0.6);
+        text-shadow: 1px 1px 0px #B71B1F;
     }
 
     &--link {
