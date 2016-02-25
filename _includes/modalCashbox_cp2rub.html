@@ -6,7 +6,7 @@
 
         {% for item in site.data.cp2rub %}
         <div class="exchange__item">
-            <input class="exchange__input-radio" type="radio" name="cp-to-rub" id="{{ item.id }}" value="{{ item.number1 }}" {% if item.checked == true %}checked{% endif %}>
+            <input class="exchange__input-radio" type="radio" name="cp2rub" id="{{ item.id }}" value="{{ item.number1 }}" {% if item.checked == true %}checked{% endif %}>
             <label class="exchange__label" for="{{ item.id }}">
                 <div class="exchange__left">
                     <div class="exchange__row-ellipsis">
