@@ -1248,6 +1248,7 @@ html.remodal-is-locked {
 
 .exchange__label:hover:before {
   border-color: rgba(0, 0, 0, 0.1);
+  border-color: #249e49;
 }
 
 .exchange__label:hover .icon-radio-checked {
@@ -1258,25 +1259,13 @@ html.remodal-is-locked {
   opacity: 0;
 }
 
-.exchange__label.exchange__label--selected:before {
-  border-color: #249e49;
-}
-
-.exchange__label.exchange__label--selected .icon-radio-checked {
-  opacity: 1;
-  color: #205A89;
-}
-
-.exchange__label.exchange__label--selected .icon-radio-unchecked {
-  opacity: 0;
-}
-
 .exchange__input-radio[type="radio"] {
   display: none;
 }
 
 .exchange__input-radio[type="radio"]:checked + .exchange__label:before {
   border-color: #249e49;
+  border-color: transparent;
 }
 
 .exchange__input-radio[type="radio"]:checked + .exchange__label .icon-radio-checked {

@@ -57,31 +57,32 @@
         &:hover {
             &:before {
                 border-color: rgba(#000, .1);
-            }
-
-            .icon-radio-checked {
-                opacity: 1;
-            }
-
-            .icon-radio-unchecked {
-                opacity: 0;
-            }
-        }
-
-        &.exchange__label--selected {
-            &:before {
                 border-color: #249e49;
             }
 
             .icon-radio-checked {
                 opacity: 1;
-                color: #205A89;
             }
 
             .icon-radio-unchecked {
                 opacity: 0;
             }
         }
+
+        // &.exchange__label--selected {
+        //     &:before {
+        //         border-color: #249e49;
+        //     }
+
+        //     .icon-radio-checked {
+        //         opacity: 1;
+        //         color: #205A89;
+        //     }
+
+        //     .icon-radio-unchecked {
+        //         opacity: 0;
+        //     }
+        // }
     }
 
     &__input-radio[type="radio"] {
@@ -92,6 +93,7 @@
         &:checked + .exchange__label {
             &:before {
                 border-color: #249e49;
+                border-color: transparent;
             }
 
             .icon-radio-checked {
