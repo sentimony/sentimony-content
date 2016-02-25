@@ -64,10 +64,10 @@ $('.exchange__item').click(function () {
 
 /* Disabled */
 (function () {
-    var availableSum = +$('.js-available').text().match(/\d+/)[0],
-        disabledSum = $('.exchange__item').find('.exchange__left .exchange__number');
+    var availableSum = +$('.js-rub2fun-rub').val(),
+        disabledElem = $('.exchange__item').find('.exchange__left .exchange__number');
 
-    disabledSum.each(function () {
+    disabledElem.each(function () {
         var thisSum = $(this).text();
         thisSum = +thisSum.replace(/\s/g, '');
 
@@ -76,6 +76,24 @@ $('.exchange__item').click(function () {
         }
     });
 })();
+
+/* Not increase sum */
+function notIncrease(element) {
+    $(element).focus(function () {
+        var ownSum = +$(this).val();
+
+        $(this).keyup(function () {
+            var currentSum = $(this).val();
+
+            if (currentSum > ownSum) {
+                $(this).val(ownSum);
+            }
+        });
+    });
+}
+
+notIncrease('.exchange__input-text');
+
 
 /**
  * calculation
