@@ -13,7 +13,8 @@ $('.js-remodal').remodal({
 $('.js-easytabs').easytabs({
     animate: true,
     animationSpeed: 200,
-    tabActiveClass: 'selected'
+    tabActiveClass: 'selected',
+    updateHash: false
 });
 
 /**
