@@ -78,22 +78,18 @@ $('.exchange__item').click(function () {
 })();
 
 /* Not increase sum */
-function notIncrease(element) {
-    $(element).focus(function () {
-        var ownSum = +$(this).val();
+function notIncrease(element, ownSum) {
+    $(element).keyup(function () {
+        var currentSum = $(this).val();
 
-        $(this).keyup(function () {
-            var currentSum = $(this).val();
-
-            if (currentSum > ownSum) {
-                $(this).val(ownSum);
-            }
-        });
+        if (currentSum > +ownSum) {
+            $(this).val(+ownSum);
+        }
     });
 }
 
-notIncrease('.exchange__input-text');
-
+notIncrease('.js-exchange .exchange__input-text', $('.js-exchange-rub').text().match(/\d+/)[0]);
+notIncrease('.exchange__item--noradio .exchange__input-text', $('.js-exchange-points').text().match(/\d+/)[0]);
 
 /**
  * calculation

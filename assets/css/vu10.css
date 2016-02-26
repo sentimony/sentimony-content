@@ -1154,8 +1154,8 @@ input[type="number"]::-webkit-outer-spin-button {
   color: #0187d0;
   border: 1px solid transparent;
   padding: 15px 12px;
-  -webkit-transition: background .2s ease-in-out, border-color .2s ease-in-out;
-  transition: background .2s ease-in-out, border-color .2s ease-in-out;
+  -webkit-transition: background .2s ease-in-out, border-color .2s ease-in-out;
+  transition: background .2s ease-in-out, border-color .2s ease-in-out;
 }
 
 .easytabs__nav li a:hover {
