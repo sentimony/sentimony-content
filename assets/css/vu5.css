@@ -811,6 +811,7 @@ html.remodal-is-locked {
 /* Default theme styles of the modal dialog */
 .remodal {
   padding: 0;
+  color: #CED0D8;
 }
 
 /* Vertical align of the modal dialog */
@@ -986,8 +987,21 @@ button {
   text-shadow: 0px 1px 1px #ffd79b;
 }
 
+.btn--success:hover {
+  text-shadow: 0px -1px 1px #ffd79b;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffa71f), color-stop(60%, #ffcd1e), to(#ffa71f));
+  background: -webkit-linear-gradient(top, #ffa71f 0%, #ffcd1e 60%, #ffa71f 100%);
+  background: linear-gradient(to bottom, #ffa71f 0%, #ffcd1e 60%, #ffa71f 100%);
+}
+
 .btn--link {
-  color: #0a4777;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.btn--link:hover {
+  color: #ffbf1f;
 }
 
 input[type="text"] {
@@ -1158,8 +1172,8 @@ input[type="number"]::-webkit-outer-spin-button {
   text-transform: uppercase;
   color: #fff;
   padding: 20px 0px;
-  -webkit-transition: background .2s ease-in-out, border-color .2s ease-in-out;
-  transition: background .2s ease-in-out, border-color .2s ease-in-out;
+  -webkit-transition: background .2s ease-in-out, border-color .2s ease-in-out;
+  transition: background .2s ease-in-out, border-color .2s ease-in-out;
 }
 
 .easytabs__nav li a:hover {
@@ -1185,7 +1199,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .singletab__form {
   padding: 16px 20px;
   text-align: left;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #133260;
 }
 
 .singletab__form:last-child {
@@ -1204,17 +1218,16 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .singletab__subtitle {
-  font-family: 'PT Serif';
-  font-style: italic;
   margin-bottom: 16px;
   text-align: center;
+  color: #3973a3;
 }
 
 .exchange__item {
   text-align: left;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-bottom: 16px;
+  margin-bottom: 25px;
   position: relative;
 }
 
@@ -1224,8 +1237,8 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .exchange__label {
   width: 100%;
-  height: 64px;
-  background: #fff;
+  height: 82px;
+  background: #123457;
   cursor: pointer;
   -webkit-border-radius: 4px;
           border-radius: 4px;
@@ -1235,16 +1248,17 @@ input[type="number"]::-webkit-outer-spin-button {
   display: table;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  border: 1px solid #274F8A;
 }
 
 .exchange__label:before {
   content: '';
   position: absolute;
-  top: -2px;
+  top: -1px;
   left: -2px;
   width: 100%;
   height: 100%;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   -webkit-border-radius: 4px;
           border-radius: 4px;
   -webkit-transition: border-color .2s ease-in-out;
@@ -1256,7 +1270,7 @@ input[type="number"]::-webkit-outer-spin-button {
   position: absolute;
   top: 50%;
   left: 10px;
-  color: rgba(0, 0, 0, 0.2);
+  color: #081d30;
   font-size: 20px;
   margin-top: -10px;
   -webkit-transition: opacity .2s ease-in-out;
@@ -1272,7 +1286,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .exchange__label:hover:before {
-  border-color: #249e49 !important;
+  border-color: #febf1c !important;
 }
 
 .exchange__label:hover .icon-radio-checked {
@@ -1293,7 +1307,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .exchange__input-radio[type="radio"]:checked + .exchange__label .icon-radio-checked {
   opacity: 1;
-  color: #205A89;
+  color: #ffc720;
 }
 
 .exchange__input-radio[type="radio"]:checked + .exchange__label .icon-radio-unchecked {
@@ -1306,7 +1320,7 @@ input[type="number"]::-webkit-outer-spin-button {
   vertical-align: middle;
   position: relative;
   z-index: 10;
-  padding: 0 16px;
+  padding: 0 30px;
 }
 
 .exchange__left {
@@ -1314,9 +1328,9 @@ input[type="number"]::-webkit-outer-spin-button {
           border-radius: 4px 0 0 4px;
   padding-left: 40px;
   background: #fff;
-  background: -webkit-gradient(linear, left top, right top, color-stop(75%, #fff), color-stop(75%, #f5f5f5));
-  background: -webkit-linear-gradient(left, #fff 75%, #f5f5f5);
-  background: linear-gradient(to right, #fff 75%, #f5f5f5);
+  background: -webkit-gradient(linear, left top, right top, from(#0e2d4c), to(#091a2e));
+  background: -webkit-linear-gradient(left, #0e2d4c 0%, #091a2e 100%);
+  background: linear-gradient(to right, #0e2d4c 0%, #091a2e 100%);
 }
 
 .exchange__right {
@@ -1335,15 +1349,15 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .exchange__right:before {
-  border-color: #eaeaea;
+  border-color: #224C8A;
   border-left-color: transparent;
-  border-width: 32px 2px 32px 10px;
+  border-width: 40px 2px 40px 22px;
 }
 
 .exchange__right:after {
-  border-color: #fff;
+  border-color: #123457;
   border-left-color: transparent;
-  border-width: 32px 1px 32px 10px;
+  border-width: 40px 1px 40px 22px;
 }
 
 .exchange__row-ellipsis {
@@ -1356,18 +1370,17 @@ input[type="number"]::-webkit-outer-spin-button {
 .exchange__number, .exchange__input-text[type="number"] {
   font-size: 18px;
   font-weight: 600;
-  color: #205a89;
+  color: #f5f5f5;
 }
 
 .exchange__currency {
-  color: rgba(0, 0, 0, 0.5);
-  font-family: 'PT Serif';
-  font-style: italic;
+  text-transform: uppercase;
+  color: #3773a5;
 }
 
 .exchange__subnumber {
   font-weight: 600;
-  color: rgba(0, 0, 0, 0.5);
+  color: #3973a3;
 }
 
 .exchange__subnumber--line-through {
@@ -1375,7 +1388,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .exchange__subcurrency {
-  color: rgba(0, 0, 0, 0.5);
+  color: #3973a3;
   font-family: 'PT Serif';
   font-style: italic;
 }
@@ -1391,13 +1404,14 @@ input[type="number"]::-webkit-outer-spin-button {
           box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
   line-height: 40px;
   padding: 0 36px 0 8px;
-  background: #f3f3f3;
+  background: #081a2e;
+  border: 1px solid #224C8A;
 }
 
 .exchange__input-text[type="number"] + .exchange__currency {
   position: absolute;
-  right: 24px;
-  bottom: 21px;
+  right: 37px;
+  bottom: 31px;
 }
 
 .gonfalon {

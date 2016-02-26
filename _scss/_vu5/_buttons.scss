@@ -35,9 +35,23 @@ button {
             #ffcd1e 100%);
         box-shadow: 0 2px 4px rgba(#000, .3);
         text-shadow: 0px 1px 1px #ffd79b;
+
+        &:hover {
+            text-shadow: 0px -1px 1px #ffd79b;
+            background: linear-gradient(to bottom, 
+                #ffa71f 0%,
+                #ffcd1e 60%,
+                #ffa71f 100%);
+        }
     }
 
     &--link {
-        color: #0a4777;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #fff;
+
+        &:hover {
+            color: #ffbf1f;
+        }
     }
 }
