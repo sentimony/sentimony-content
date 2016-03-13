@@ -1,23 +1,53 @@
 <!DOCTYPE html>
 <html ng-app="jafApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{{ site.description }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-  {% include head.html %}
+    <!-- Angular.JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/{{ site.angular_version }}/angular.min.js"></script>
 
-    <body>
+    <!-- jQuery (just for Bootstrap) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/{{ site.jquery_version }}/jquery.min.js"></script>
 
-        <div id="data-firebase-url" data-firebase-url="{{ site.firebase_url }}" />
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/{{ site.bootstrap_version }}/css/bootstrap.min.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/{{ site.bootstrap_version }}/js/bootstrap.min.js"></script>
 
-        {% include header.html %}
+    <!-- Custom CSS -->    
+    <link rel="stylesheet" href="{{ "/css/all.css" | prepend: site.baseurl }}">
 
-        <div class="page-content" >
-          <div class="wrap">
-            <div class="container-fluid">
-              {{ content }}
-            </div>
-          </div>
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/{{ site.firebase_version }}/firebase.js"></script>
+
+    <!-- Firebase simple login -->
+    <script src="https://cdn.firebase.com/js/simple-login/1.6.3/firebase-simple-login.js"></script> 
+
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/{{ site.angularfire_version }}/angularfire.min.js"></script>
+
+    <!-- Angular controllers -->
+    <script src="{{ "/js/common.js" | prepend: site.baseurl }}"></script>
+</head>
+<body>
+
+    <div id="data-firebase-url" data-firebase-url="{{ site.firebase_url }}" />
+
+    {% include header.html %}
+
+    <div class="page-content" >
+      <div class="wrap">
+        <div class="container-fluid">
+          {{ content }}
         </div>
+      </div>
+    </div>
 
-        <!-- {% include footer.html %} -->
+    {% include footer.html %}
 
-    </body>
+</body>
 </html>
