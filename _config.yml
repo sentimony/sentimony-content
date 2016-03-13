@@ -1,0 +1,17 @@
+# Site settings
+title: Jekyll - Angular - Firebase (JAF)
+email: your-email@domain.com
+description: "your site description"
+baseurl: "/empty2" 
+url: "http://yourdomain.com"
+angular_version: 1.2.21
+bootstrap_version: 3.2.0
+jquery_version: 1.11.1
+firebase_version: 1.0.18
+angularfire_version: 0.8.0
+firebase_url: "https://jaf.firebaseio.com/"
+
+
+# Build settings
+markdown: kramdown
+permalink: pretty

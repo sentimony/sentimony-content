@@ -1,0 +1,24 @@
+---
+layout: default
+title: Notes
+permalink: /notes/
+---
+
+<script src="{{ "/js/notes.js" | prepend: site.baseurl }}"></script>
+
+<div class="home" ng-controller="notesController">
+
+  <h3>Notes ([[{ notes.length }]])</h3>
+
+  	<div>
+	  <div class="note" ng-repeat="note in notes">
+	  	[[{ note.text }]]
+	  	<div ng-show="user.email" class="removeNote glyphicon glyphicon-remove" ng-click="removeNote(note.id)"></div>
+	  </div>
+
+	  <div class="note new-note" ng-show="user.email">
+	  	<textarea class="new-note-textarea" type="text" placeholder="new note" ng-model="newNote"></textarea>
+	  	<button class="btn btn-primary" ng-click="addNote()">Add</button>
+	  </div>
+	</div>
+</div>
