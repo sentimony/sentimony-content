@@ -17,5 +17,8 @@
     "gulp-sass-unicode": "^1.0.1",
     "gulp-uglify": "^2.0.1",
     "require-dir": "^0.3.1"
+  },
+  "scripts": {
+    "start": "gulp img-resize-100 && gulp img-resize-350 && gulp"
   }
 }
