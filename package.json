@@ -19,6 +19,6 @@
     "require-dir": "^0.3.1"
   },
   "scripts": {
-    "start": "gulp img-resize-100 && gulp img-resize-350 && gulp"
+    "build": "gulp img-resize-small && gulp img-resize-medium && gulp"
   }
 }
