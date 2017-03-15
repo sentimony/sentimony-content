@@ -4,8 +4,8 @@ var gulp = require('gulp'),
 gulp.task('img-resize-small', function () {
     gulp.src('assets/img/releases/large/**/*.*')
         .pipe(imageResize({ 
-            width : 100,
-            height : 100,
+            width : 132,
+            height : 132,
             upscale: true
         }))
         .pipe(gulp.dest('assets/img/releases/small/'));
@@ -14,8 +14,8 @@ gulp.task('img-resize-small', function () {
 gulp.task('img-resize-medium', function () {
     gulp.src('assets/img/releases/large/**/*.*')
         .pipe(imageResize({ 
-            width : 350,
-            height : 350,
+            width : 600,
+            height : 600,
             upscale: true
         }))
         .pipe(gulp.dest('assets/img/releases/medium/'));
