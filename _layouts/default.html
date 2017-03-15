@@ -1,53 +1,55 @@
+---
+layout: compress
+---
+
 <!DOCTYPE html>
-<html ng-app="jafApp">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="description" content="{{ site.description }}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Angular.JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/{{ site.angular_version }}/angular.min.js"></script>
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+  <meta property="og:image" content="{{ page.og-image }}">
 
-    <!-- jQuery (just for Bootstrap) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/{{ site.jquery_version }}/jquery.min.js"></script>
+  <link rel="shortcut icon" href="{{ site.baseurl }}/assets/img/favicons/favicon-32.png">
+  <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/img/favicons/favicon-144.jpg">
 
-    <!-- Bootstrap  -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/{{ site.bootstrap_version }}/css/bootstrap.min.css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/{{ site.bootstrap_version }}/js/bootstrap.min.js"></script>
+  <style>
+    body {font-family:monospace;text-align:center;padding:40px 0 40px;}
+    h1 {margin:0 auto 40px;}
+    article {margin:0 auto 40px;}
+    a {text-decoration: none;}
+    figure {background:#ccc;padding:10px;display:inline-block;}
+    img {display:block;margin:0 auto 10px;height:auto;max-width:250px;}
+    figcaption {font-size:10px;}
+    footer {}
+  </style>
 
-    <!-- Custom CSS -->    
-    <link rel="stylesheet" href="{{ "/css/all.css" | prepend: site.baseurl }}">
-
-    <!-- Firebase -->
-    <script src="https://cdn.firebase.com/js/client/{{ site.firebase_version }}/firebase.js"></script>
-
-    <!-- Firebase simple login -->
-    <script src="https://cdn.firebase.com/js/simple-login/1.6.3/firebase-simple-login.js"></script> 
-
-    <!-- AngularFire -->
-    <script src="https://cdn.firebase.com/libs/angularfire/{{ site.angularfire_version }}/angularfire.min.js"></script>
-
-    <!-- Angular controllers -->
-    <script src="{{ "/js/common.js" | prepend: site.baseurl }}"></script>
 </head>
 <body>
 
-    <div id="data-firebase-url" data-firebase-url="{{ site.firebase_url }}" />
+  {{ content }}
 
-    {% include header.html %}
+  <article>
+    <h2>Releases:</h2>
+    {% for file in site.static_files %}
+      {% if file.path contains 'assets/img/releases' %}
+        <a href="{{ site.baseurl }}{{ file.path }}">
+          <figure>
+            <img src="{{ site.baseurl }}{{ file.path }}">
+            <figcaption>{{ file.name }}</figcaption>
+          </figure>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </article>
 
-    <div class="page-content" >
-      <div class="wrap">
-        <div class="container-fluid">
-          {{ content }}
-        </div>
-      </div>
-    </div>
-
-    {% include footer.html %}
+  <footer>
+    Powered By
+    <a href="https://ihororlovskyi.com">Ihor Orlovskyi</a>
+  </footer>
 
 </body>
 </html>
