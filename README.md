@@ -12,8 +12,6 @@ _Content of Sentimony Records_
 
 [Netlify](https://www.netlify.com) - deploy & free hosting platform
 
-[GitHub Pages](https://pages.github.com) - free hosting
-
 ### Run
 
 `npm i`
