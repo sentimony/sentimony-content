@@ -4,8 +4,8 @@ var gulp = require('gulp'),
 gulp.task('img-resize-small', function () {
     gulp.src('assets/img/releases/large/**/*.*')
         .pipe(imageResize({ 
-            width : 132,
-            height : 132,
+            width : 120,
+            height : 120,
             upscale: true
         }))
         .pipe(gulp.dest('assets/img/releases/small/'));
