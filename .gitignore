@@ -2,4 +2,7 @@ node_modules/
 _site/
 
 assets/img/releases/small/
+assets/img/releases/small-retina/
 assets/img/releases/medium/
+assets/img/releases/medium-retina/
+assets/img/releases/og-images/
