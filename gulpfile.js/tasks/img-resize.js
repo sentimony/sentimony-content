@@ -41,13 +41,25 @@ gulp.task('img-resize-medium-retina', function () {
     .pipe(gulp.dest('assets/img/releases/medium-retina/'));
 });
 
-gulp.task('img-resize-og-images', function () {
+gulp.task('img-resize-og-image', function () {
   gulp.src('assets/img/releases/large/**/*.*')
     .pipe(imageResize({ 
       width : 526,
       height : 274,
       upscale: true,
-      crop: true
+      crop: true,
+      gravity: 'North'
     }))
     .pipe(gulp.dest('assets/img/releases/og-images/'));
+});
+
+gulp.task('img-resize-micro', function () {
+  gulp.src('assets/img/releases/large/**/*.*')
+    .pipe(imageResize({ 
+      width : 5,
+      height : 5,
+      upscale: true,
+      crop: true
+    }))
+    .pipe(gulp.dest('assets/img/releases/micro/'));
 });
