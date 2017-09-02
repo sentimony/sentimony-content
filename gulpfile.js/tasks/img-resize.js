@@ -8,7 +8,8 @@ gulp.task('img:resize', [
     'img:releases:resize:medium-retina',
     'img:releases:resize:og-image',
     'img:releases:resize:micro',
-    'img:artists:resize:small'
+    'img:artists:resize:small',
+    'img:artists:resize:medium'
   ], function () {
 });
 
@@ -83,4 +84,14 @@ gulp.task('img:artists:resize:small', function () {
       upscale: true
     }))
     .pipe(gulp.dest('assets/img/artists/small/'));
+});
+
+gulp.task('img:artists:resize:medium', function () {
+  gulp.src('assets/img/artists/large/**/*.*')
+    .pipe(imageResize({ 
+      width : 190,
+      height : 190,
+      upscale: true
+    }))
+    .pipe(gulp.dest('assets/img/artists/medium/'));
 });
