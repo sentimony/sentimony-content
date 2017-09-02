@@ -1,16 +1,20 @@
 ---
 layout: default
-permalink: /
-title: 'Content of Sentimony Records'
-description: 'Content of Sentimony Records'
+permalink: /artists/
+title: 'artists'
+description: 'artists'
 og-image: ''
 ---
+
+<style>
+  article {max-width:25%;}
+</style>
 
 # {{ page.title }}
 
 <section>
   {% for file in site.static_files %}
-    {% if file.path contains 'assets/img/' %}
+    {% if file.path contains 'assets/img/artists/' %}
       {% include article.html %}
     {% endif %}
   {% endfor %}

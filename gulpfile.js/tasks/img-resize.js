@@ -1,7 +1,18 @@
-var gulp = require('gulp'),
-  imageResize = require('gulp-image-resize');
+var gulp = require('gulp');
+var imageResize = require('gulp-image-resize');
 
-gulp.task('img-resize-small', function () {
+gulp.task('img:resize', [
+    'img:releases:resize:small',
+    'img:releases:resize:small-retina',
+    'img:releases:resize:medium',
+    'img:releases:resize:medium-retina',
+    'img:releases:resize:og-image',
+    'img:releases:resize:micro',
+    'img:artists:resize:small'
+  ], function () {
+});
+
+gulp.task('img:releases:resize:small', function () {
   gulp.src('assets/img/releases/large/**/*.*')
     .pipe(imageResize({ 
       width : 120,
@@ -11,7 +22,7 @@ gulp.task('img-resize-small', function () {
     .pipe(gulp.dest('assets/img/releases/small/'));
 });
 
-gulp.task('img-resize-small-retina', function () {
+gulp.task('img:releases:resize:small-retina', function () {
   gulp.src('assets/img/releases/large/**/*.*')
     .pipe(imageResize({ 
       width : 240,
@@ -21,7 +32,7 @@ gulp.task('img-resize-small-retina', function () {
     .pipe(gulp.dest('assets/img/releases/small-retina/'));
 });
 
-gulp.task('img-resize-medium', function () {
+gulp.task('img:releases:resize:medium', function () {
   gulp.src('assets/img/releases/large/**/*.*')
     .pipe(imageResize({ 
       width : 190,
@@ -31,7 +42,7 @@ gulp.task('img-resize-medium', function () {
     .pipe(gulp.dest('assets/img/releases/medium/'));
 });
 
-gulp.task('img-resize-medium-retina', function () {
+gulp.task('img:releases:resize:medium-retina', function () {
   gulp.src('assets/img/releases/large/**/*.*')
     .pipe(imageResize({ 
       width : 380,
@@ -41,7 +52,7 @@ gulp.task('img-resize-medium-retina', function () {
     .pipe(gulp.dest('assets/img/releases/medium-retina/'));
 });
 
-gulp.task('img-resize-og-image', function () {
+gulp.task('img:releases:resize:og-image', function () {
   gulp.src('assets/img/releases/large/**/*.*')
     .pipe(imageResize({ 
       width : 526,
@@ -53,7 +64,7 @@ gulp.task('img-resize-og-image', function () {
     .pipe(gulp.dest('assets/img/releases/og-images/'));
 });
 
-gulp.task('img-resize-micro', function () {
+gulp.task('img:releases:resize:micro', function () {
   gulp.src('assets/img/releases/large/**/*.*')
     .pipe(imageResize({ 
       width : 5,
@@ -62,4 +73,14 @@ gulp.task('img-resize-micro', function () {
       crop: true
     }))
     .pipe(gulp.dest('assets/img/releases/micro/'));
+});
+
+gulp.task('img:artists:resize:small', function () {
+  gulp.src('assets/img/artists/large/**/*.*')
+    .pipe(imageResize({ 
+      width : 120,
+      height : 120,
+      upscale: true
+    }))
+    .pipe(gulp.dest('assets/img/artists/small/'));
 });

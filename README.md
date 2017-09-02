@@ -6,11 +6,9 @@ _Content of Sentimony Records_
 
 [Jekyll](https://jekyllrb.com) - static site generator based on [Ruby](https://www.ruby-lang.org)
 
-[Gulp](http://gulpjs.com) - build system based on [NodeJS](https://nodejs.org)
+[Gulp](http://gulpjs.com) - task runner based on [NodeJS](https://nodejs.org)
 
-[Coriolan UI](https://coriolan-ui.github.io) - [Sass](http://sass-lang.com) mixins pack
-
-[Netlify](https://www.netlify.com) - deploy & free hosting platform
+[Netlify](https://www.netlify.com) - automatic deploy & free hosting platform
 
 ### Run
 

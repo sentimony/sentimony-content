@@ -1,8 +1,8 @@
 ---
 layout: default
 permalink: /og-images/
-title: 'og-images'
-description: 'og-images'
+title: 'releases:og-images'
+description: 'releases:og-images'
 og-image: ''
 ---
 
@@ -10,15 +10,8 @@ og-image: ''
 
 <section>
   {% for file in site.static_files %}
-  {% if file.path contains 'assets/img/releases/og-images' %}
-  <article>
-    <a href="{{ site.baseurl }}{{ file.path }}">
-      <figure>
-        <img src="{{ site.baseurl }}{{ file.path }}">
-        <figcaption>{{ file.name }}</figcaption>
-      </figure>
-    </a>
-  </article>
-  {% endif %}
+    {% if file.path contains 'assets/img/releases/og-images/' %}
+      {% include article.html %}
+    {% endif %}
   {% endfor %}
 </section>

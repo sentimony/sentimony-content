@@ -1,13 +1,13 @@
 ---
 layout: default
 permalink: /micro/
-title: 'micro'
-description: 'micro'
+title: 'releases:micro'
+description: 'releases:micro'
 og-image: ''
 ---
 
 <style>
-  article {width:25%;float:left;}
+  article {max-width:25%;}
   img {min-width:250px;}
 </style>
 
@@ -15,15 +15,8 @@ og-image: ''
 
 <section>
   {% for file in site.static_files %}
-  {% if file.path contains 'assets/img/releases/micro' %}
-  <article>
-    <a href="{{ site.baseurl }}{{ file.path }}">
-      <figure>
-        <img src="{{ site.baseurl }}{{ file.path }}">
-        <figcaption>{{ file.name }}</figcaption>
-      </figure>
-    </a>
-  </article>
-  {% endif %}
+    {% if file.path contains 'assets/img/releases/micro/' %}
+      {% include article.html %}
+    {% endif %}
   {% endfor %}
 </section>

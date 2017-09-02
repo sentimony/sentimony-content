@@ -20,8 +20,8 @@ layout: compress
     body {margin:0;font-family:monospace;text-align:center;padding:40px 0;}
     nav {}
     h1 {}
-    section {margin:0 auto 40px;}
-    article {}
+    section {margin:0 auto 40px;display:flex;flex-wrap:wrap;justify-content:center;}
+    article {max-width:33.333333%;}
     a {text-decoration:none;}
     figure {background:#ccc;padding:10px;display:inline-block;}
     img {display:block;margin:0 auto 10px;height:auto;max-width:100%;min-width:100px;}
@@ -34,8 +34,9 @@ layout: compress
 
   <nav>
     <a href="/">home</a> |
-    <a href="/micro/">micro</a> |
-    <a href="/og-images/">og-images</a>
+    <a href="/micro/">releases:micro</a> |
+    <a href="/og-images/">releases:og-images</a> |
+    <a href="/artists/">artists</a>
   </nav>
 
   {{ content }}
