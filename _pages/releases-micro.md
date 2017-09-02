@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /micro/
+permalink: /releases/micro/
 title: 'releases:micro'
 description: 'releases:micro'
 og-image: ''
@@ -12,6 +12,12 @@ og-image: ''
 </style>
 
 # {{ page.title }}
+
+<nav>
+  <a href="/releases/">releases</a> |
+  <a href="/releases/micro/">releases:micro</a> |
+  <a href="/releases/og-images/">releases:og-images</a>
+</nav>
 
 <section>
   {% for file in site.static_files %}

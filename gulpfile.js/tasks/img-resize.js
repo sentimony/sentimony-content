@@ -9,7 +9,11 @@ gulp.task('img:resize', [
     'img:releases:resize:og-image',
     'img:releases:resize:micro',
     'img:artists:resize:small',
-    'img:artists:resize:medium'
+    'img:artists:resize:small-retina',
+    'img:artists:resize:medium',
+    'img:artists:resize:medium-retina',
+    'img:artists:resize:og-image',
+    'img:artists:resize:micro'
   ], function () {
 });
 
@@ -86,6 +90,16 @@ gulp.task('img:artists:resize:small', function () {
     .pipe(gulp.dest('assets/img/artists/small/'));
 });
 
+gulp.task('img:artists:resize:small-retina', function () {
+  gulp.src('assets/img/artists/large/**/*.*')
+    .pipe(imageResize({ 
+      width : 240,
+      height : 240,
+      upscale: true
+    }))
+    .pipe(gulp.dest('assets/img/artists/small-retina/'));
+});
+
 gulp.task('img:artists:resize:medium', function () {
   gulp.src('assets/img/artists/large/**/*.*')
     .pipe(imageResize({ 
@@ -94,4 +108,37 @@ gulp.task('img:artists:resize:medium', function () {
       upscale: true
     }))
     .pipe(gulp.dest('assets/img/artists/medium/'));
+});
+
+gulp.task('img:artists:resize:medium-retina', function () {
+  gulp.src('assets/img/artists/large/**/*.*')
+    .pipe(imageResize({ 
+      width : 380,
+      height : 380,
+      upscale: true
+    }))
+    .pipe(gulp.dest('assets/img/artists/medium-retina/'));
+});
+
+gulp.task('img:artists:resize:og-image', function () {
+  gulp.src('assets/img/artists/large/**/*.*')
+    .pipe(imageResize({ 
+      width : 526,
+      height : 274,
+      upscale: true,
+      crop: true,
+      gravity: 'North'
+    }))
+    .pipe(gulp.dest('assets/img/artists/og-images/'));
+});
+
+gulp.task('img:artists:resize:micro', function () {
+  gulp.src('assets/img/artists/large/**/*.*')
+    .pipe(imageResize({ 
+      width : 5,
+      height : 5,
+      upscale: true,
+      crop: true
+    }))
+    .pipe(gulp.dest('assets/img/artists/micro/'));
 });
