@@ -1,14 +1,14 @@
 {
   "dependencies": {
     "coriolan-ui": "^0.1.19",
-    "normalize.css": "^7.0.0"
+    "normalize.css": "^8.0.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.18.13",
+    "browser-sync": "^2.24.4",
     "gulp": "^3.9.1",
-    "gulp-image-resize": "^0.12.0",
-    "gulp-imagemin": "^3.3.0",
-    "require-dir": "^0.3.2"
+    "gulp-image-resize": "^0.13.0",
+    "gulp-imagemin": "^4.1.0",
+    "require-dir": "^1.0.0"
   },
   "scripts": {
     "clean": "rm -rf _site/; rm -rf assets/img/releases/small/; rm -rf assets/img/releases/small-retina/; rm -rf assets/img/releases/medium/; rm -rf assets/img/releases/medium-retina/; rm -rf assets/img/releases/og-images/; rm -rf assets/img/artists/small/; rm -rf assets/img/artists/small-retina/; rm -rf assets/img/artists/medium/; rm -rf assets/img/artists/medium-retina/; rm -rf assets/img/artists/og-images/",
