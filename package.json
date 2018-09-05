@@ -1,7 +1,7 @@
 {
   "dependencies": {},
   "devDependencies": {
-    "browser-sync": "^2.24.6",
+    "browser-sync": "^2.24.7",
     "gulp": "^3.9.1",
     "gulp-image-resize": "^0.13.0",
     "gulp-imagemin": "^4.1.0",
