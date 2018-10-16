@@ -1,22 +1,14 @@
 ---
 layout: default
 permalink: /releases/
-title: 'releases'
-description: 'releases'
+title: 'releases:all'
+description: 'releases:all'
 og-image: ''
 ---
 
-<style>
-  article {max-width:25%;}
-</style>
-
 # {{ page.title }}
 
-<nav>
-  <a href="/releases/">releases</a> |
-  <a href="/releases/micro/">releases:micro</a> |
-  <a href="/releases/og-images/">releases:og-images</a>
-</nav>
+{% include menu-releases.html %}
 
 <section>
   {% for file in site.static_files %}

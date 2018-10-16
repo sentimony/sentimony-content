@@ -8,14 +8,10 @@ og-image: ''
 
 # {{ page.title }}
 
-<nav>
-  <a href="/releases/">releases</a> |
-  <a href="/releases/micro/">releases:micro</a> |
-  <a href="/releases/og-images/">releases:og-images</a>
-</nav>
+{% include menu-releases.html %}
 
 <section>
-  {% for file in site.static_files %}
+  {% for file in site.static_files reversed %}
     {% if file.path contains 'assets/img/releases/og-images/' %}
       {% include article.html %}
     {% endif %}

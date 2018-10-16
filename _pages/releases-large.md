@@ -1,8 +1,8 @@
 ---
 layout: default
-permalink: /releases/micro/
-title: 'releases:micro'
-description: 'releases:micro'
+permalink: /releases/large/
+title: 'releases:large'
+description: 'releases:large'
 og-image: ''
 ---
 
@@ -12,7 +12,7 @@ og-image: ''
 
 <section>
   {% for file in site.static_files reversed %}
-    {% if file.path contains 'assets/img/releases/micro/' %}
+    {% if file.path contains 'assets/img/releases/large/' %}
       {% include article.html %}
     {% endif %}
   {% endfor %}
