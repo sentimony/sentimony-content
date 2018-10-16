@@ -1,8 +1,8 @@
 ---
 layout: default
-permalink: /artists/
-title: 'artists:all'
-description: 'artists:all'
+permalink: /artists/large/
+title: 'artists:large'
+description: 'artists:large'
 og-image: ''
 ---
 
@@ -12,7 +12,7 @@ og-image: ''
 
 <section>
   {% for file in site.static_files %}
-    {% if file.path contains 'assets/img/artists/' %}
+    {% if file.path contains 'assets/img/artists/large/' %}
       {% include article.html %}
     {% endif %}
   {% endfor %}
