@@ -1,11 +1,11 @@
 {
   "dependencies": {},
   "devDependencies": {
-    "browser-sync": "^2.24.7",
+    "browser-sync": "^2.26.3",
     "gulp": "^3.9.1",
     "gulp-image-resize": "^0.13.0",
     "gulp-imagemin": "^4.1.0",
-    "require-dir": "^1.0.0"
+    "require-dir": "^1.1.0"
   },
   "scripts": {
     "clean": "rm -rf _site/; rm -rf assets/img/releases/small/; rm -rf assets/img/releases/small-retina/; rm -rf assets/img/releases/medium/; rm -rf assets/img/releases/medium-retina/; rm -rf assets/img/releases/og-images/; rm -rf assets/img/artists/small/; rm -rf assets/img/artists/small-retina/; rm -rf assets/img/artists/medium/; rm -rf assets/img/artists/medium-retina/; rm -rf assets/img/artists/og-images/; rm -rf assets/img/releases/micro/; rm -rf assets/img/artists/micro/",
