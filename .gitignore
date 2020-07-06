@@ -2,16 +2,18 @@
 node_modules/
 _site/
 
+assets/img/releases/micro/
+assets/img/releases/micro-retina/
 assets/img/releases/small/
 assets/img/releases/small-retina/
 assets/img/releases/medium/
 assets/img/releases/medium-retina/
 assets/img/releases/og-images/
-assets/img/releases/micro/
 
+assets/img/artists/micro/
+assets/img/artists/micro-retina/
 assets/img/artists/small/
 assets/img/artists/small-retina/
 assets/img/artists/medium/
 assets/img/artists/medium-retina/
 assets/img/artists/og-images/
-assets/img/artists/micro/

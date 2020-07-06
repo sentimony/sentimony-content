@@ -2,24 +2,51 @@ var gulp = require('gulp');
 var imageResize = require('gulp-image-resize');
 
 gulp.task('img:resize', [
+
+    'img:releases:resize:micro',
+    'img:releases:resize:micro-retina',
     'img:releases:resize:small',
     'img:releases:resize:small-retina',
     'img:releases:resize:medium',
     'img:releases:resize:medium-retina',
     'img:releases:resize:og-image',
-    'img:releases:resize:micro',
+
+    'img:artists:resize:micro',
+    'img:artists:resize:micro-retina',
     'img:artists:resize:small',
     'img:artists:resize:small-retina',
     'img:artists:resize:medium',
     'img:artists:resize:medium-retina',
-    'img:artists:resize:og-image',
-    'img:artists:resize:micro'
+    'img:artists:resize:og-image'
+
   ], function () {
+});
+
+gulp.task('img:releases:resize:micro', function () {
+  gulp.src('assets/img/releases/large/**/*.*')
+    .pipe(imageResize({
+      width : 11,
+      height : 11,
+      upscale: true,
+      crop: true
+    }))
+    .pipe(gulp.dest('assets/img/releases/micro/'));
+});
+
+gulp.task('img:releases:resize:micro-retina', function () {
+  gulp.src('assets/img/releases/large/**/*.*')
+    .pipe(imageResize({
+      width : 22,
+      height : 22,
+      upscale: true,
+      crop: true
+    }))
+    .pipe(gulp.dest('assets/img/releases/micro-retina/'));
 });
 
 gulp.task('img:releases:resize:small', function () {
   gulp.src('assets/img/releases/large/**/*.*')
-    .pipe(imageResize({ 
+    .pipe(imageResize({
       width : 120,
       height : 120,
       upscale: true
@@ -29,7 +56,7 @@ gulp.task('img:releases:resize:small', function () {
 
 gulp.task('img:releases:resize:small-retina', function () {
   gulp.src('assets/img/releases/large/**/*.*')
-    .pipe(imageResize({ 
+    .pipe(imageResize({
       width : 240,
       height : 240,
       upscale: true
@@ -39,7 +66,7 @@ gulp.task('img:releases:resize:small-retina', function () {
 
 gulp.task('img:releases:resize:medium', function () {
   gulp.src('assets/img/releases/large/**/*.*')
-    .pipe(imageResize({ 
+    .pipe(imageResize({
       width : 190,
       height : 190,
       upscale: true
@@ -49,7 +76,7 @@ gulp.task('img:releases:resize:medium', function () {
 
 gulp.task('img:releases:resize:medium-retina', function () {
   gulp.src('assets/img/releases/large/**/*.*')
-    .pipe(imageResize({ 
+    .pipe(imageResize({
       width : 380,
       height : 380,
       upscale: true
@@ -59,7 +86,7 @@ gulp.task('img:releases:resize:medium-retina', function () {
 
 gulp.task('img:releases:resize:og-image', function () {
   gulp.src('assets/img/releases/large/**/*.*')
-    .pipe(imageResize({ 
+    .pipe(imageResize({
       width : 526,
       height : 274,
       upscale: true,
@@ -69,20 +96,31 @@ gulp.task('img:releases:resize:og-image', function () {
     .pipe(gulp.dest('assets/img/releases/og-images/'));
 });
 
-gulp.task('img:releases:resize:micro', function () {
-  gulp.src('assets/img/releases/large/**/*.*')
-    .pipe(imageResize({ 
-      width : 5,
-      height : 5,
+gulp.task('img:artists:resize:micro', function () {
+  gulp.src('assets/img/artists/large/**/*.*')
+    .pipe(imageResize({
+      width : 11,
+      height : 11,
       upscale: true,
       crop: true
     }))
-    .pipe(gulp.dest('assets/img/releases/micro/'));
+    .pipe(gulp.dest('assets/img/artists/micro/'));
+});
+
+gulp.task('img:artists:resize:micro-retina', function () {
+  gulp.src('assets/img/artists/large/**/*.*')
+    .pipe(imageResize({
+      width : 22,
+      height : 22,
+      upscale: true,
+      crop: true
+    }))
+    .pipe(gulp.dest('assets/img/artists/micro-retina/'));
 });
 
 gulp.task('img:artists:resize:small', function () {
   gulp.src('assets/img/artists/large/**/*.*')
-    .pipe(imageResize({ 
+    .pipe(imageResize({
       width : 120,
       height : 120,
       upscale: true
@@ -92,7 +130,7 @@ gulp.task('img:artists:resize:small', function () {
 
 gulp.task('img:artists:resize:small-retina', function () {
   gulp.src('assets/img/artists/large/**/*.*')
-    .pipe(imageResize({ 
+    .pipe(imageResize({
       width : 240,
       height : 240,
       upscale: true
@@ -102,7 +140,7 @@ gulp.task('img:artists:resize:small-retina', function () {
 
 gulp.task('img:artists:resize:medium', function () {
   gulp.src('assets/img/artists/large/**/*.*')
-    .pipe(imageResize({ 
+    .pipe(imageResize({
       width : 190,
       height : 190,
       upscale: true
@@ -112,7 +150,7 @@ gulp.task('img:artists:resize:medium', function () {
 
 gulp.task('img:artists:resize:medium-retina', function () {
   gulp.src('assets/img/artists/large/**/*.*')
-    .pipe(imageResize({ 
+    .pipe(imageResize({
       width : 380,
       height : 380,
       upscale: true
@@ -122,7 +160,7 @@ gulp.task('img:artists:resize:medium-retina', function () {
 
 gulp.task('img:artists:resize:og-image', function () {
   gulp.src('assets/img/artists/large/**/*.*')
-    .pipe(imageResize({ 
+    .pipe(imageResize({
       width : 526,
       height : 274,
       upscale: true,
@@ -130,15 +168,4 @@ gulp.task('img:artists:resize:og-image', function () {
       gravity: 'North'
     }))
     .pipe(gulp.dest('assets/img/artists/og-images/'));
-});
-
-gulp.task('img:artists:resize:micro', function () {
-  gulp.src('assets/img/artists/large/**/*.*')
-    .pipe(imageResize({ 
-      width : 5,
-      height : 5,
-      upscale: true,
-      crop: true
-    }))
-    .pipe(gulp.dest('assets/img/artists/micro/'));
 });
