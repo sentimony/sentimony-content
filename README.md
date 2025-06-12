@@ -10,10 +10,16 @@ _Content of Sentimony Records_
 
 [Netlify](https://www.netlify.com) - automatic deploy & free hosting platform
 
+### Can be usefull
+
+`brew install imagemagick`
+
+`brew install graphicsmagick`
+
 ### Run
 
 `npm i`
 
-`gulp watch`
+`npm run dev`
 
 #### Have fun! :)
