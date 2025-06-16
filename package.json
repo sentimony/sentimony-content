@@ -10,7 +10,8 @@
   "scripts": {
     "clean": "rm -rf _site/; rm -rf assets/img/releases/small/; rm -rf assets/img/releases/small-retina/; rm -rf assets/img/releases/medium/; rm -rf assets/img/releases/medium-retina/; rm -rf assets/img/releases/og-images/; rm -rf assets/img/artists/small/; rm -rf assets/img/artists/small-retina/; rm -rf assets/img/artists/medium/; rm -rf assets/img/artists/medium-retina/; rm -rf assets/img/releases/micro/; rm -rf assets/img/releases/micro-retina/; rm -rf assets/img/artists/micro/; rm -rf assets/img/artists/micro-retina/; rm -rf assets/img/artists/og-images/",
     "dev": "npm run clean; gulp img:resize; gulp watch",
-    "build": "gulp img:resize; gulp",
+    "build-old": "gulp img:resize; gulp",
+    "build": "gulp",
     "preinstall": "npx npm-force-resolutions"
   },
   "resolutions": {
